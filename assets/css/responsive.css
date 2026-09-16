@@ -1,0 +1,515 @@
+/* ==========================================================================
+   CREDIT REPAIR SERVICE - RESPONSIVE & RTL OVERRIDES
+   Breakpoints: 320px, 375px, 425px, 576px, 768px, 820px, 992px, 1024px, 1200px, 1440px+
+   ========================================================================== */
+
+/* ==========================================================================
+   RTL (RIGHT-TO-LEFT) SPECIFIC MIRRORING RULES
+   ========================================================================== */
+[dir="rtl"] body {
+  text-align: right;
+}
+
+[dir="rtl"] .dropdown-menu {
+  text-align: right;
+}
+
+[dir="rtl"] .ms-auto {
+  margin-right: auto !important;
+  margin-left: 0 !important;
+}
+
+[dir="rtl"] .me-auto {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+[dir="rtl"] .me-2 {
+  margin-left: 0.5rem !important;
+  margin-right: 0 !important;
+}
+
+[dir="rtl"] .ms-2 {
+  margin-right: 0.5rem !important;
+  margin-left: 0 !important;
+}
+
+[dir="rtl"] .hero-float-badge {
+  left: auto;
+  right: -20px;
+}
+
+[dir="rtl"] .back-to-top {
+  right: auto;
+  left: 30px;
+}
+
+[dir="rtl"] .service-card-link svg,
+[dir="rtl"] .btn-custom-primary svg,
+[dir="rtl"] .btn-custom-secondary svg {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .footer-links a:hover {
+  padding-inline-start: 0;
+  padding-inline-end: 4px;
+}
+
+/* ==========================================================================
+   BREAKPOINT: MOBILE RESPONSIVE FIXES (< 768px)
+   ========================================================================== */
+@media (max-width: 767.98px) {
+  /* Back to top floating button adjustment on mobile to prevent CTA button overlap */
+  .back-to-top {
+    bottom: 16px !important;
+    right: 14px !important;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 0.85rem !important;
+    z-index: 990 !important;
+  }
+
+  [dir="rtl"] .back-to-top {
+    right: auto !important;
+    left: 14px !important;
+  }
+
+  /* Padding bottom for CTA sections so floating elements don't obscure buttons */
+  .cta-section {
+    padding-bottom: 3.5rem !important;
+  }
+
+  .cta-content {
+    padding: 2rem 1.25rem 2.5rem 1.25rem !important;
+  }
+}
+
+/* ==========================================================================
+   BREAKPOINT: EXTRA SMALL & SMALL MOBILE (320px - 575.98px)
+   ========================================================================== */
+@media (max-width: 575.98px) {
+  .hero-section {
+    padding-top: 110px;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    margin-inline: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn-custom-primary,
+  .hero-actions .btn-custom-secondary {
+    width: 100%;
+  }
+
+  .hero-img {
+    height: 300px;
+  }
+
+  .hero-float-badge {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin: 1rem auto 0 auto;
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  [dir="rtl"] .hero-float-badge {
+    position: relative;
+    right: auto;
+    margin: 1rem auto 0 auto;
+  }
+
+  .journey-section,
+  .progress-section,
+  .services-section,
+  .cta-section {
+    padding: 55px 0;
+  }
+
+  .journey-banner-overlay {
+    padding: 1.5rem;
+  }
+
+  .journey-banner-content h3 {
+    font-size: 1.35rem;
+  }
+
+  .progress-img {
+    height: 320px;
+  }
+
+  .score-widget-card {
+    margin-top: 1.25rem;
+    margin-inline: 0;
+    padding: 1.25rem 1rem;
+  }
+
+  .score-value {
+    font-size: 2rem;
+  }
+
+  .progress-stat-pill {
+    padding: 0.75rem 0.4rem;
+  }
+
+  .progress-stat-pill .stat-number {
+    font-size: 1.15rem;
+  }
+
+  .progress-stat-pill .stat-desc {
+    font-size: 0.72rem;
+  }
+
+  .cta-content {
+    padding: 2.25rem 1.25rem 2.75rem 1.25rem !important;
+    text-align: center;
+  }
+
+  .cta-content p {
+    margin-inline: auto;
+  }
+
+  .cta-content .btn-custom-gold,
+  .cta-content .btn-custom-primary,
+  .cta-content .btn-custom-teal,
+  .cta-content a.btn-custom-primary {
+    width: 100%;
+    margin-bottom: 0.5rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .cta-box,
+  .cta-banner {
+    height: auto !important;
+    min-height: auto !important;
+  }
+
+  .cta-img-wrap {
+    min-height: 220px;
+    height: 220px;
+  }
+
+  /* Featured Story Card Mobile Fix */
+  .featured-story-content {
+    padding: 1.75rem 1.25rem 2.25rem 1.25rem !important;
+  }
+
+  .featured-story-content .btn-custom-primary {
+    width: 100% !important;
+    justify-content: center !important;
+    margin-top: 0.75rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* FICO Gauge Box Mobile Responsiveness */
+  .fico-gauge-box {
+    padding: 0.85rem 0.5rem !important;
+  }
+
+  .fico-flex-row {
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 0.2rem !important;
+  }
+
+  .fico-score-pill {
+    font-size: 0.78rem !important;
+    padding: 0.2rem 0.35rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .fico-flex-row .text-uppercase {
+    font-size: 0.65rem !important;
+  }
+
+  .fico-flex-row .extra-small {
+    font-size: 0.62rem !important;
+  }
+
+  /* Contact Form Mobile Symmetrical Alignment Fix */
+  .contact-form-card {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .contact-form-section .contact-form-card .row.g-0 {
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+  .contact-form-section .col-lg-7 {
+    padding: 1.75rem 1.25rem 3.5rem 1.25rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .contact-form-section .col-lg-7 form .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .contact-form-section .col-lg-7 form .row > [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .contact-form-section #btn-submit-contact {
+    margin-top: 0.5rem !important;
+    width: 100% !important;
+    height: 52px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .contact-form-section .contact-info-panel-dark {
+    padding: 2rem 1.25rem !important;
+    margin-top: 0.5rem !important;
+    border-radius: 0 0 20px 20px !important;
+  }
+
+  /* Hero Section Glass Card Mobile Separation */
+  .hero-section {
+    padding-bottom: 75px !important;
+  }
+
+  .hero-section-card-glass {
+    margin-top: 1.75rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .journey-section {
+    padding-top: 65px !important;
+  }
+
+  /* Pricing Hero Trust Bar Mobile Fix */
+  .pricing-hero-banner-wrap .position-absolute.bottom-0 {
+    position: relative !important;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg) !important;
+  }
+
+  .navbar-brand-logo {
+    font-size: 1.15rem;
+  }
+
+  .logo-icon-box {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Dashboard Chart Bar Responsiveness */
+  .chart-bar-wrap {
+    height: 160px !important;
+    gap: 0.2rem !important;
+    padding-top: 1.25rem !important;
+  }
+
+  .chart-bar-item {
+    min-width: 30px !important;
+  }
+
+  .chart-bar-item > span {
+    white-space: nowrap !important;
+    font-size: 0.65rem !important;
+    line-height: 1 !important;
+    text-align: center !important;
+    margin-top: 0.4rem !important;
+  }
+
+  .chart-bar-value {
+    font-size: 0.65rem !important;
+    top: -18px !important;
+  }
+
+  /* Dashboard tab card padding on small screens */
+  .dash-tab-pane .card.p-4 {
+    padding: 1rem !important;
+  }
+}
+
+/* Very Small Mobiles (320px - 374px) */
+@media (max-width: 374.98px) {
+  .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .badge-eyebrow {
+    font-size: 0.72rem;
+    padding: 0.35rem 0.75rem;
+  }
+
+  .progress-stat-pill .stat-number {
+    font-size: 1rem;
+  }
+
+  .chart-bar-item span {
+    font-size: 0.65rem !important;
+  }
+}
+
+/* Document Cards Badge Mobile Fix */
+@media (max-width: 575.98px) {
+  .dash-tab-pane .badge.flex-shrink-0.ms-auto {
+    margin-left: 0 !important;
+    margin-top: 0.25rem !important;
+  }
+
+  [dir="rtl"] .dash-tab-pane .badge.flex-shrink-0.ms-auto {
+    margin-right: 0 !important;
+  }
+}
+
+/* ==========================================================================
+   TABLE RESPONSIVENESS (INVOICES & DISPUTES)
+   ========================================================================== */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive table {
+  min-width: 320px;
+}
+
+/* ==========================================================================
+   BREAKPOINT: TABLET & MID PHONES (576px to 991.98px)
+   ========================================================================== */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .hero-section {
+    padding-top: 125px;
+    padding-bottom: 70px;
+  }
+
+  .hero-img {
+    height: 420px;
+  }
+
+  .hero-float-badge {
+    bottom: 20px;
+    left: 10px;
+  }
+
+  [dir="rtl"] .hero-float-badge {
+    left: auto;
+    right: 10px;
+  }
+
+  .progress-img {
+    height: 380px;
+  }
+
+  .score-widget-card {
+    margin-top: 1.25rem;
+    margin-inline: 0;
+  }
+
+  .cta-img-wrap {
+    min-height: 380px !important;
+    height: 380px !important;
+  }
+
+  .cta-img {
+    object-position: center 25% !important;
+  }
+
+  .service-card-img-wrap {
+    height: auto !important;
+    aspect-ratio: 16 / 9 !important;
+    max-height: 360px !important;
+  }
+
+  .service-card-img {
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+  }
+
+  /* Services 3-Image Collage Tablet View Fix */
+  .services-hero-collage .collage-center-box,
+  .services-hero-collage .collage-side-box {
+    height: 300px !important;
+  }
+}
+
+/* Bento Grid Mobile & Tablet Stacking Overrides */
+@media (max-width: 991.98px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .bento-tile-large,
+  .bento-tile-tall,
+  .bento-tile-medium,
+  .bento-tile-stat {
+    grid-column: span 1;
+  }
+
+  .editorial-hero-img-wrap {
+    height: 440px !important;
+    min-height: 440px !important;
+  }
+
+  .editorial-hero-img {
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center 30% !important;
+  }
+
+  .editorial-hero-overlay-box {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    margin: 1.25rem auto 0 auto;
+    max-width: 100%;
+  }
+
+  [dir="rtl"] .editorial-hero-overlay-box {
+    position: relative;
+    right: auto;
+  }
+}
+
+/* ==========================================================================
+   BREAKPOINT: DESKTOP & LARGE DESKTOP (992px+)
+   ========================================================================== */
+@media (min-width: 992px) {
+  .container {
+    max-width: 1240px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1240px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1240px;
+  }
+}

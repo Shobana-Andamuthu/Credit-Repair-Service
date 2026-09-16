@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Repair Service | Home 2</title>
+  <meta name="description" content="Editorial financial storytelling homepage. Understand, repair, and optimize your credit score with transparent FCRA disputes and expert financial coaching.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230D9488'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Custom Stylesheet System -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       ATTRACTIVE PAGE LOADER
+       ========================================================================== -->
+  <div id="page-loader" class="page-loader">
+    <div class="loader-content">
+      <div class="loader-spinner-wrap">
+        <div class="loader-ring loader-ring-1"></div>
+        <div class="loader-ring loader-ring-2"></div>
+        <div class="loader-logo-box">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="loader-text font-heading fw-bold">Veritas<span style="color: #2DD4BF;">Credit</span></div>
+      <div class="loader-subtext">Optimizing Bureau Profiles...</div>
+      <div class="loader-progress-bar">
+        <div class="loader-progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SHARED NAVBAR
+       ========================================================================== -->
+  <header class="header-navbar">
+    <div class="container">
+      <nav class="navbar navbar-expand-xl navbar-light p-0">
+        
+        <!-- Brand Logo -->
+        <a class="navbar-brand navbar-brand-logo" href="index.html" id="nav-brand-logo">
+          <div class="logo-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <span>Veritas<span style="color: var(--brand-teal);">Credit</span></span>
+        </a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" id="mobile-nav-toggler">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <!-- Navbar Menu & Controls -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <!-- Main Links (Home 2 set as Active) -->
+          <ul class="navbar-nav mx-auto align-items-lg-center">
+            
+            <!-- Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html" id="link-home1">Home 1</a></li>
+                <li><a class="dropdown-item active" href="home-2.html" id="link-home2">Home 2</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="services.html" id="link-services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html" id="link-pricing">Pricing Plans</a></li>
+            <li class="nav-item"><a class="nav-link" href="stories.html" id="link-stories">Success Stories</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html" id="link-contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard.html" id="link-dashboard">Dashboard</a></li>
+          </ul>
+
+          <!-- Controls & Login CTA -->
+          <div class="d-flex align-items-center gap-2 ms-lg-3 nav-controls-mobile mt-3 mt-lg-0">
+            <!-- Direction Switcher (LTR / RTL) -->
+            <button class="lang-switch-btn dir-toggle-btn" type="button" aria-label="Toggle Layout Direction" id="btn-rtl-toggle">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span class="dir-label">RTL</span>
+            </button>
+
+            <!-- Light/Dark Mode Switcher -->
+            <button class="btn-icon-toggle theme-toggle-btn" type="button" aria-label="Toggle Dark/Light Mode" id="btn-theme-toggle">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+            </button>
+
+            <!-- Login Button -->
+            <a href="login.html" class="btn-custom-primary text-decoration-none px-3 py-2 ms-1" id="btn-login">
+              <span>Client Login</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                <polyline points="10 17 15 12 10 7"></polyline>
+                <line x1="15" y1="12" x2="3" y2="12"></line>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SECTION 1 — EDITORIAL HERO (NEW ASYMMETRIC COMPOSITION)
+       ========================================================================== -->
+  <!-- ==========================================================================
+       SECTION 1 — EDITORIAL SPLIT HERO (NEW DISTINCT COMPOSITION)
+       ========================================================================== -->
+  <section class="hero-editorial-section" id="hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        
+        <!-- Left Editorial Text Content -->
+        <div class="col-lg-6">
+          <div class="badge-eyebrow mb-3">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 20h9"></path>
+              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+            </svg>
+            EDITORIAL FINANCIAL STORYTELLING
+          </div>
+
+          <h1 class="hero-editorial-display-title">
+            Rewriting Credit Profiles. <br>
+            <span class="text-gradient">Restoring Complete Financial Control.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            A bespoke, law-backed credit recovery experience designed for individuals seeking transparent bureau disputes, rapid score optimization, and long-term wealth confidence.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#story" class="btn-custom-primary" id="btn-hero-primary">
+              <span>Start Free Credit Audit</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <a href="#bento" class="btn-custom-secondary" id="btn-hero-secondary">
+              <span>Explore Services Mosaic</span>
+            </a>
+          </div>
+
+          <!-- Editorial Trust Highlights -->
+          <div class="row g-3 pt-3 border-top border-secondary-subtle">
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-2">
+                <div class="float-icon bg-teal-subtle text-teal">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div>
+                  <div class="fw-bold text-main font-heading small mb-0">FCRA Certified</div>
+                  <div class="text-subtle extra-small">Legal Bureau Disputes</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="d-flex align-items-center gap-2">
+                <div class="float-icon bg-gold-subtle text-gold">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                </div>
+                <div>
+                  <div class="fw-bold text-emerald font-heading small mb-0">+185 PTS</div>
+                  <div class="text-subtle extra-small">Avg. 90-Day Score Jump</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Composite Editorial Visual Showcase -->
+        <div class="col-lg-6">
+          <div class="hero-image-wrapper border-0 bg-transparent shadow-none position-relative">
+            <img src="assets/images/home2/hero-editorial.jpg" alt="Executive financial strategy consultation" class="hero-editorial-center-img rounded-4 shadow-lg" id="img-hero-h2" style="height: 480px; width: 100%; object-fit: cover;">
+            
+            <!-- Top Right Score Boost Float Badge -->
+            <div class="position-absolute top-0 end-0 m-3 p-3 bg-card border rounded-3 shadow-md d-flex align-items-center gap-3">
+              <div class="float-icon bg-emerald-subtle text-emerald">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline></svg>
+              </div>
+              <div>
+                <div class="fw-bold text-main font-heading small mb-0">Audited Results</div>
+                <div class="text-emerald small font-heading fw-bold">12,000+ Profiles Restored</div>
+              </div>
+            </div>
+
+            <!-- Bottom Left Tri-Bureau Float Badge -->
+            <div class="position-absolute bottom-0 start-0 m-3 p-3 bg-dark bg-opacity-85 text-white backdrop-blur border border-white border-opacity-15 rounded-3 shadow-md">
+              <div class="small fw-semibold mb-1">Tri-Bureau Dispute Shield</div>
+              <div class="extra-small text-white fw-medium">Equifax • Experian • TransUnion</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2 — THE CREDIT STORY (ASYMMETRIC STORYTELLING)
+       ========================================================================== -->
+  <section class="story-section" id="story">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header-block">
+        <div class="badge-eyebrow">ASYMMETRIC JOURNEY</div>
+        <h2>The Path From Uncertainty To Mastery</h2>
+        <p>Three distinct chapters in every client's credit restoration journey.</p>
+      </div>
+
+      <!-- 3 Asymmetric Story Cards -->
+      <div class="row g-4">
+        
+        <!-- Story Card 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="story-card-item">
+            <div class="story-img-wrap">
+              <img src="assets/images/home2/story-1.jpg" alt="Client discovering credit errors" class="story-img" id="img-story-1">
+            </div>
+            <div class="story-card-body">
+              <div class="story-stage-tag">STAGE 01 — DISCOVERY</div>
+              <h4 class="font-heading">Audit & Bureau Analysis</h4>
+              <p>Uncovering hidden inaccuracies, outdated collection records, and erroneous inquiries across Equifax, Experian, and TransUnion.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story Card 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="story-card-item">
+            <div class="story-img-wrap">
+              <img src="assets/images/home2/story-2.jpg" alt="FCRA legal dispute consultation" class="story-img" id="img-story-2">
+            </div>
+            <div class="story-card-body">
+              <div class="story-stage-tag">STAGE 02 — RESOLUTION</div>
+              <h4 class="font-heading">Legal FCRA Challenges</h4>
+              <p>Filing rigorous, law-backed dispute challenges demanding strict creditor verification or immediate item removal.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story Card 3 -->
+        <div class="col-lg-4 col-md-6 mx-auto">
+          <div class="story-card-item">
+            <div class="story-img-wrap">
+              <img src="assets/images/home2/story-3.jpg" alt="Client achieving homeownership goal" class="story-img" id="img-story-3">
+            </div>
+            <div class="story-card-body">
+              <div class="story-stage-tag">STAGE 03 — EMPOWERMENT</div>
+              <h4 class="font-heading">Prime Loan Qualification</h4>
+              <p>Enjoying restored credit scores, low interest rates, and seamless qualification for mortgage and business financing.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3 — WHAT WE HELP WITH (BENTO GRID MOSAIC)
+       ========================================================================== -->
+  <section class="bento-section" id="bento">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header-block">
+        <div class="badge-eyebrow">SERVICES MOSAIC</div>
+        <h2>What We Help With</h2>
+        <p>A Bento showcase of specialized credit resolution offerings designed for lasting impact.</p>
+      </div>
+
+      <!-- Bento Grid Layout -->
+      <div class="bento-grid">
+        
+        <!-- Tile 1: Large Featured (Dispute Support) -->
+        <div class="bento-tile bento-tile-large">
+          <div class="bento-tile-img-wrap">
+            <img src="assets/images/home2/bento-dispute.jpg" alt="Dispute analysis paperwork" class="bento-tile-img" id="img-bento-1">
+          </div>
+          <div class="bento-tile-body">
+            <div class="badge-eyebrow bg-teal-subtle text-teal border-0 w-auto mb-2">PRIMARY SERVICE</div>
+            <h3 class="font-heading fs-4 fw-bold">Tri-Bureau Dispute Support</h3>
+            <p>Direct legal challenges against unverifiable bankruptcies, charge-offs, late payments, and identity inaccuracies.</p>
+            <a href="#" class="service-card-link mt-auto" id="link-bento-1">
+              <span>Explore Disputes</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tile 2: Tall Feature (Credit Monitoring) -->
+        <div class="bento-tile bento-tile-tall">
+          <div class="bento-tile-img-wrap" style="height: 220px;">
+            <img src="assets/images/home2/bento-monitoring.jpg" alt="Mobile credit monitoring dashboard" class="bento-tile-img" id="img-bento-2">
+          </div>
+          <div class="bento-tile-body">
+            <div class="badge-eyebrow bg-teal-subtle text-teal border-0 w-auto mb-2">24/7 SHIELD</div>
+            <h3 class="font-heading fs-4 fw-bold">Live Credit Monitoring</h3>
+            <p>Real-time updates on score shifts, inquiry alerts, and dark web vulnerability scans.</p>
+            <a href="#" class="service-card-link mt-auto" id="link-bento-2">
+              <span>View Monitoring</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Tile 3: Stat & Action Planning Tile -->
+        <div class="bento-tile bento-tile-stat">
+          <div class="bento-tile-body justify-content-center text-center py-4">
+            <span class="text-uppercase tracking-wider small text-teal fw-bold">CUSTOMIZED ACTION PLANNING</span>
+            <div class="progress-number-hero my-2 text-white">780+</div>
+            <p class="text-white-50 small mb-3">Target score threshold engineered for clients within 6 months.</p>
+            <div class="d-flex justify-content-center gap-2">
+              <span class="badge bg-secondary text-dark">Utilization Optimization</span>
+              <span class="badge bg-secondary text-dark">Debt Payoff Plan</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tile 4: Medium Feature (Financial Coaching) -->
+        <div class="bento-tile bento-tile-medium">
+          <div class="bento-tile-img-wrap">
+            <img src="assets/images/home2/bento-coaching.jpg" alt="Financial advisor coaching call" class="bento-tile-img" id="img-bento-4">
+          </div>
+          <div class="bento-tile-body">
+            <h3 class="font-heading fs-4 fw-bold">Financial Coaching</h3>
+            <p>Personalized 1-on-1 strategy sessions focused on credit mix, trade-line expansion, and wealth building.</p>
+            <a href="#" class="service-card-link mt-auto" id="link-bento-4">
+              <span>Schedule Coaching</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4 — PROGRESS / SUCCESS
+       ========================================================================== -->
+  <section class="editorial-progress-section" id="progress">
+    <div class="container">
+      
+      <div class="editorial-progress-box">
+        <div class="row align-items-center g-5">
+          
+          <div class="col-lg-6">
+            <div class="badge-eyebrow">VERIFIED OUTCOMES</div>
+            <h2 class="font-heading fw-bold fs-2 mb-3">Empirical Evidence Of Score Growth</h2>
+            <p class="text-muted mb-4">
+              Every dispute strategy is legally engineered to maximize item deletions and restore your credit standing across all major credit repositories.
+            </p>
+
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="progress-stat-pill">
+                  <div class="stat-number text-teal">99.1%</div>
+                  <div class="stat-desc">FCRA Dispute Accuracy</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="progress-stat-pill">
+                  <div class="stat-number">$6.8M+</div>
+                  <div class="stat-desc">Inaccurate Debt Removed</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="progress-stat-pill">
+                  <div class="stat-number">30 Days</div>
+                  <div class="stat-desc">Avg. First Deletion</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="progress-stat-pill">
+                  <div class="stat-number">100%</div>
+                  <div class="stat-desc">Transparent Portal</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 text-center">
+            <div class="p-4 rounded-3 border bg-surface">
+              <div class="badge-eyebrow bg-teal-subtle text-teal border-0 mb-2">SCORE IMPACT RECORD</div>
+              <div class="progress-number-hero text-teal">+185 PTS</div>
+              <div class="fw-bold text-main font-heading mt-2">Average 90-Day Credit Jump</div>
+              <p class="text-subtle small mt-1 mb-0">Based on audited client results across Equifax, Experian, and TransUnion.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5 — FINAL CTA
+       ========================================================================== -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <div class="cta-box">
+        <div class="row align-items-center g-0">
+          
+          <div class="col-lg-7">
+            <div class="cta-content">
+              <div class="badge-eyebrow bg-teal-subtle text-teal border-0">START TODAY</div>
+              <h2>Ready to Begin Your Financial Transformation?</h2>
+              <p>Schedule your private, zero-obligation credit audit with a senior credit specialist today.</p>
+              <a href="#contact" class="btn-custom-gold" id="btn-cta-editorial">
+                <span>Schedule Free Audit</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="cta-img-wrap">
+              <img src="assets/images/home2/cta-editorial.jpg" alt="Happy family celebrating financial success" class="cta-img" id="img-cta-h2">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">
+            <a class="navbar-brand-logo mb-3" href="index.html">
+              <div class="logo-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+              <span>Veritas<span style="color: var(--brand-teal);">Credit</span></span>
+            </a>
+            <p>Empowering consumers with legal credit repair, transparent bureau disputes, and actionable financial wellness coaching.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Pricing Plans</a></li>
+            <li><a href="#">Success Stories</a></li>
+            <li><a href="#">Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Legal & Compliance</h4>
+          <ul class="footer-links">
+            <li><a href="#">FCRA Disclosures</a></li>
+            <li><a href="#">CROA Compliance</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Client Support</h4>
+          <p class="small text-muted mb-2">Speak directly with a credit specialist:</p>
+          <div class="fw-bold text-main fs-5 mb-1">+1 (800) 555-0199</div>
+          <div class="small text-subtle">Mon – Fri: 8am – 7pm EST</div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom text-center">
+        <p class="mb-0">© 2026 VeritasCredit Repair Service. All rights reserved. Built for Phase 2 demonstration.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Back to top" id="btn-back-to-top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Main Custom Application JS -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact VeritasCredit — Speak with certified credit repair specialists, schedule a confidential consultation, or dispute bureau errors.">
+  <title>VeritasCredit | Contact Our Credit Specialists</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230D9488'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+
+  <!-- Google Fonts (Outfit & Inter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Custom Stylesheet System -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       ATTRACTIVE PAGE LOADER
+       ========================================================================== -->
+  <div id="page-loader" class="page-loader">
+    <div class="loader-content">
+      <div class="loader-spinner-wrap">
+        <div class="loader-ring loader-ring-1"></div>
+        <div class="loader-ring loader-ring-2"></div>
+        <div class="loader-logo-box">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="loader-text font-heading fw-bold">Veritas<span style="color: #2DD4BF;">Credit</span></div>
+      <div class="loader-subtext">Connecting Specialist Portal...</div>
+      <div class="loader-progress-bar">
+        <div class="loader-progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SHARED NAVBAR
+       ========================================================================== -->
+  <header class="header-navbar">
+    <div class="container">
+      <nav class="navbar navbar-expand-xl navbar-light p-0">
+        
+        <!-- Brand Logo -->
+        <a class="navbar-brand navbar-brand-logo" href="index.html" id="nav-brand-logo">
+          <div class="logo-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <span>Veritas<span style="color: var(--brand-teal);">Credit</span></span>
+        </a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" id="mobile-nav-toggler">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <!-- Navbar Menu & Controls -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <!-- Main Links -->
+          <ul class="navbar-nav mx-auto align-items-lg-center">
+            
+            <!-- Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html" id="link-home1">Home 1</a></li>
+                <li><a class="dropdown-item" href="home-2.html" id="link-home2">Home 2</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="services.html" id="link-services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html" id="link-pricing">Pricing Plans</a></li>
+            <li class="nav-item"><a class="nav-link" href="stories.html" id="link-stories">Success Stories</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html" id="link-contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard.html" id="link-dashboard">Dashboard</a></li>
+          </ul>
+
+          <!-- Controls & Login CTA -->
+          <div class="d-flex align-items-center gap-2 ms-lg-3 nav-controls-mobile mt-3 mt-lg-0">
+            <!-- Direction Switcher (LTR / RTL) -->
+            <button class="lang-switch-btn dir-toggle-btn" type="button" aria-label="Toggle Layout Direction" id="btn-rtl-toggle">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span class="dir-label">RTL</span>
+            </button>
+
+            <!-- Light/Dark Mode Switcher -->
+            <button class="btn-icon-toggle theme-toggle-btn" type="button" aria-label="Toggle Dark/Light Mode" id="btn-theme-toggle">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+            </button>
+
+            <!-- Login Button -->
+            <a href="login.html" class="btn-custom-primary text-decoration-none px-3 py-2 ms-1" id="btn-login">
+              <span>Client Login</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                <polyline points="10 17 15 12 10 7"></polyline>
+                <line x1="15" y1="12" x2="3" y2="12"></line>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- ==========================================================================
+       SECTION 1 — HERO SECTION (CENTERED DARK SPOTLIGHT)
+       ========================================================================== -->
+  <section class="hero-contact-section" id="hero">
+    <div class="container">
+
+      <div class="hero-contact-centered text-center">
+
+        <!-- Pill Badge -->
+        <div class="hero-contact-badge mb-4">
+          GET IN TOUCH
+        </div>
+
+        <!-- Main Heading -->
+        <h1 class="hero-contact-heading mb-4">
+          We'd love to hear from you.
+        </h1>
+
+        <!-- Description -->
+        <p class="hero-contact-desc mb-5">
+          Questions about bureau disputes, credit score restoration, or pricing plans?<br class="d-none d-md-block">
+          We usually reply within a few hours.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-contact-actions">
+          <a href="#contact-form" class="btn-custom-primary" id="btn-hero-contact-primary">
+            <span>Send Us a Message</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </a>
+          <a href="tel:18005550199" class="btn-custom-secondary" id="btn-hero-call">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>Call +1 (800) 555-0199</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 2 — CONTACT INFORMATION CARDS (3 EQUAL COLUMNS ON DESKTOP)
+       ========================================================================== -->
+  <section class="contact-options-section py-5" id="contact-options">
+    <div class="container">
+      
+      <div class="section-header-block text-center mb-5">
+        <div class="badge-eyebrow mx-auto">MULTIPLE WAYS TO REACH US</div>
+        <h2>Choose Your Preferred Contact Channel</h2>
+        <p>Connect with our expert team via phone, email, or a 1-on-1 private consultation.</p>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- Card 1: Toll-Free Phone -->
+        <div class="col-lg-4 col-md-6">
+          <div class="contact-option-card text-start p-4 rounded-4 bg-card border border-color shadow-sm h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-4">
+                <div class="option-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <span class="contact-card-badge teal">TOLL-FREE 24/7</span>
+              </div>
+              <h3 class="font-heading fs-4 fw-bold mb-2">Call Toll-Free</h3>
+              <div class="option-highlight text-teal fw-bold fs-5 mb-2">+1 (800) 555-0199</div>
+              <p class="small text-muted mb-3">Speak live with a certified FCRA credit specialist during business hours.</p>
+              <div class="extra-small text-subtle mb-4">Mon – Fri: 8:00am – 7:00pm EST</div>
+            </div>
+            <a href="tel:18005550199" class="contact-card-btn teal" id="btn-card-call">
+              Call Now &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Email Support -->
+        <div class="col-lg-4 col-md-6">
+          <div class="contact-option-card text-start p-4 rounded-4 bg-card border border-color shadow-sm h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-4">
+                <div class="option-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <span class="contact-card-badge teal">RAPID DISPATCH</span>
+              </div>
+              <h3 class="font-heading fs-4 fw-bold mb-2">Email Support</h3>
+              <div class="option-highlight text-teal fw-bold fs-5 mb-2">support@veritascredit.com</div>
+              <p class="small text-muted mb-3">Send credit dispute documents or case inquiries anytime 24/7.</p>
+              <div class="extra-small text-subtle mb-4">24/7 Monitoring &amp; Rapid Ticket Dispatch</div>
+            </div>
+            <a href="mailto:support@veritascredit.com" class="contact-card-btn teal" id="btn-card-email">
+              Send Direct Email &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Confidential Session -->
+        <div class="col-lg-4 col-md-12">
+          <div class="contact-option-card text-start p-4 rounded-4 bg-card border border-color shadow-sm h-100 d-flex flex-column justify-content-between">
+            <div>
+              <div class="d-flex align-items-center justify-content-between mb-4">
+                <div class="option-icon-box">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                </div>
+                <span class="contact-card-badge teal">FREE AUDIT</span>
+              </div>
+              <h3 class="font-heading fs-4 fw-bold mb-2">15-Minute Session</h3>
+              <div class="option-highlight text-teal fw-bold fs-5 mb-2">Confidential Consultation</div>
+              <p class="small text-muted mb-3">Book a 1-on-1 private virtual or phone credit report review session.</p>
+              <div class="extra-small text-subtle mb-4">Schedule Virtual or Phone Meeting</div>
+            </div>
+            <a href="#contact-form" class="contact-card-btn teal" id="btn-card-book">
+              Book Slot &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3 — WHAT HAPPENS WHEN YOU REACH OUT? (2-COLUMN RESPONSIVE SPLIT)
+       ========================================================================== -->
+  <section class="trust-guarantee-section py-5" id="trust-guarantee">
+    <div class="container">
+      <div class="row align-items-center g-4 g-lg-5">
+        
+        <!-- Left Side: Title & Paragraph -->
+        <div class="col-lg-5 text-start">
+          <div class="badge-eyebrow bg-teal-subtle text-teal border-0 mb-3">TRUST & GUARANTEE</div>
+          <h2 class="font-heading fs-2 fw-bold mb-3">What Happens When You Reach Out?</h2>
+          <p class="text-muted mb-4">
+            Our FCRA dispute team reviews every inquiry with complete confidentiality and rapid action. We guide you step-by-step through bureau error challenges.
+          </p>
+          <div class="p-3 bg-card border border-color rounded-3 d-inline-flex align-items-center gap-3 shadow-xs">
+            <span class="pulse-dot"></span>
+            <span class="small fw-semibold">Certified FCRA Specialists Standing By</span>
+          </div>
+        </div>
+
+        <!-- Right Side: Clean Vertical Process Cards -->
+        <div class="col-lg-7">
+          <div class="d-flex flex-column gap-3">
+            
+            <div class="p-3 p-md-4 rounded-4 bg-card border border-color shadow-sm contact-item-row">
+              <span class="check-pill item-icon">✓</span>
+              <div class="item-content">
+                <h4 class="font-heading fs-6 fw-bold mb-1">15-Minute Response Window</h4>
+                <p class="small text-muted mb-0">Immediate ticket assignment and rapid specialist evaluation during business hours.</p>
+              </div>
+            </div>
+
+            <div class="p-3 p-md-4 rounded-4 bg-card border border-color shadow-sm contact-item-row">
+              <span class="check-pill item-icon">✓</span>
+              <div class="item-content">
+                <h4 class="font-heading fs-6 fw-bold mb-1">100% FCRA Confidentiality</h4>
+                <p class="small text-muted mb-0">Bank-level 256-bit SSL data encryption protecting your personal financial report.</p>
+              </div>
+            </div>
+
+            <div class="p-3 p-md-4 rounded-4 bg-card border border-color shadow-sm contact-item-row">
+              <span class="check-pill item-icon">✓</span>
+              <div class="item-content">
+                <h4 class="font-heading fs-6 fw-bold mb-1">Custom Audit Roadmap</h4>
+                <p class="small text-muted mb-0">Receive a tailored tri-bureau dispute strategy before making any financial commitment.</p>
+              </div>
+            </div>
+
+            <div class="p-3 p-md-4 rounded-4 bg-card border border-color shadow-sm contact-item-row">
+              <span class="check-pill item-icon">✓</span>
+              <div class="item-content">
+                <h4 class="font-heading fs-6 fw-bold mb-1">Direct Specialist Hotline</h4>
+                <p class="small text-muted mb-0">Direct phone access to your assigned compliance manager without automated phone loops.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4 — MAIN CONTACT FORM (2-COLUMN SPLIT: FORM ON LEFT, INFO PANEL ON RIGHT)
+       ========================================================================== -->
+  <section class="contact-form-section" id="contact-form">
+    <div class="container">
+      
+      <div class="contact-form-card overflow-hidden border border-color rounded-4 shadow-lg bg-card">
+        <div class="row g-0">
+          
+          <!-- Left Column: Contact Form -->
+          <div class="col-lg-7 p-4 p-lg-5 text-start">
+            
+            <div class="mb-4">
+              <div class="badge-eyebrow bg-teal-subtle text-teal border-0 mb-2">CONFIDENTIAL INQUIRY</div>
+              <h2 class="font-heading fs-3 fw-bold mb-2">Send Us a Direct Message</h2>
+              <p class="text-muted small mb-0">Fill out the secure fields below. All information is protected under federal FCRA privacy standards.</p>
+            </div>
+
+            <!-- Success Alert (hidden by default) -->
+            <div id="form-success-alert" class="alert alert-success d-none mb-4" role="alert">
+              <div class="d-flex align-items-center gap-2">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <div>
+                  <strong class="d-block">Message Delivered Successfully!</strong>
+                  <span class="small">Thank you. A senior specialist will review your inquiry and reach out shortly.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Main Form -->
+            <form id="contact-main-form" class="needs-validation w-100" novalidate autocomplete="off">
+              <div class="row g-4">
+                
+                <div class="col-md-6 text-start">
+                  <label for="form-name" class="form-label fw-semibold small mb-2">Full Name <span class="text-danger">*</span></label>
+                  <div class="input-group-custom w-100">
+                    <span class="input-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </span>
+                    <input type="text" class="form-control w-100" id="form-name" placeholder="John Miller" required>
+                  </div>
+                  <div class="invalid-feedback">Please provide your full name.</div>
+                </div>
+
+                <div class="col-md-6 text-start">
+                  <label for="form-email" class="form-label fw-semibold small mb-2">Email Address <span class="text-danger">*</span></label>
+                  <div class="input-group-custom w-100">
+                    <span class="input-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </span>
+                    <input type="email" class="form-control w-100" id="form-email" placeholder="john@example.com" required>
+                  </div>
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+
+                <div class="col-md-6 text-start">
+                  <label for="form-phone" class="form-label fw-semibold small mb-2">Phone Number <span class="text-danger">*</span></label>
+                  <div class="input-group-custom w-100">
+                    <span class="input-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </span>
+                    <input type="tel" class="form-control w-100" id="form-phone" placeholder="(555) 000-0000" required>
+                  </div>
+                  <div class="invalid-feedback">Please enter a valid phone number.</div>
+                </div>
+
+                <div class="col-md-6 text-start">
+                  <label for="form-service" class="form-label fw-semibold small mb-2">Primary Goal / Service</label>
+                  <div class="input-group-custom w-100">
+                    <span class="input-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </span>
+                    <select class="form-select w-100" id="form-service">
+                      <option value="bureau-dispute">FCRA Tri-Bureau Dispute</option>
+                      <option value="home-mortgage">Mortgage / Auto Approval</option>
+                      <option value="debt-validation">Collection & Debt Audit</option>
+                      <option value="credit-monitoring">Real-Time Credit Monitoring</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-12 text-start">
+                  <label for="form-message" class="form-label fw-semibold small mb-2">Your Message / Case Notes <span class="text-danger">*</span></label>
+                  <div class="input-group-custom has-textarea-icon w-100">
+                    <span class="input-icon">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                    </span>
+                    <textarea class="form-control w-100" id="form-message" rows="4" placeholder="Briefly describe your credit goals or items you wish to challenge..." required></textarea>
+                  </div>
+                  <div class="invalid-feedback">Please enter your message details.</div>
+                </div>
+
+                <div class="col-12 mt-4 text-start">
+                  <button type="submit" class="btn-custom-primary w-100 py-3 font-heading fw-bold fs-6 justify-content-center" id="btn-submit-contact">
+                    <span>Submit Confidential Inquiry</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="22" y1="2" x2="11" y2="13"></line>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                  </button>
+                  <div class="extra-small text-muted text-center mt-2.5 mb-3">No obligation. Your data is 100% confidential under Privacy Laws.</div>
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+
+          <!-- Right Column: Support Info Panel -->
+          <div class="col-lg-5 contact-info-panel-dark p-4 p-lg-5 d-flex flex-column justify-content-between text-start">
+            <div>
+              <div class="badge-eyebrow bg-teal-subtle text-teal border-0 mb-3">DIRECT SPECIALIST PORTAL</div>
+              <h3 class="font-heading fs-3 fw-bold text-white mb-3">Support Details</h3>
+              <p class="small text-white-50 mb-4">Our FCRA dispute specialists are ready to evaluate your credit report error disputes.</p>
+
+              <div class="contact-item-row mb-4">
+                <div class="sidebar-info-icon item-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                </div>
+                <div class="item-content">
+                  <div class="fw-bold font-heading text-white">Bank-Grade SSL Encryption</div>
+                  <div class="extra-small text-white-50">Protected under FCRA & Privacy Laws.</div>
+                </div>
+              </div>
+
+              <div class="contact-item-row mb-4">
+                <div class="sidebar-info-icon item-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                </div>
+                <div class="item-content">
+                  <div class="fw-bold font-heading text-white">15-Min Response Guarantee</div>
+                  <div class="extra-small text-white-50">Senior FCRA specialist assigned immediately.</div>
+                </div>
+              </div>
+
+              <div class="contact-item-row mb-4">
+                <div class="sidebar-info-icon item-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                </div>
+                <div class="item-content">
+                  <div class="fw-bold font-heading text-white">FCRA Dispute Protection</div>
+                  <div class="extra-small text-white-50">Tri-bureau audit & deletion strategy.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-top border-white border-opacity-15">
+              <div class="extra-small text-white-50">Toll-Free Hotline</div>
+              <div class="fw-bold font-heading text-teal fs-5">+1 (800) 555-0199</div>
+              <div class="extra-small text-white-50 mt-1">Mon – Fri: 8:00 AM – 7:00 PM EST</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5 — HEADQUARTERS & LOCATION (BALANCED 2-COLUMN BENTO CARD)
+       ========================================================================== -->
+  <section class="office-location-section py-5" id="office-location">
+    <div class="container">
+      
+      <div class="section-header-block text-center mb-5">
+        <div class="badge-eyebrow mx-auto">HEADQUARTERS & LOCATION</div>
+        <h2>Visit Our Corporate Office</h2>
+        <p>Located in the heart of the financial district for walk-in client appointments.</p>
+      </div>
+
+      <div class="office-card rounded-4 border border-color bg-card shadow-lg overflow-hidden">
+        <div class="row align-items-stretch g-0">
+          
+          <!-- Left Office Information Column -->
+          <div class="col-lg-6 text-start">
+            <div class="office-content p-4 p-lg-5 h-100 d-flex flex-column justify-content-center">
+              <div class="badge-eyebrow bg-teal-subtle text-teal border-0 mb-3">MAIN HEADQUARTERS</div>
+              <h3 class="font-heading fs-3 fw-bold mb-4">VeritasCredit Tower</h3>
+              
+              <div class="contact-item-row mb-4">
+                <div class="office-info-icon item-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div class="item-content">
+                  <div class="fw-bold font-heading mb-1">Corporate Address</div>
+                  <div class="small text-muted">750 Corporate Parkway, Suite 400<br>Financial Plaza, New York, NY 10005</div>
+                </div>
+              </div>
+
+              <div class="contact-item-row mb-4">
+                <div class="office-info-icon item-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 16 14"></polyline></svg>
+                </div>
+                <div class="item-content">
+                  <div class="fw-bold font-heading mb-1">Office Hours</div>
+                  <div class="small text-muted">Monday – Friday: 8:00 AM – 7:00 PM EST<br>Saturday: 9:00 AM – 2:00 PM EST (Appt Only)</div>
+                </div>
+              </div>
+
+              <div class="contact-item-row">
+                <div class="office-info-icon item-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div class="item-content">
+                  <div class="fw-bold font-heading mb-1">Direct Appointments</div>
+                  <div class="small text-muted">Walk-ins welcome or call ahead to reserve a private conference room.</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right Office Photo & Live Location Map Overlay Column -->
+          <div class="col-lg-6">
+            <div class="office-img-wrap position-relative h-100 min-vh-40" style="min-height: 380px;">
+              <img src="assets/images/contact/contact-office.jpg" alt="VeritasCredit corporate headquarters building" class="office-img w-100 h-100 object-fit-cover" id="img-contact-office">
+              
+              <!-- High Contrast Map Live Location Frame Overlay -->
+              <div class="map-placeholder-box position-absolute bottom-0 start-0 end-0 m-3 backdrop-blur p-3 rounded-3 border border-white border-opacity-15 shadow-md text-start">
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                  <div class="d-flex align-items-center gap-2">
+                    <span class="pulse-dot"></span>
+                    <div>
+                      <div class="small fw-bold font-heading text-teal">Google Maps Live Location</div>
+                      <div class="extra-small text-white-50">750 Corporate Pkwy, Financial Plaza, NY</div>
+                    </div>
+                  </div>
+                  <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-sm btn-outline-teal px-3 py-1">
+                    <span>Open Map &rarr;</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5 — FINAL SUPPORT CTA
+       ========================================================================== -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <div class="cta-box">
+        <div class="row align-items-center g-0">
+          
+          <div class="col-lg-7">
+            <div class="cta-content">
+              <div class="badge-eyebrow bg-teal-subtle text-teal border-0">TAKE THE FIRST STEP</div>
+              <h2>Ready to Reclaim Your Financial Future?</h2>
+              <p>Schedule your complimentary credit evaluation and discover how quickly inaccurate items can be disputed.</p>
+              <a href="#contact-form" class="btn-custom-primary" id="btn-contact-cta">
+                <span>Book Free Audit Call</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="cta-img-wrap">
+              <img src="assets/images/contact/contact-cta.jpg" alt="Client celebrating credit approval milestone" class="cta-img" id="img-contact-cta">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">
+            <a class="navbar-brand-logo mb-3" href="index.html">
+              <div class="logo-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+              <span>Veritas<span style="color: var(--brand-teal);">Credit</span></span>
+            </a>
+            <p>Empowering consumers with legal credit repair, transparent bureau disputes, and actionable financial wellness coaching.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing Plans</a></li>
+            <li><a href="stories.html">Success Stories</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Legal & Compliance</h4>
+          <ul class="footer-links">
+            <li><a href="#">FCRA Disclosures</a></li>
+            <li><a href="#">CROA Compliance</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Client Support</h4>
+          <p class="small text-muted mb-2">Speak directly with a credit specialist:</p>
+          <div class="fw-bold text-main fs-5 mb-1">+1 (800) 555-0199</div>
+          <div class="small text-subtle">Mon – Fri: 8am – 7pm EST</div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom text-center">
+        <p class="mb-0">© 2026 VeritasCredit Repair Service. All rights reserved. Built for Phase 6 demonstration.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Back to top" id="btn-back-to-top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Main Custom Application JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Contact Form Validation JS Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('contact-main-form');
+      const successAlert = document.getElementById('form-success-alert');
+
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          if (!form.checkValidity()) {
+            e.stopPropagation();
+            form.classList.add('was-validated');
+          } else {
+            form.classList.remove('was-validated');
+            successAlert.classList.remove('d-none');
+            form.reset();
+            setTimeout(() => {
+              successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
+          }
+        }, false);
+      }
+    });
+  </script>
+
+</body>
+</html>

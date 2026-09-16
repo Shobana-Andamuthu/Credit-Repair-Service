@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VeritasCredit Client Dashboard — Track credit score recovery, bureau dispute progress, FCRA action plans, document vault, and subscription payments.">
+  <title>VeritasCredit | Client Dashboard</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230D9488'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+
+  <!-- Google Fonts (Outfit & Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Custom Stylesheet System -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- Early Theme & Direction Initialization -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('credit_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      document.documentElement.setAttribute('data-bs-theme', savedTheme);
+      const savedDir = localStorage.getItem('credit_dir') || 'ltr';
+      document.documentElement.setAttribute('dir', savedDir);
+    })();
+  </script>
+</head>
+<body class="dashboard-body">
+
+  <!-- ==========================================================================
+       1. DASHBOARD TOP HEADER NAVBAR
+       ========================================================================== -->
+  <header class="dashboard-header">
+    <div class="dashboard-header-inner">
+      
+      <!-- Brand Logo -->
+      <a class="navbar-brand navbar-brand-logo" href="index.html" id="dash-logo">
+        <div class="logo-icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <span>Veritas<span style="color: var(--brand-teal);">Credit</span></span>
+      </a>
+
+      <!-- Controls & Header Actions -->
+      <div class="d-flex align-items-center gap-2">
+        <!-- Light/Dark Theme Switcher -->
+        <button class="btn-icon-toggle theme-toggle-btn" type="button" aria-label="Toggle Dark/Light Mode" id="btn-theme-toggle">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <!-- Layout Direction (LTR / RTL) Switcher -->
+        <button class="lang-switch-btn dir-toggle-btn" type="button" aria-label="Toggle Layout Direction" id="btn-rtl-toggle">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span class="dir-label">RTL</span>
+        </button>
+
+
+
+        <!-- Logout CTA -->
+        <a href="index.html" class="btn-logout" id="btn-logout">
+          <span>Log Out</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       2. MOBILE SUB-NAV PILL BAR (Horizontal Scrollable Tabs)
+       ========================================================================== -->
+  <div class="dashboard-mobile-nav" id="mobile-subnav">
+    <a href="javascript:void(0)" onclick="switchDashTab('tab-overview')" data-tab="tab-overview" class="mobile-nav-pill active" id="mpill-overview">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+      <span>Overview</span>
+    </a>
+    <a href="javascript:void(0)" onclick="switchDashTab('tab-disputes')" data-tab="tab-disputes" class="mobile-nav-pill" id="mpill-disputes">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+      <span>Disputes</span>
+    </a>
+    <a href="javascript:void(0)" onclick="switchDashTab('tab-action')" data-tab="tab-action" class="mobile-nav-pill" id="mpill-action">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+      <span>Action Plan</span>
+    </a>
+    <a href="javascript:void(0)" onclick="switchDashTab('tab-vault')" data-tab="tab-vault" class="mobile-nav-pill" id="mpill-vault">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+      <span>Vault</span>
+    </a>
+    <a href="javascript:void(0)" onclick="switchDashTab('tab-billing')" data-tab="tab-billing" class="mobile-nav-pill" id="mpill-billing">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+      <span>Billing</span>
+    </a>
+  </div>
+
+  <!-- ==========================================================================
+       3. DESKTOP SIDEBAR
+       ========================================================================== -->
+  <aside class="dashboard-sidebar" id="desktop-sidebar">
+    <div>
+      <ul class="sidebar-menu">
+        <li class="sidebar-item">
+          <a href="javascript:void(0)" onclick="switchDashTab('tab-overview')" data-tab="tab-overview" class="sidebar-link active" id="side-overview">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <span>Overview</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="javascript:void(0)" onclick="switchDashTab('tab-disputes')" data-tab="tab-disputes" class="sidebar-link" id="side-disputes">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            <span>Bureau Disputes</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="javascript:void(0)" onclick="switchDashTab('tab-action')" data-tab="tab-action" class="sidebar-link" id="side-action">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <span>Action Plan</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="javascript:void(0)" onclick="switchDashTab('tab-vault')" data-tab="tab-vault" class="sidebar-link" id="side-vault">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+            <span>Document Vault</span>
+          </a>
+        </li>
+        <li class="sidebar-item">
+          <a href="javascript:void(0)" onclick="switchDashTab('tab-billing')" data-tab="tab-billing" class="sidebar-link" id="side-billing">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            <span>Subscription &amp; Billing</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Sidebar Footer Info -->
+    <div class="p-3 border-top border-white border-opacity-10 text-center">
+      <div class="extra-small text-white-50 mb-1">FCRA COMPLIANT PORTAL</div>
+      <div class="fw-semibold small text-teal">256-Bit SSL Encrypted</div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       4. MAIN DASHBOARD CONTENT AREA (SINGLE-PAGE TAB PANES)
+       ========================================================================== -->
+  <main class="dashboard-main" id="main-content">
+
+    <!-- Client Header Welcome Banner -->
+    <div class="client-welcome-banner">
+      <div class="d-flex align-items-center gap-3">
+        <div class="client-avatar-box">JB</div>
+        <div>
+          <div class="extra-small text-muted text-uppercase fw-bold letter-spacing-1 mb-1">WELCOME BACK</div>
+          <h1 class="font-heading fs-3 fw-bold mb-0">Jordan Blake</h1>
+        </div>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <span class="badge bg-teal-subtle text-teal p-2 rounded-3 font-heading fw-bold fs-6">
+          <span class="pulse-dot me-2"></span>Score Health: 742 Good (+68 Pts)
+        </span>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         TAB 1: OVERVIEW TAB PANE
+         ====================================================================== -->
+    <div class="dash-tab-pane" id="tab-overview">
+      
+      <!-- Summary Stat Cards -->
+      <div class="row g-3 mb-4">
+        
+        <div class="col-xl-3 col-md-6" style="cursor: pointer;" onclick="switchDashTab('tab-overview')">
+          <div class="dash-stat-card">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="extra-small text-muted text-uppercase fw-bold">CURRENT CREDIT SCORE</span>
+              <span class="badge bg-teal-subtle text-teal small fw-bold">+68 PTS</span>
+            </div>
+            <div class="dash-stat-number">742</div>
+            <div class="extra-small text-muted mt-2">Tri-bureau average score updated 2 days ago.</div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6" style="cursor: pointer;" onclick="switchDashTab('tab-disputes')">
+          <div class="dash-stat-card">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="extra-small text-muted text-uppercase fw-bold">ACTIVE DISPUTES</span>
+              <span class="badge bg-primary-subtle text-teal small fw-bold">14 PENDING</span>
+            </div>
+            <div class="dash-stat-number">14 Items</div>
+            <div class="extra-small text-muted mt-2">Equifax (5), Experian (4), TransUnion (5).</div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6" style="cursor: pointer;" onclick="switchDashTab('tab-disputes')">
+          <div class="dash-stat-card">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="extra-small text-muted text-uppercase fw-bold">ITEMS REMOVED</span>
+              <span class="badge bg-success-subtle text-success small fw-bold">28 DELETIONS</span>
+            </div>
+            <div class="dash-stat-number">28 Deleted</div>
+            <div class="extra-small text-muted mt-2">Late payments &amp; collections successfully expunged.</div>
+          </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6" style="cursor: pointer;" onclick="switchDashTab('tab-action')">
+          <div class="dash-stat-card">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="extra-small text-muted text-uppercase fw-bold">TARGET GOAL</span>
+              <span class="badge bg-teal-subtle text-teal small fw-bold">38 PTS LEFT</span>
+            </div>
+            <div class="dash-stat-number">780 Excellent</div>
+            <div class="extra-small text-muted mt-2">On track for prime mortgage rate qualification.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Credit Score Growth Trend Chart -->
+      <div class="card p-4 border-color bg-card rounded-4 shadow-sm mb-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+          <div>
+            <h3 class="font-heading fs-5 fw-bold mb-1">Credit Score Growth Trend</h3>
+            <p class="small text-muted mb-0">6-Month historical recovery trajectory across all 3 bureaus.</p>
+          </div>
+          <span class="extra-small text-muted border border-color rounded-2 px-2 py-1">Last 6 Months</span>
+        </div>
+
+        <!-- Custom Interactive Score Bar Visual -->
+        <div class="chart-bar-wrap">
+          <div class="chart-bar-item">
+            <div class="chart-bar-fill" style="height: 55%;">
+              <span class="chart-bar-value">674</span>
+            </div>
+            <span class="extra-small text-muted text-nowrap mt-2">Month 1</span>
+          </div>
+          <div class="chart-bar-item">
+            <div class="chart-bar-fill" style="height: 65%;">
+              <span class="chart-bar-value">692</span>
+            </div>
+            <span class="extra-small text-muted text-nowrap mt-2">Month 2</span>
+          </div>
+          <div class="chart-bar-item">
+            <div class="chart-bar-fill" style="height: 72%;">
+              <span class="chart-bar-value">708</span>
+            </div>
+            <span class="extra-small text-muted text-nowrap mt-2">Month 3</span>
+          </div>
+          <div class="chart-bar-item">
+            <div class="chart-bar-fill" style="height: 80%;">
+              <span class="chart-bar-value">722</span>
+            </div>
+            <span class="extra-small text-muted text-nowrap mt-2">Month 4</span>
+          </div>
+          <div class="chart-bar-item">
+            <div class="chart-bar-fill" style="height: 88%;">
+              <span class="chart-bar-value">734</span>
+            </div>
+            <span class="extra-small text-muted text-nowrap mt-2">Month 5</span>
+          </div>
+          <div class="chart-bar-item">
+            <div class="chart-bar-fill" style="height: 96%; background: linear-gradient(180deg, var(--brand-teal) 0%, #10B981 100%);">
+              <span class="chart-bar-value fw-bold text-teal">742</span>
+            </div>
+            <span class="extra-small fw-bold text-teal text-nowrap mt-2">Current</span>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mt-3 pt-2">
+          <div class="d-flex align-items-center flex-wrap gap-2 gap-sm-3">
+            <span class="extra-small text-muted"><span class="d-inline-block rounded-circle bg-teal me-1" style="width: 8px; height: 8px;"></span> Equifax: 742</span>
+            <span class="extra-small text-muted"><span class="d-inline-block rounded-circle me-1" style="width: 8px; height: 8px; background: #3B82F6;"></span> Experian: 738</span>
+            <span class="extra-small text-muted"><span class="d-inline-block rounded-circle me-1" style="width: 8px; height: 8px; background: #8B5CF6;"></span> TransUnion: 746</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ======================================================================
+         TAB 2: BUREAU DISPUTES TAB PANE
+         ====================================================================== -->
+    <div class="dash-tab-pane d-none" id="tab-disputes">
+      
+      <div class="card p-4 border-color bg-card rounded-4 shadow-sm mb-4">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
+          <div>
+            <h2 class="font-heading fs-4 fw-bold mb-1">Bureau Dispute Management</h2>
+            <p class="small text-muted mb-0">Active FCRA legal challenge status across Equifax, Experian, and TransUnion.</p>
+          </div>
+          <span class="badge bg-teal-subtle text-teal font-heading fw-bold fs-6">28 Deletions Confirmed</span>
+        </div>
+
+        <!-- Bureau Progress Cards Grid -->
+        <div class="row g-4 mb-4">
+          
+          <div class="col-md-4">
+            <div class="bureau-card mb-0">
+              <div class="d-flex align-items-center justify-content-between mb-1">
+                <span class="fw-bold font-heading fs-5">Equifax</span>
+                <span class="extra-small text-teal fw-bold">85% RESOLVED</span>
+              </div>
+              <div class="extra-small text-muted mb-2">12 Deletions • 2 Pending Review</div>
+              <div class="bureau-progress-bar">
+                <div class="bureau-progress-fill" style="width: 85%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="bureau-card mb-0">
+              <div class="d-flex align-items-center justify-content-between mb-1">
+                <span class="fw-bold font-heading fs-5">Experian</span>
+                <span class="extra-small text-teal fw-bold">70% RESOLVED</span>
+              </div>
+              <div class="extra-small text-muted mb-2">9 Deletions • 4 Pending Review</div>
+              <div class="bureau-progress-bar">
+                <div class="bureau-progress-fill" style="width: 70%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="bureau-card mb-0">
+              <div class="d-flex align-items-center justify-content-between mb-1">
+                <span class="fw-bold font-heading fs-5">TransUnion</span>
+                <span class="extra-small text-teal fw-bold">90% RESOLVED</span>
+              </div>
+              <div class="extra-small text-muted mb-2">7 Deletions • 1 Pending Review</div>
+              <div class="bureau-progress-bar">
+                <div class="bureau-progress-fill" style="width: 90%;"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Detailed Dispute Items Table -->
+        <div class="p-3 rounded-4 bg-surface border border-color">
+          <span class="extra-small text-muted text-uppercase fw-bold d-block mb-3">ALL ACTIVE &amp; RESOLVED DISPUTE ITEMS</span>
+          
+          <div class="table-responsive">
+            <table class="table table-borderless table-hover align-middle mb-0">
+              <thead>
+                <tr class="extra-small text-muted border-bottom border-color">
+                  <th>ACCOUNT / ITEM</th>
+                  <th>BUREAU</th>
+                  <th>DISPUTE TYPE</th>
+                  <th>ROUND</th>
+                  <th>STATUS</th>
+                  <th class="text-end">ACTION DATE</th>
+                </tr>
+              </thead>
+              <tbody class="small">
+                <tr>
+                  <td class="fw-bold font-heading">Chase Bank Card #4120</td>
+                  <td><span class="badge bg-secondary-subtle text-main">Equifax</span></td>
+                  <td>30-Day Late Payment</td>
+                  <td>Round 2 FCRA</td>
+                  <td><span class="badge bg-success-subtle text-success extra-small">DELETED</span></td>
+                  <td class="text-end text-muted">Sept 10, 2026</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold font-heading">Midland Credit Management</td>
+                  <td><span class="badge bg-secondary-subtle text-main">Experian</span></td>
+                  <td>Collection Account</td>
+                  <td>Round 3 Audit</td>
+                  <td><span class="badge bg-warning-subtle text-warning extra-small">PENDING BUREAU</span></td>
+                  <td class="text-end text-muted">Sept 04, 2026</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold font-heading">Capital One Auto Finance</td>
+                  <td><span class="badge bg-secondary-subtle text-main">TransUnion</span></td>
+                  <td>Erroneous Charge-off</td>
+                  <td>Round 1 Audit</td>
+                  <td><span class="badge bg-success-subtle text-success extra-small">DELETED</span></td>
+                  <td class="text-end text-muted">Aug 28, 2026</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold font-heading">Synchrony Retail Credit</td>
+                  <td><span class="badge bg-secondary-subtle text-main">Equifax</span></td>
+                  <td>Unauthorized Inquiry</td>
+                  <td>Section 604 Challenge</td>
+                  <td><span class="badge bg-success-subtle text-success extra-small">DELETED</span></td>
+                  <td class="text-end text-muted">Aug 15, 2026</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ======================================================================
+         TAB 3: ACTION PLAN TAB PANE
+         ====================================================================== -->
+    <div class="dash-tab-pane d-none" id="tab-action">
+      
+      <div class="card p-4 border-color bg-card rounded-4 shadow-sm mb-4">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+          <div>
+            <h2 class="font-heading fs-4 fw-bold mb-1">Personalized FCRA Action Plan</h2>
+            <p class="small text-muted mb-0">Follow your assigned specialist checklist to maximize credit score gains.</p>
+          </div>
+          <span class="badge bg-teal-subtle text-teal font-heading fw-bold fs-6">3 of 4 Tasks Completed</span>
+        </div>
+
+        <div class="d-flex flex-column gap-3 mt-3">
+          
+          <div class="p-3.5 rounded-3 bg-surface border border-color d-flex align-items-start gap-3">
+            <input class="form-check-input mt-1" type="checkbox" checked id="ptask1">
+            <div>
+              <label for="ptask1" class="fw-bold small font-heading cursor-pointer text-decoration-line-through text-muted mb-1">Freeze Secondary Bureaus (LexisNexis &amp; SageStream)</label>
+              <div class="extra-small text-muted">Prevents creditors from cross-verifying disputed negative records during FCRA audits.</div>
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-3 bg-surface border border-color d-flex align-items-start gap-3">
+            <input class="form-check-input mt-1" type="checkbox" checked id="ptask2">
+            <div>
+              <label for="ptask2" class="fw-bold small font-heading cursor-pointer text-decoration-line-through text-muted mb-1">Upload Updated Proof of Residence (Utility Bill)</label>
+              <div class="extra-small text-muted">Required by Experian legal department to verify dispute letter legitimacy.</div>
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-3 bg-surface border border-color d-flex align-items-start gap-3">
+            <input class="form-check-input mt-1" type="checkbox" checked id="ptask3">
+            <div>
+              <label for="ptask3" class="fw-bold small font-heading cursor-pointer text-decoration-line-through text-muted mb-1">Review Round 2 Bureau Response Letters</label>
+              <div class="extra-small text-muted">Audited by Senior Compliance Officer on Sept 14. 3 items confirmed deleted.</div>
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-3 bg-surface border border-teal d-flex align-items-start gap-3">
+            <input class="form-check-input mt-1" type="checkbox" id="ptask4">
+            <div>
+              <label for="ptask4" class="fw-bold small font-heading cursor-pointer text-main mb-1">Connect Real-Time Tri-Bureau Monitoring Feed</label>
+              <div class="extra-small text-teal fw-semibold">Action Required • Enables 24/7 automated score change alerts &amp; bureau refresh.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ======================================================================
+         TAB 4: DOCUMENT VAULT TAB PANE
+         ====================================================================== -->
+    <div class="dash-tab-pane d-none" id="tab-vault">
+      
+      <div class="card p-4 border-color bg-card rounded-4 shadow-sm mb-4">
+        <h2 class="font-heading fs-4 fw-bold mb-1">Document Vault &amp; File Storage</h2>
+        <p class="small text-muted mb-4">Upload government IDs, utility bills, or credit dispute response letters securely.</p>
+
+        <!-- Upload Dropzone -->
+        <div class="dropzone-box mb-4" id="vault-dropzone">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2" class="mb-2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+          <div class="fw-bold font-heading text-main">Drag &amp; Drop Supporting Documents Here</div>
+          <div class="extra-small text-muted mt-1">Supports PDF, JPG, PNG (Max 15MB • 256-Bit Encrypted)</div>
+        </div>
+
+        <!-- Uploaded Files List -->
+        <div class="d-flex flex-column gap-3">
+          
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 p-3 rounded-3 bg-surface border border-color">
+            <div class="d-flex align-items-center gap-2 overflow-hidden" style="min-width: 0; flex: 1 1 200px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2" class="flex-shrink-0"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              <div class="overflow-hidden" style="min-width: 0;">
+                <div class="small fw-bold font-heading text-break">State_Driver_License_Front.pdf</div>
+                <div class="extra-small text-muted">Uploaded Sept 02, 2026 • 2.4 MB</div>
+              </div>
+            </div>
+            <span class="badge bg-success-subtle text-success small fw-bold flex-shrink-0 ms-auto">VERIFIED</span>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 p-3 rounded-3 bg-surface border border-color">
+            <div class="d-flex align-items-center gap-2 overflow-hidden" style="min-width: 0; flex: 1 1 200px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2" class="flex-shrink-0"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              <div class="overflow-hidden" style="min-width: 0;">
+                <div class="small fw-bold font-heading text-break">Electric_Utility_Bill_Aug2026.pdf</div>
+                <div class="extra-small text-muted">Uploaded Aug 28, 2026 • 1.8 MB</div>
+              </div>
+            </div>
+            <span class="badge bg-success-subtle text-success small fw-bold flex-shrink-0 ms-auto">VERIFIED</span>
+          </div>
+
+          <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 p-3 rounded-3 bg-surface border border-color">
+            <div class="d-flex align-items-center gap-2 overflow-hidden" style="min-width: 0; flex: 1 1 200px;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--brand-teal)" stroke-width="2" class="flex-shrink-0"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              <div class="overflow-hidden" style="min-width: 0;">
+                <div class="small fw-bold font-heading text-break">Experian_Deletion_Notice_Round2.pdf</div>
+                <div class="extra-small text-muted">Uploaded Sept 12, 2026 • 3.1 MB</div>
+              </div>
+            </div>
+            <span class="badge bg-warning-subtle text-warning small fw-bold flex-shrink-0 ms-auto">PENDING REVIEW</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ======================================================================
+         TAB 5: SUBSCRIPTION & BILLING TAB PANE
+         ====================================================================== -->
+    <div class="dash-tab-pane d-none" id="tab-billing">
+      
+      <div class="card p-4 border-color bg-card rounded-4 shadow-sm mb-4">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+          <div>
+            <h2 class="font-heading fs-4 fw-bold mb-1">Subscription &amp; Payment Management</h2>
+            <p class="small text-muted mb-0">Manage your active credit recovery tier, payment methods, and invoices.</p>
+          </div>
+          <a href="pricing.html" class="btn-custom-primary text-decoration-none py-2 px-3 fs-6">Change Plan</a>
+        </div>
+
+        <div class="row g-4">
+          
+          <!-- Active Plan Banner -->
+          <div class="col-lg-6">
+            <div class="p-3.5 rounded-4 bg-surface border border-color h-100">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="extra-small text-muted text-uppercase fw-bold">ACTIVE SUBSCRIPTION</span>
+                <span class="badge bg-success-subtle text-success fw-bold">ACTIVE &amp; AUTO-RENEW</span>
+              </div>
+              <h4 class="font-heading fs-4 fw-bold text-main mb-1">Pro Credit Recovery Tier</h4>
+              <div class="fs-5 fw-bold text-teal mb-3">$99.00 / month</div>
+              <div class="extra-small text-muted mb-2">Next Billing Date: <strong class="text-main">October 12, 2026</strong></div>
+              <div class="extra-small text-muted">Payment Method: <strong class="text-main">Visa ending in •••• 4242</strong></div>
+            </div>
+          </div>
+
+          <!-- Recent Invoices Table -->
+          <div class="col-lg-6">
+            <div class="p-3.5 rounded-4 bg-surface border border-color h-100">
+              <span class="extra-small text-muted text-uppercase fw-bold d-block mb-3">RECENT INVOICE HISTORY</span>
+              
+              <div class="table-responsive">
+                <table class="table table-borderless table-sm align-middle mb-0">
+                  <thead>
+                    <tr class="extra-small text-muted border-bottom border-color">
+                      <th>DATE</th>
+                      <th>AMOUNT</th>
+                      <th>STATUS</th>
+                      <th class="text-end">RECEIPT</th>
+                    </tr>
+                  </thead>
+                  <tbody class="small">
+                    <tr>
+                      <td class="fw-semibold">Sept 12, 2026</td>
+                      <td>$99.00</td>
+                      <td><span class="badge bg-success-subtle text-success extra-small">PAID</span></td>
+                      <td class="text-end"><a href="#" class="text-teal text-decoration-none fw-bold extra-small">PDF ↓</a></td>
+                    </tr>
+                    <tr>
+                      <td class="fw-semibold">Aug 12, 2026</td>
+                      <td>$99.00</td>
+                      <td><span class="badge bg-success-subtle text-success extra-small">PAID</span></td>
+                      <td class="text-end"><a href="#" class="text-teal text-decoration-none fw-bold extra-small">PDF ↓</a></td>
+                    </tr>
+                    <tr>
+                      <td class="fw-semibold">July 12, 2026</td>
+                      <td>$99.00</td>
+                      <td><span class="badge bg-success-subtle text-success extra-small">PAID</span></td>
+                      <td class="text-end"><a href="#" class="text-teal text-decoration-none fw-bold extra-small">PDF ↓</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Application Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Single-Page Tab Filtering Logic -->
+  <script>
+    function switchDashTab(tabId) {
+      // Hide all tab panes
+      const panes = document.querySelectorAll('.dash-tab-pane');
+      panes.forEach(pane => pane.classList.add('d-none'));
+
+      // Show targeted tab pane
+      const targetPane = document.getElementById(tabId);
+      if (targetPane) {
+        targetPane.classList.remove('d-none');
+      }
+
+      // Update active state on sidebar links
+      document.querySelectorAll('.sidebar-link').forEach(link => {
+        const dataTab = link.getAttribute('data-tab');
+        link.classList.toggle('active', dataTab === tabId);
+      });
+
+      // Update active state on mobile nav pills
+      document.querySelectorAll('.mobile-nav-pill').forEach(pill => {
+        const dataTab = pill.getAttribute('data-tab');
+        pill.classList.toggle('active', dataTab === tabId);
+      });
+
+      // Scroll smoothly to top of main content
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Simulated Dropzone Upload click
+      const dropzone = document.getElementById('vault-dropzone');
+      if (dropzone) {
+        dropzone.addEventListener('click', () => {
+          alert('Document Upload simulated: Secure 256-bit SSL encrypted file picker opened.');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

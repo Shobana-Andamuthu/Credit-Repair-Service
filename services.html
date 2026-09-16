@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Repair Service | Services</title>
+  <meta name="description" content="Explore our specialized credit repair, bureau dispute support, 24/7 credit monitoring, and financial coaching services.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230D9488'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Custom Stylesheet System -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       ATTRACTIVE PAGE LOADER
+       ========================================================================== -->
+  <div id="page-loader" class="page-loader">
+    <div class="loader-content">
+      <div class="loader-spinner-wrap">
+        <div class="loader-ring loader-ring-1"></div>
+        <div class="loader-ring loader-ring-2"></div>
+        <div class="loader-logo-box">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="loader-text font-heading fw-bold">Veritas<span style="color: #2DD4BF;">Credit</span></div>
+      <div class="loader-subtext">Optimizing Bureau Profiles...</div>
+      <div class="loader-progress-bar">
+        <div class="loader-progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SHARED NAVBAR
+       ========================================================================== -->
+  <header class="header-navbar">
+    <div class="container">
+      <nav class="navbar navbar-expand-xl navbar-light p-0">
+        
+        <!-- Brand Logo -->
+        <a class="navbar-brand navbar-brand-logo" href="index.html" id="nav-brand-logo">
+          <div class="logo-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <span>Veritas<span style="color: var(--brand-teal);">Credit</span></span>
+        </a>
+
+        <!-- Mobile Toggler -->
+        <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" id="mobile-nav-toggler">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <!-- Navbar Menu & Controls -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <!-- Main Links (Services set as Active) -->
+          <ul class="navbar-nav mx-auto align-items-lg-center">
+            
+            <!-- Home Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="homeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Home
+              </a>
+              <ul class="dropdown-menu dropdown-menu-custom" aria-labelledby="homeDropdown">
+                <li><a class="dropdown-item" href="index.html" id="link-home1">Home 1</a></li>
+                <li><a class="dropdown-item" href="home-2.html" id="link-home2">Home 2</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link active" href="services.html" id="link-services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html" id="link-pricing">Pricing Plans</a></li>
+            <li class="nav-item"><a class="nav-link" href="stories.html" id="link-stories">Success Stories</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html" id="link-contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard.html" id="link-dashboard">Dashboard</a></li>
+          </ul>
+
+          <!-- Controls & Login CTA -->
+          <div class="d-flex align-items-center gap-2 ms-lg-3 nav-controls-mobile mt-3 mt-lg-0">
+            <!-- Direction Switcher (LTR / RTL) -->
+            <button class="lang-switch-btn dir-toggle-btn" type="button" aria-label="Toggle Layout Direction" id="btn-rtl-toggle">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+              <span class="dir-label">RTL</span>
+            </button>
+
+            <!-- Light/Dark Mode Switcher -->
+            <button class="btn-icon-toggle theme-toggle-btn" type="button" aria-label="Toggle Dark/Light Mode" id="btn-theme-toggle">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              </svg>
+            </button>
+
+            <!-- Login Button -->
+            <a href="login.html" class="btn-custom-primary text-decoration-none px-3 py-2 ms-1" id="btn-login">
+              <span>Client Login</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                <polyline points="10 17 15 12 10 7"></polyline>
+                <line x1="15" y1="12" x2="3" y2="12"></line>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SECTION 1 — HERO (3-IMAGE EDITORIAL COLLAGE)
+       ========================================================================== -->
+  <section class="services-page-hero" id="hero">
+    <div class="container">
+      
+      <!-- Headline & Subtitle -->
+      <div class="row justify-content-center text-center mb-4">
+        <div class="col-lg-9">
+          <div class="badge-eyebrow">SPECIALIZED CREDIT HUB</div>
+          <h1 class="hero-editorial-display-title">
+            Comprehensive Credit Repair & <br>
+            <span class="text-gradient">Financial Protection Hub</span>
+          </h1>
+          <p class="hero-subtitle mx-auto">
+            Tailored dispute support, 24/7 tri-bureau credit monitoring, and 1-on-1 financial coaching to reclaim your credit power.
+          </p>
+          <div class="hero-actions justify-content-center">
+            <a href="#dispute-support" class="btn-custom-primary" id="btn-services-primary">
+              <span>Get Free Credit Audit</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3-Image Editorial Collage Frame -->
+      <div class="services-hero-collage">
+        <div class="row align-items-center g-3 g-md-4">
+          
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="collage-side-box">
+              <img src="assets/images/services/services-hero-2.jpg" alt="Financial document audit analysis" class="collage-side-img">
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-4 col-12 order-first order-md-0">
+            <div class="collage-center-box">
+              <img src="assets/images/services/services-hero-1.jpg" alt="Comprehensive credit analytics dashboard" class="collage-center-img" id="img-services-hero">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="collage-side-box">
+              <img src="assets/images/services/services-hero-3.jpg" alt="Advisor client consultation session" class="collage-side-img">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2 — CREDIT DISPUTE SUPPORT
+       ========================================================================== -->
+  <section class="service-feature-section" id="dispute-support">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        
+        <div class="col-lg-6">
+          <div class="badge-eyebrow">CORE RECOVERY</div>
+          <h2 class="font-heading fw-bold fs-2 mb-3">Credit Dispute Support</h2>
+          <p class="text-muted mb-4">
+            Direct legal challenges against unverifiable, misleading, or outdated credit items across Equifax, Experian, and TransUnion.
+          </p>
+
+          <!-- 3 Compact Benefits -->
+          <div class="d-flex flex-column gap-3 mb-4">
+            <div class="benefit-pill-card">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div>
+                <div class="fw-bold text-main font-heading">Tri-Bureau Inaccuracy Removal</div>
+                <div class="small text-subtle">Targeted deletion of collections, late payments, and charge-offs.</div>
+              </div>
+            </div>
+
+            <div class="benefit-pill-card">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div>
+                <div class="fw-bold text-main font-heading">FCRA & FDCPA Rights Enforcement</div>
+                <div class="small text-subtle">Certified federal consumer law protection on every audit.</div>
+              </div>
+            </div>
+
+            <div class="benefit-pill-card">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div>
+                <div class="fw-bold text-main font-heading">Collector Communication Shield</div>
+                <div class="small text-subtle">We handle creditor and collection agency correspondence directly.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual Dispute Indicator Element -->
+          <div class="p-3 bg-surface rounded-3 border d-flex align-items-center justify-content-between">
+            <span class="small fw-bold text-main font-heading">STATUS: Active Tri-Bureau Dispute Filing</span>
+            <span class="badge bg-teal-subtle text-teal font-heading">98.4% Resolution Rate</span>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="service-feature-img-box">
+            <img src="assets/images/services/service-dispute-main.jpg" alt="Legal credit dispute document audit" class="service-feature-img" id="img-dispute-support">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3 — CREDIT MONITORING
+       ========================================================================== -->
+  <section class="service-feature-section" id="credit-monitoring">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        
+        <div class="col-lg-6 order-lg-2">
+          <div class="service-feature-img-box">
+            <img src="assets/images/services/service-monitoring-main.jpg" alt="Live credit monitoring dashboard screen" class="service-feature-img" id="img-monitoring">
+          </div>
+        </div>
+
+        <div class="col-lg-6 order-lg-1">
+          <div class="badge-eyebrow">24/7 PROTECTION</div>
+          <h2 class="font-heading fw-bold fs-2 mb-3">Live Credit Monitoring</h2>
+          <p class="text-muted mb-4">
+            Real-time tri-bureau tracking with instant notifications on score updates, new hard inquiries, and identity threats.
+          </p>
+
+          <!-- Compact Information Pills -->
+          <div class="row g-3 mb-4">
+            <div class="col-md-6">
+              <div class="p-3 bg-card border rounded-3 h-100">
+                <div class="fw-bold font-heading text-main mb-1">Instant Score Alerts</div>
+                <div class="small text-subtle">Detect score shifts across all 3 bureaus in real-time.</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 bg-card border rounded-3 h-100">
+                <div class="fw-bold font-heading text-main mb-1">Identity Threat Shield</div>
+                <div class="small text-subtle">24/7 dark web vulnerability scans and fraud protection.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Score / Progress Visual Badge -->
+          <div class="p-3 bg-teal-subtle rounded-3 border border-teal d-flex align-items-center justify-content-between flex-wrap gap-2">
+            <div class="d-flex align-items-center gap-2">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <span class="fw-bold text-teal small font-heading">24/7 TRI-BUREAU SHIELD ACTIVE</span>
+            </div>
+            <span class="fw-bold text-main font-heading">FICO Score Gauge: 750+</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4 — FINANCIAL COACHING (3-CARD IMAGE GRID)
+       ========================================================================== -->
+  <section class="service-feature-section" id="financial-coaching">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header-block">
+        <div class="badge-eyebrow">WEALTH BUILDER</div>
+        <h2>1-on-1 Financial Coaching</h2>
+        <p>Personalized guidance to optimize utilization, expand trade-lines, and qualify for prime loans.</p>
+      </div>
+
+      <!-- 3 Coaching Image Cards -->
+      <div class="row g-4">
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="coaching-card">
+            <div class="coaching-card-img-wrap">
+              <img src="assets/images/services/service-coaching-1.jpg" alt="Utilization optimization strategy" class="coaching-card-img">
+            </div>
+            <div class="coaching-card-body">
+              <h3 class="font-heading fs-5 fw-bold mb-2">Utilization Optimization</h3>
+              <p class="small text-muted mb-3">Balancing credit card balances and statement closing dates to maximize FICO score jumps.</p>
+              <a href="#support" class="service-card-link mt-auto">
+                <span>Learn Utilization Strategy</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="coaching-card">
+            <div class="coaching-card-img-wrap">
+              <img src="assets/images/services/service-coaching-2.jpg" alt="Trade-line building session" class="coaching-card-img">
+            </div>
+            <div class="coaching-card-body">
+              <h3 class="font-heading fs-5 fw-bold mb-2">Trade-Line Building</h3>
+              <p class="small text-muted mb-3">Adding primary credit accounts and authorized user lines to establish thick payment history.</p>
+              <a href="#support" class="service-card-link mt-auto">
+                <span>Explore Trade-Lines</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mx-auto">
+          <div class="coaching-card">
+            <div class="coaching-card-img-wrap">
+              <img src="assets/images/services/service-coaching-3.jpg" alt="Prime loan mortgage qualification" class="coaching-card-img">
+            </div>
+            <div class="coaching-card-body">
+              <h3 class="font-heading fs-5 fw-bold mb-2">Prime Loan Qualification</h3>
+              <p class="small text-muted mb-3">Structuring your credit profile for lowest interest rates on mortgages, auto loans, & business credit.</p>
+              <a href="#support" class="service-card-link mt-auto">
+                <span>Qualify For Loans</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5 — HOW WE SUPPORT YOU & FINAL CTA (VERIFIED WORKING PHOTO)
+       ========================================================================== -->
+  <section class="service-feature-section" id="support">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header-block">
+        <div class="badge-eyebrow">OUR SUPPORT METHODOLOGY</div>
+        <h2>How We Support You</h2>
+        <p>A structured 4-step framework to ensure transparent, continuous credit recovery.</p>
+      </div>
+
+      <!-- 4 Short Steps -->
+      <div class="row g-4 mb-5">
+        
+        <div class="col-lg-3 col-sm-6">
+          <div class="support-step-item">
+            <div class="support-step-num">01</div>
+            <h4 class="font-heading fs-5">Audit & Analyze</h4>
+            <p class="small text-muted mb-0">Deep tri-bureau credit audit to identify unverified items.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6">
+          <div class="support-step-item">
+            <div class="support-step-num">02</div>
+            <h4 class="font-heading fs-5">Challenge & File</h4>
+            <p class="small text-muted mb-0">Custom FCRA legal disputes sent directly to credit bureaus.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6">
+          <div class="support-step-item">
+            <div class="support-step-num">03</div>
+            <h4 class="font-heading fs-5">Track & Verify</h4>
+            <p class="small text-muted mb-0">Real-time dispute status tracking inside your client portal.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-sm-6">
+          <div class="support-step-item">
+            <div class="support-step-num">04</div>
+            <h4 class="font-heading fs-5">Build & Maintain</h4>
+            <p class="small text-muted mb-0">Ongoing coaching to sustain high FICO scores long-term.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Support Image Banner & Final CTA -->
+      <div class="cta-box">
+        <div class="row align-items-center g-0">
+          <div class="col-lg-7">
+            <div class="cta-content">
+              <div class="badge-eyebrow bg-teal-subtle text-teal border-0">TAKE ACTION TODAY</div>
+              <h2>Ready to Restore Your Credit Power?</h2>
+              <p>Schedule your private, zero-obligation credit audit with a senior credit specialist today.</p>
+              <a href="#" class="btn-custom-gold" id="btn-services-final">
+                <span>Start Your Credit Audit</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="cta-img-wrap">
+              <img src="assets/images/services/service-support-main.jpg" alt="Client achieving credit success milestone" class="cta-img" id="img-services-cta">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">
+            <a class="navbar-brand-logo mb-3" href="index.html">
+              <div class="logo-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+              <span>Veritas<span style="color: var(--brand-teal);">Credit</span></span>
+            </a>
+            <p>Empowering consumers with legal credit repair, transparent bureau disputes, and actionable financial wellness coaching.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#">Pricing Plans</a></li>
+            <li><a href="#">Success Stories</a></li>
+            <li><a href="#">Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Legal & Compliance</h4>
+          <ul class="footer-links">
+            <li><a href="#">FCRA Disclosures</a></li>
+            <li><a href="#">CROA Compliance</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">Client Support</h4>
+          <p class="small text-muted mb-2">Speak directly with a credit specialist:</p>
+          <div class="fw-bold text-main fs-5 mb-1">+1 (800) 555-0199</div>
+          <div class="small text-subtle">Mon – Fri: 8am – 7pm EST</div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom text-center">
+        <p class="mb-0">© 2026 VeritasCredit Repair Service. All rights reserved. Built for Phase 3 demonstration.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Back to top" id="btn-back-to-top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Main Custom Application JS -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
