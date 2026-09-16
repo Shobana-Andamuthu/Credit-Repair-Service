@@ -26,6 +26,7 @@
   --brand-navy: #0F2942;
   --brand-navy-dark: #0A192F;
   --brand-teal: #0D9488;
+  --brand-teal-dark: #0F766E;
   --brand-teal-light: #CCFBF1;
   --brand-emerald: #10B981;
   --brand-gold: #0D9488;
@@ -63,6 +64,7 @@
   --brand-navy: #1E293B;
   --brand-navy-dark: #020617;
   --brand-teal: #14B8A6;
+  --brand-teal-dark: #0D9488;
   --brand-teal-light: rgba(20, 184, 166, 0.15);
   --brand-emerald: #34D399;
   --brand-gold: #14B8A6;
@@ -5270,8 +5272,8 @@ form.was-validated textarea:invalid ~ .invalid-feedback {
   width: 100%;
   padding: 0.9rem 1.5rem;
   border-radius: 30px;
-  background: linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-teal-dark) 100%);
-  color: #ffffff;
+  background: linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-teal-dark) 100%) !important;
+  color: #ffffff !important;
   font-weight: 700;
   font-size: 1rem;
   border: none;
@@ -5286,9 +5288,9 @@ form.was-validated textarea:invalid ~ .invalid-feedback {
 
 .btn-auth-submit:hover {
   transform: translateY(-2px);
-  background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
+  background: linear-gradient(135deg, #0f766e 0%, #115e59 100%) !important;
   box-shadow: 0 6px 24px rgba(13, 148, 136, 0.5);
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .auth-toggle-footer {
