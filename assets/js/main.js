@@ -153,18 +153,15 @@ function initMobileNav() {
   togglers.forEach(toggler => {
     toggler.addEventListener('click', (e) => {
       e.preventDefault();
+      e.stopPropagation();
+      if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+      
       const targetId = toggler.getAttribute('data-bs-target') || '#navbarContent';
       const targetEl = document.querySelector(targetId);
       if (!targetEl) return;
 
-      const isShow = targetEl.classList.contains('show');
-      if (isShow) {
-        targetEl.classList.remove('show');
-        toggler.setAttribute('aria-expanded', 'false');
-      } else {
-        targetEl.classList.add('show');
-        toggler.setAttribute('aria-expanded', 'true');
-      }
+      const isShow = targetEl.classList.toggle('show');
+      toggler.setAttribute('aria-expanded', isShow ? 'true' : 'false');
     });
   });
 
@@ -175,6 +172,8 @@ function initMobileNav() {
       const targetEl = document.querySelector('#navbarContent');
       if (targetEl && targetEl.classList.contains('show')) {
         targetEl.classList.remove('show');
+        const togglers = document.querySelectorAll('.navbar-toggler, #mobile-nav-toggler');
+        togglers.forEach(t => t.setAttribute('aria-expanded', 'false'));
       }
     });
   });

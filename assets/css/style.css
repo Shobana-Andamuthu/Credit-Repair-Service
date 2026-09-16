@@ -480,13 +480,25 @@ ul.navbar-nav {
 
   .header-navbar .navbar-collapse.show {
     display: block !important;
-    background-color: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 1.25rem;
-    margin-top: 0.75rem;
-    box-shadow: var(--shadow-md);
-    width: 100%;
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--radius-md) !important;
+    padding: 1.25rem !important;
+    margin-top: 0.75rem !important;
+    box-shadow: var(--shadow-md) !important;
+    width: 100% !important;
+    animation: menuSlideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes menuSlideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .header-navbar .navbar-nav {
@@ -3649,11 +3661,39 @@ textarea.form-control:focus {
 .contact-option-card h3 {
   margin-top: 0.25rem !important;
   margin-bottom: 0.5rem !important;
+  min-height: 2.2rem !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.contact-option-card .option-highlight {
+  font-size: 1.05rem !important;
+  word-break: break-word !important;
+  min-height: 2.5rem !important;
+  display: flex !important;
+  align-items: center !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.contact-option-card p.small {
+  min-height: 2.8rem !important;
+  display: flex !important;
+  align-items: center !important;
+  margin-bottom: 0.75rem !important;
+}
+
+.contact-option-card .extra-small.text-subtle {
+  min-height: 2.4rem !important;
+  display: flex !important;
+  align-items: center !important;
+  margin-bottom: 1.25rem !important;
 }
 
 /* Push button down from card content */
 .contact-option-card .contact-card-btn {
-  margin-top: 1.25rem !important;
+  margin-top: auto !important;
+  width: 100% !important;
+  text-align: center !important;
 }
 
 /* Extra breathing room between cards in the row */
@@ -5415,11 +5455,24 @@ form.was-validated textarea:invalid ~ .invalid-feedback {
 .footer-hours,
 .footer-column .text-subtle,
 .site-footer .text-subtle,
-.top-bar-info .text-subtle,
-.extra-small.text-subtle {
+.top-bar-info .text-subtle {
   color: #e2e8f0 !important;
   opacity: 0.95 !important;
   font-weight: 500;
+}
+
+/* Universal High Contrast Rules for Light & Dark Mode */
+.text-subtle,
+.extra-small.text-subtle {
+  color: #475569 !important;
+  opacity: 1 !important;
+  font-weight: 500 !important;
+}
+
+[data-theme="dark"] .text-subtle,
+[data-theme="dark"] .extra-small.text-subtle {
+  color: #cbd5e1 !important;
+  opacity: 1 !important;
 }
 
 
