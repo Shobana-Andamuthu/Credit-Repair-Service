@@ -88,35 +88,82 @@
    BREAKPOINT: EXTRA SMALL & SMALL MOBILE (320px - 575.98px)
    ========================================================================== */
 @media (max-width: 575.98px) {
-  .hero-section {
-    padding-top: 110px;
-    padding-bottom: 50px;
+  .hero-section,
+  .hero-editorial-section {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 90px;
+    padding-bottom: 2rem;
     text-align: center;
   }
 
-  .hero-title {
-    font-size: 2.1rem;
-    line-height: 1.2;
+  .hero-title,
+  .hero-editorial-display-title {
+    font-size: clamp(1.8rem, 6.8vw, 2.25rem);
+    line-height: 1.15;
+    margin-bottom: 0.85rem;
   }
 
   .hero-subtitle {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
     margin-inline: auto;
+    margin-bottom: 1.4rem;
   }
 
   .hero-actions {
     justify-content: center;
     flex-direction: column;
     width: 100%;
+    gap: 0.65rem;
+    margin-bottom: 1.5rem;
   }
 
   .hero-actions .btn-custom-primary,
   .hero-actions .btn-custom-secondary {
     width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 12px 18px;
+    font-size: 0.92rem;
   }
 
   .hero-img {
-    height: 300px;
+    height: 280px;
+  }
+
+  .hero-editorial-center-img-box,
+  .hero-editorial-center-img {
+    height: 280px !important;
+    border-radius: var(--radius-md);
+  }
+
+  .hero-editorial-badge-top {
+    padding: 7px 10px !important;
+    margin: 8px !important;
+    gap: 8px !important;
+    border-radius: 10px !important;
+  }
+
+  .hero-editorial-badge-top .small {
+    font-size: 0.75rem !important;
+  }
+
+  .hero-editorial-badge-bottom {
+    padding: 7px 10px !important;
+    margin: 8px !important;
+    border-radius: 10px !important;
+  }
+
+  .hero-editorial-badge-bottom .small {
+    font-size: 0.75rem !important;
+  }
+
+  .hero-editorial-badge-bottom .extra-small {
+    font-size: 0.68rem !important;
   }
 
   .hero-float-badge {
@@ -134,6 +181,12 @@
     position: relative;
     right: auto;
     margin: 1rem auto 0 auto;
+  }
+
+  .hero-section-card-glass {
+    margin-top: 1.25rem !important;
+    padding: 1.25rem !important;
+    text-align: start;
   }
 
   .journey-section,
@@ -350,13 +403,18 @@
 
 /* Very Small Mobiles (320px - 374px) */
 @media (max-width: 374.98px) {
-  .hero-title {
-    font-size: 1.85rem;
+  .hero-title,
+  .hero-editorial-display-title {
+    font-size: clamp(1.45rem, 6.5vw, 1.85rem) !important;
   }
 
   .badge-eyebrow {
-    font-size: 0.72rem;
-    padding: 0.35rem 0.75rem;
+    font-size: 0.68rem !important;
+    padding: 0.3rem 0.65rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem !important;
   }
 
   .progress-stat-pill .stat-number {
@@ -365,6 +423,81 @@
 
   .chart-bar-item span {
     font-size: 0.65rem !important;
+  }
+
+  .hero-editorial-center-img-box,
+  .hero-editorial-center-img {
+    height: 220px !important;
+  }
+}
+
+/* Ultra-Narrow Viewports (< 320px down to 200px) */
+@media (max-width: 319.98px) {
+  .hero-section,
+  .hero-editorial-section {
+    padding-top: 75px !important;
+    padding-bottom: 1.25rem !important;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .container {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .hero-title,
+  .hero-editorial-display-title {
+    font-size: 1.35rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.8rem !important;
+  }
+
+  .hero-actions .btn-custom-primary,
+  .hero-actions .btn-custom-secondary {
+    padding: 9px 12px !important;
+    font-size: 0.78rem !important;
+  }
+
+  .hero-section-card-glass {
+    padding: 0.9rem !important;
+  }
+
+  .hero-editorial-center-img-box,
+  .hero-editorial-center-img {
+    height: 180px !important;
+  }
+}
+
+/* Landscape Viewport Safety on Short Screens (height < 600px) */
+@media (max-height: 600px) and (orientation: landscape) {
+  .hero-section,
+  .hero-editorial-section {
+    min-height: 100vh;
+    min-height: 100dvh;
+    height: auto !important;
+    padding-top: 80px !important;
+    padding-bottom: 2rem !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .hero-title,
+  .hero-editorial-display-title {
+    font-size: 1.75rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.88rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .hero-editorial-center-img-box,
+  .hero-editorial-center-img {
+    height: 240px !important;
   }
 }
 
@@ -397,9 +530,20 @@
    BREAKPOINT: TABLET & MID PHONES (576px to 991.98px)
    ========================================================================== */
 @media (min-width: 576px) and (max-width: 991.98px) {
-  .hero-section {
-    padding-top: 125px;
-    padding-bottom: 70px;
+  .hero-section,
+  .hero-editorial-section {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 105px;
+    padding-bottom: 2.5rem;
+  }
+
+  .hero-editorial-center-img-box,
+  .hero-editorial-center-img {
+    height: 380px !important;
   }
 
   .hero-img {
@@ -513,3 +657,273 @@
     max-width: 1240px;
   }
 }
+
+/* ==========================================================================
+   ABOUT PAGE RESPONSIVE OVERRIDES
+   ========================================================================== */
+
+/* RTL Mirroring for About Page */
+[dir="rtl"] .card-top-left {
+  left: auto;
+  right: 24px;
+}
+
+[dir="rtl"] .card-bottom-right {
+  right: auto;
+  left: 24px;
+}
+
+[dir="rtl"] .story-experience-card {
+  right: auto;
+  left: 20px;
+}
+
+[dir="rtl"] .tech-badge-overlay {
+  left: auto;
+  right: 20px;
+}
+
+[dir="rtl"] .team-badge {
+  left: auto;
+  right: 12px;
+}
+
+[dir="rtl"] .timeline-wrapper::before {
+  left: auto;
+  right: 95px;
+}
+
+[dir="rtl"] .timeline-year {
+  text-align: left;
+}
+
+[dir="rtl"] .timeline-marker {
+  margin-left: 22px;
+  margin-right: 12px;
+}
+
+[dir="rtl"] .pillar-item:hover,
+[dir="rtl"] .timeline-content-box:hover {
+  transform: translateX(-4px);
+}
+
+/* Tablet & Mobile Breakpoints (< 992px) */
+@media (max-width: 991.98px) {
+  .about-page-hero {
+    padding-top: 110px;
+    padding-bottom: 50px;
+  }
+
+  .about-hero-img {
+    height: 380px;
+  }
+
+  .story-image {
+    height: 380px;
+  }
+
+  .tech-img {
+    height: 360px;
+  }
+
+  .about-story-section,
+  .about-tech-section,
+  .about-values-section,
+  .about-timeline-section,
+  .about-team-section,
+  .about-faq-section {
+    padding: 65px 0;
+  }
+}
+
+/* Mobile Breakpoints (< 768px) */
+@media (max-width: 767.98px) {
+  .about-hero-img {
+    height: 300px;
+  }
+
+  .about-floating-stat-card {
+    position: relative;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    margin-top: 12px;
+    width: 100%;
+  }
+
+  .story-experience-card {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    max-width: 100%;
+    margin-top: 14px;
+  }
+
+  .timeline-wrapper::before {
+    left: 20px;
+  }
+
+  [dir="rtl"] .timeline-wrapper::before {
+    left: auto;
+    right: 20px;
+  }
+
+  .timeline-row {
+    flex-direction: column;
+    padding-left: 45px;
+    margin-bottom: 24px;
+  }
+
+  [dir="rtl"] .timeline-row {
+    padding-left: 0;
+    padding-right: 45px;
+  }
+
+  .timeline-year {
+    width: auto;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 4px;
+    font-size: 1.1rem;
+  }
+
+  [dir="rtl"] .timeline-year {
+    text-align: right;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    top: 2px;
+    left: 13px;
+    margin: 0;
+  }
+
+  [dir="rtl"] .timeline-marker {
+    left: auto;
+    right: 13px;
+  }
+
+  .timeline-content-box {
+    width: 100%;
+    padding: 16px 18px;
+  }
+
+  .trust-badges-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .trust-badge-item {
+    justify-content: center;
+    width: 100%;
+    padding: 10px 10px !important;
+    font-size: 0.82rem !important;
+    white-space: nowrap !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .about-cta-box {
+    padding: 3rem 1.5rem !important;
+  }
+
+  .about-cta-box .cta-title {
+    font-size: 1.75rem !important;
+  }
+
+  .about-cta-box .cta-subtitle {
+    font-size: 0.95rem !important;
+    margin-bottom: 1.75rem !important;
+  }
+
+  .about-cta-box .btn-custom-primary,
+  .about-cta-box .btn-custom-secondary {
+    width: 100% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 14px 18px !important;
+    font-size: 0.94rem !important;
+    gap: 8px !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .about-cta-box .btn-custom-primary svg {
+    flex-shrink: 0 !important;
+    margin-left: 2px !important;
+  }
+}
+
+/* Breakpoint for tablet (< 1200px) */
+@media (max-width: 1199.98px) and (min-width: 768px) {
+  .trust-badges-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+  
+  .trust-badge-item {
+    padding: 10px 14px !important;
+    font-size: 0.84rem !important;
+  }
+}
+
+/* Extra Small Mobile (< 576px) */
+@media (max-width: 575.98px) {
+  .page-hero-title {
+    font-size: 1.85rem;
+  }
+
+  .about-hero-pill {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+  }
+
+  .story-image {
+    height: 280px;
+  }
+
+  .tech-img {
+    height: 260px;
+  }
+
+  .team-img-wrap {
+    height: 320px;
+  }
+
+  .team-img {
+    object-position: center 10% !important;
+  }
+
+  .value-box-card {
+    padding: 24px 18px;
+  }
+
+  .trust-badges-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  .trust-badge-item {
+    padding: 9px 6px !important;
+    font-size: 0.78rem !important;
+    gap: 6px !important;
+  }
+
+  .trust-badge-item svg {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  .about-cta-box {
+    padding: 2.5rem 1.25rem !important;
+  }
+
+  .about-cta-box .cta-title {
+    font-size: 1.55rem !important;
+  }
+}
+
+
+
