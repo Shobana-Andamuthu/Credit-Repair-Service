@@ -107,7 +107,9 @@
 [data-theme="dark"] .bento-card p,
 [data-theme="dark"] .process-card p,
 [data-theme="dark"] .service-card p,
-[data-theme="dark"] .pricing-card p {
+[data-theme="dark"] .pricing-card p,
+[data-theme="dark"] .pricing-method-card p,
+[data-theme="dark"] .accordion-pricing .accordion-body {
   color: #CBD5E1 !important;
 }
 
@@ -920,17 +922,18 @@ ul.navbar-nav {
 .hero-section {
   position: relative;
   width: 100%;
-  min-height: calc(100vh - 75px);
-  min-height: clamp(620px, 88vh, 880px);
+  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: calc(75px + 2rem);
-  padding-bottom: 3rem;
-  background: linear-gradient(135deg, rgba(10, 25, 47, 0.86) 0%, rgba(15, 23, 42, 0.94) 100%),
-              url('../images/hero/hero-bg-home1.jpg') center 30% / cover no-repeat;
+  padding-top: calc(75px + clamp(1rem, 2.5vh, 2.5rem));
+  padding-bottom: clamp(1.5rem, 3vh, 3rem);
+  background: linear-gradient(135deg, rgba(10, 25, 47, 0.88) 0%, rgba(15, 23, 42, 0.94) 100%),
+              url('../images/hero/hero-bg-home1.jpg') center center / cover no-repeat;
   color: #ffffff;
-  overflow: hidden;
+  overflow-x: clip;
+  box-sizing: border-box;
 }
 
 .hero-section > .container {
@@ -1536,17 +1539,18 @@ ul.navbar-nav {
 .hero-editorial-section {
   position: relative;
   width: 100%;
-  min-height: calc(100vh - 75px);
-  min-height: clamp(600px, 85vh, 850px);
+  min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: calc(75px + 2rem);
-  padding-bottom: 3rem;
+  padding-top: calc(75px + clamp(1rem, 2.5vh, 2.5rem));
+  padding-bottom: clamp(1.5rem, 3vh, 3rem);
   background: radial-gradient(circle at 50% 10%, rgba(13, 148, 136, 0.08) 0%, transparent 60%),
               radial-gradient(circle at 90% 80%, rgba(217, 119, 6, 0.05) 0%, transparent 50%),
               var(--bg-primary);
-  overflow: hidden;
+  overflow-x: clip;
+  box-sizing: border-box;
 }
 
 .hero-editorial-section > .container {
@@ -1586,12 +1590,12 @@ ul.navbar-nav {
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   border: 4px solid var(--bg-card);
-  height: clamp(380px, 46vh, 520px);
+  height: auto;
 }
 
 .hero-editorial-center-img {
   width: 100%;
-  height: clamp(380px, 46vh, 520px);
+  height: clamp(420px, 54vh, 640px);
   object-fit: cover;
   object-position: center 20%;
   display: block;
@@ -1880,22 +1884,42 @@ ul.navbar-nav {
   margin-left: 0.2rem;
 }
 
+.pricing-card p.pricing-plan-desc {
+  font-size: 0.88rem !important;
+  line-height: 1.45 !important;
+  color: var(--text-muted) !important;
+  min-height: 3.5rem !important;
+  margin-bottom: 1.15rem !important;
+}
+
 .pricing-features-list {
   list-style: none;
   padding: 0;
-  margin: 1.5rem 0 2rem 0;
+  margin: 1.25rem 0 2rem 0;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.75rem;
   flex-grow: 1;
 }
 
 .pricing-features-list li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.65rem;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  line-height: 1.4;
   color: var(--text-muted);
+  min-height: 2.55rem;
+}
+
+.pricing-features-list li svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.pricing-card .btn-custom-primary,
+.pricing-card .btn-custom-secondary {
+  margin-top: auto;
 }
 
 /* Plan Comparison Matrix */
@@ -1938,6 +1962,209 @@ ul.navbar-nav {
 .table-comparison tr:last-child td {
   border-bottom: none;
 }
+
+/* ==========================================================================
+   PRICING METHODOLOGY WORKFLOW (CROA 4-STAGE BILLING METHOD)
+   ========================================================================== */
+.pricing-method-section {
+  padding: 80px 0;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pricing-method-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.6rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.pricing-method-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--brand-teal);
+  box-shadow: var(--shadow-md);
+}
+
+.pricing-method-step-num {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-teal);
+  background: var(--brand-teal-light);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+  display: inline-block;
+  margin-bottom: 1rem;
+  width: fit-content;
+}
+
+.pricing-method-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background: var(--brand-teal-light);
+  color: var(--brand-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  transition: var(--transition);
+}
+
+.pricing-method-card:hover .pricing-method-icon {
+  background: var(--brand-teal);
+  color: #FFFFFF;
+}
+
+.pricing-method-card h4 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  min-height: 3.1rem !important;
+  margin-bottom: 0.65rem !important;
+  display: flex !important;
+  align-items: flex-start !important;
+}
+
+.pricing-method-desc {
+  font-size: 0.88rem !important;
+  line-height: 1.55 !important;
+  color: var(--text-muted) !important;
+  min-height: 5.6em !important;
+  margin-bottom: 0 !important;
+}
+
+/* ==========================================================================
+   BILLING FREQUENCY TOGGLE (MONTHLY VS QUARTERLY)
+   ========================================================================== */
+.billing-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem auto 3rem auto;
+  padding: 0.5rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  width: fit-content;
+  max-width: 100%;
+  box-shadow: var(--shadow-sm);
+}
+
+.billing-toggle-btn {
+  background: transparent;
+  border: none;
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius-full);
+  transition: var(--transition);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.billing-toggle-btn:hover {
+  color: var(--text-main);
+}
+
+.billing-toggle-btn.active {
+  background-color: var(--brand-teal);
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.28);
+}
+
+.billing-save-badge {
+  background: rgba(234, 179, 8, 0.2);
+  color: #ca8a04;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.billing-toggle-btn.active .billing-save-badge {
+  background: #FFFFFF;
+  color: var(--brand-teal);
+}
+
+.pricing-billing-note {
+  font-size: 0.78rem;
+  color: var(--brand-teal);
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+
+.pricing-amount {
+  transition: opacity 0.15s ease;
+}
+
+/* ==========================================================================
+   PRICING FAQ ACCORDION SECTION
+   ========================================================================== */
+.pricing-faq-section {
+  padding: 85px 0;
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-color);
+}
+
+.accordion-pricing .accordion-item {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md) !important;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.accordion-pricing .accordion-item:hover {
+  border-color: var(--brand-teal);
+}
+
+.accordion-pricing .accordion-button {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: none;
+}
+
+.accordion-pricing .accordion-button:not(.collapsed) {
+  background-color: var(--brand-teal-light);
+  color: var(--brand-teal);
+}
+
+.accordion-pricing .accordion-button::after {
+  filter: var(--accordion-arrow-filter, none);
+}
+
+.accordion-pricing .accordion-body {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+  background-color: var(--bg-card);
+}
+
 
 /* What Is Included Visual Cards */
 .included-card {
@@ -2453,6 +2680,118 @@ ul.navbar-nav {
   }
 }
 
+/* ==========================================================================
+   CASE WORKFLOW STEPPER DESIGN (FEATURED CASE BREAKDOWN)
+   ========================================================================== */
+.case-workflow-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.case-workflow-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.case-workflow-step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3.5px;
+  height: 100%;
+  background: transparent;
+  transition: var(--transition);
+}
+
+.case-workflow-step.step-challenge::before {
+  background: #f59e0b;
+}
+
+.case-workflow-step.step-audit::before {
+  background: var(--brand-teal);
+}
+
+.case-workflow-step.step-outcome::before {
+  background: #10b981;
+}
+
+.case-workflow-step:hover {
+  transform: translateX(4px);
+  border-color: var(--brand-teal);
+  box-shadow: var(--shadow-sm);
+}
+
+.case-workflow-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.step-challenge .case-workflow-icon-box {
+  background: rgba(245, 158, 11, 0.12);
+  color: #d97706;
+}
+
+.step-audit .case-workflow-icon-box {
+  background: var(--brand-teal-light);
+  color: var(--brand-teal);
+}
+
+.step-outcome .case-workflow-icon-box {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+}
+
+.case-workflow-body {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.case-workflow-badge {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 0.2rem;
+}
+
+.badge-challenge {
+  color: #d97706;
+}
+
+.badge-audit {
+  color: var(--brand-teal);
+}
+
+.badge-outcome {
+  color: #10b981;
+}
+
+.case-workflow-text {
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
 .fico-gauge-box {
   background: #0F172A !important;
   border-radius: var(--radius-md);
@@ -2636,15 +2975,20 @@ ul.navbar-nav {
 
 .story-card-footer {
   margin-top: auto !important;
-  padding-top: 0.75rem;
-  border-top: 1px solid var(--border-color);
-  font-size: 0.8rem;
-  line-height: 1.45;
-  color: var(--text-subtle);
+  padding-top: 0.75rem !important;
+  border-top: 1px solid var(--border-color) !important;
+  font-size: 0.78rem !important;
+  line-height: 1.25 !important;
+  color: var(--text-subtle) !important;
   display: flex !important;
-  align-items: baseline !important;
+  align-items: center !important;
   justify-content: flex-start !important;
-  gap: 0.4rem !important;
+  gap: 0.35rem !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 .story-card-footer .story-outcome-badge,
@@ -2658,7 +3002,11 @@ ul.navbar-nav {
 .story-card-footer .story-outcome-text,
 .story-card-footer span:not(.story-outcome-badge) {
   color: var(--text-subtle) !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
   flex: 1 1 auto !important;
+  min-width: 0 !important;
 }
 
 /* ==========================================================================
@@ -4861,19 +5209,28 @@ form.was-validated textarea:invalid ~ .invalid-feedback {
 
 /* Name heading */
 .story-card-body h4 {
-  font-size: 1rem !important;
+  font-size: 1.05rem !important;
   font-weight: 700 !important;
-  margin-bottom: 0.5rem !important;
-  line-height: 1.3 !important;
+  margin-bottom: 0.65rem !important;
+  line-height: 1.35 !important;
+  min-height: 2.85rem !important;
+  display: flex !important;
+  align-items: flex-start !important;
 }
 
-/* Description text */
+/* Description text — exactly 3 lines */
 .story-card-desc {
-  font-size: 0.83rem !important;
+  font-size: 0.85rem !important;
   color: var(--text-muted) !important;
   line-height: 1.55 !important;
-  flex: 1 1 auto !important;
-  margin-bottom: 0.75rem !important;
+  min-height: 4.65em !important;
+  max-height: 4.65em !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  margin-bottom: 0.85rem !important;
 }
 
 /* Footer score line */
@@ -4884,10 +5241,25 @@ form.was-validated textarea:invalid ~ .invalid-feedback {
   border-top: 1px solid var(--border-color) !important;
   margin-top: auto !important;
   display: flex !important;
-  align-items: baseline !important;
+  align-items: center !important;
   justify-content: flex-start !important;
   gap: 0.4rem !important;
-  line-height: 1.45 !important;
+  line-height: 1.25 !important;
+  white-space: nowrap !important;
+}
+
+.story-card-footer .story-outcome-badge {
+  font-weight: 700 !important;
+  color: var(--text-main) !important;
+  flex-shrink: 0 !important;
+}
+
+.story-card-footer .story-outcome-text {
+  color: var(--brand-teal) !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
 }
 
 /* Badge color variants */

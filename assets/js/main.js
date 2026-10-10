@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbarScroll();
   initBackToTop();
   initMobileNav();
+  initPricingToggle();
 });
 
 /* ==========================================================================
@@ -214,4 +215,80 @@ function initMobileNav() {
       closeMobileNav();
     }
   });
+}
+
+/* ==========================================================================
+   PRICING BILLING CYCLE TOGGLE (MONTHLY / QUARTERLY)
+   ========================================================================== */
+function initPricingToggle() {
+  const toggleInput = document.getElementById('billing-toggle-switch');
+  const monthlyBtn = document.getElementById('toggle-monthly');
+  const quarterlyBtn = document.getElementById('toggle-quarterly');
+  const priceElements = document.querySelectorAll('.pricing-amount[data-monthly][data-quarterly]');
+  const periodElements = document.querySelectorAll('.pricing-period[data-monthly-period][data-quarterly-period]');
+  const noteElements = document.querySelectorAll('.pricing-billing-note');
+
+  if (!toggleInput && !monthlyBtn && !quarterlyBtn) return;
+
+  const setBillingMode = (isQuarterly) => {
+    if (toggleInput) {
+      toggleInput.checked = isQuarterly;
+    }
+
+    if (monthlyBtn && quarterlyBtn) {
+      if (isQuarterly) {
+        quarterlyBtn.classList.add('active');
+        monthlyBtn.classList.remove('active');
+      } else {
+        monthlyBtn.classList.add('active');
+        quarterlyBtn.classList.remove('active');
+      }
+    }
+
+    priceElements.forEach(el => {
+      const targetVal = isQuarterly ? el.getAttribute('data-quarterly') : el.getAttribute('data-monthly');
+      if (targetVal) {
+        el.style.opacity = '0';
+        setTimeout(() => {
+          el.textContent = targetVal;
+          el.style.opacity = '1';
+        }, 150);
+      }
+    });
+
+    periodElements.forEach(el => {
+      const targetPeriod = isQuarterly ? el.getAttribute('data-quarterly-period') : el.getAttribute('data-monthly-period');
+      if (targetPeriod) {
+        el.textContent = targetPeriod;
+      }
+    });
+
+    noteElements.forEach(el => {
+      if (isQuarterly) {
+        el.classList.remove('d-none');
+      } else {
+        el.classList.add('d-none');
+      }
+    });
+  };
+
+  if (toggleInput) {
+    toggleInput.addEventListener('change', () => {
+      setBillingMode(toggleInput.checked);
+    });
+  }
+
+  if (monthlyBtn) {
+    monthlyBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      setBillingMode(false);
+    });
+  }
+
+  if (quarterlyBtn) {
+    quarterlyBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      setBillingMode(true);
+    });
+  }
 }

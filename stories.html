@@ -245,10 +245,59 @@
               <div class="badge-eyebrow bg-teal-subtle text-teal border-0 mb-3">DOCUMENTED CASE WORKFLOW</div>
               <h3 class="font-heading fs-3 fw-bold mb-3">Medical Collection Dispute & Mortgage Readiness</h3>
               
-              <div class="case-study-details mb-3">
-                <div class="mb-2"><strong>Initial Challenge:</strong> Client identified two duplicate $450 collections reported by an agency for a bill covered by insurance, depressing scores prior to a home loan.</div>
-                <div class="mb-2"><strong>Assistance Provided:</strong> Conducted comprehensive 3-bureau audit, gathered billing statements, and filed formal dispute requests under FCRA § 611 and FDCPA § 809.</div>
-                <div class="mb-2"><strong>Documented Outcome:</strong> Credit bureaus completed 30-day investigation; furnisher failed to validate records, and duplicate items were deleted from Equifax and TransUnion.</div>
+              <!-- Modern 3-Phase Case Workflow Stepper -->
+              <div class="case-workflow-steps mb-4">
+                <!-- Phase 1: Challenge -->
+                <div class="case-workflow-step step-challenge">
+                  <div class="case-workflow-icon-box">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                      <line x1="12" y1="9" x2="12" y2="13"></line>
+                      <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                  </div>
+                  <div class="case-workflow-body">
+                    <div class="case-workflow-header">
+                      <span class="case-workflow-badge badge-challenge">PHASE 01 &bull; INITIAL CHALLENGE</span>
+                    </div>
+                    <p class="case-workflow-text">Client identified two duplicate $450 collections reported by an agency for a bill covered by insurance, depressing scores prior to a home loan.</p>
+                  </div>
+                </div>
+
+                <!-- Phase 2: Action -->
+                <div class="case-workflow-step step-audit">
+                  <div class="case-workflow-icon-box">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                      <line x1="16" y1="13" x2="8" y2="13"></line>
+                      <line x1="16" y1="17" x2="8" y2="17"></line>
+                      <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                  </div>
+                  <div class="case-workflow-body">
+                    <div class="case-workflow-header">
+                      <span class="case-workflow-badge badge-audit">PHASE 02 &bull; STATUTORY FCRA AUDIT</span>
+                    </div>
+                    <p class="case-workflow-text">Conducted comprehensive 3-bureau audit, gathered billing statements, and filed formal dispute requests under FCRA § 611 and FDCPA § 809.</p>
+                  </div>
+                </div>
+
+                <!-- Phase 3: Resolution -->
+                <div class="case-workflow-step step-outcome">
+                  <div class="case-workflow-icon-box">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                  </div>
+                  <div class="case-workflow-body">
+                    <div class="case-workflow-header">
+                      <span class="case-workflow-badge badge-outcome">PHASE 03 &bull; DOCUMENTED RESOLUTION</span>
+                    </div>
+                    <p class="case-workflow-text">Credit bureaus completed 30-day investigation; furnisher failed to validate records, and duplicate items were deleted from Equifax and TransUnion.</p>
+                  </div>
+                </div>
               </div>
 
               <!-- Dispute Timeline & Status Box -->
@@ -303,10 +352,10 @@
       </div>
 
       <!-- 4 Visual Story Cards Grid -->
-      <div class="row g-4">
+      <div class="row g-4 align-items-stretch">
         
         <!-- Story Card 1 -->
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-6 story-card-col">
           <div class="story-card h-100">
             <div class="story-card-img-wrap">
               <img src="assets/images/stories/story-card-1.jpg" alt="Homeowners reviewing loan terms" class="story-card-img" id="img-story-1">
@@ -318,17 +367,17 @@
                   <span class="fw-bold text-teal">Corrected</span>
                 </div>
                 <h4 class="font-heading fs-5 fw-bold mb-2">Mislabeled 30-Day Late Payment</h4>
-                <p class="story-card-desc">Auto lender erroneously recorded a late payment on an account that had been paid on time via auto-debit. Bank records were gathered and submitted.</p>
+                <p class="story-card-desc">Auto lender erroneously recorded a late payment on an account that was paid on time via auto-debit. Bank statements and payment receipts were formally submitted.</p>
               </div>
-              <div class="story-card-footer mt-3">
-                <span class="story-outcome-badge">Outcome:</span> <span class="story-outcome-text">Bureau updated trade-line to "Paid as Agreed".</span>
+              <div class="story-card-footer mt-3" title="Bureau updated trade-line to Paid as Agreed">
+                <span class="story-outcome-badge">Outcome:</span> <span class="story-outcome-text">Status Paid on Time</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Story Card 2 -->
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-6 story-card-col">
           <div class="story-card h-100">
             <div class="story-card-img-wrap">
               <img src="assets/images/stories/story-card-2.jpg" alt="Vehicle owner checking loan rate" class="story-card-img" id="img-story-2">
@@ -340,17 +389,17 @@
                   <span class="fw-bold text-teal">Removed</span>
                 </div>
                 <h4 class="font-heading fs-5 fw-bold mb-2">Outdated Collection Beyond 7 Years</h4>
-                <p class="story-card-desc">An old retail collection account was re-aged by a debt buyer beyond the 7-year statutory FCRA reporting limit under 15 U.S.C. § 1681c.</p>
+                <p class="story-card-desc">An old retail collection account was illegally re-aged by a debt buyer beyond the 7-year statutory FCRA reporting limit under 15 U.S.C. § 1681c.</p>
               </div>
-              <div class="story-card-footer mt-3">
-                <span class="story-outcome-badge">Outcome:</span> <span class="story-outcome-text">Obsolete trade-line deleted per federal rules.</span>
+              <div class="story-card-footer mt-3" title="Obsolete trade-line deleted per federal rules">
+                <span class="story-outcome-badge">Outcome:</span> <span class="story-outcome-text">Account Removed</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Story Card 3 -->
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-6 story-card-col">
           <div class="story-card h-100">
             <div class="story-card-img-wrap">
               <img src="assets/images/stories/story-card-3.jpg" alt="Small business owner reviewing credit file" class="story-card-img" id="img-story-3">
@@ -361,18 +410,18 @@
                   <span class="badge bg-teal-subtle text-teal font-heading">Mixed Credit File</span>
                   <span class="fw-bold text-teal">Separated</span>
                 </div>
-                <h4 class="font-heading fs-5 fw-bold mb-2">Merged Sibling Credit Accounts</h4>
-                <p class="story-card-desc">Two family members with similar names and shared previous addresses had accounts cross-merged onto Experian and Equifax reports.</p>
+                <h4 class="font-heading fs-5 fw-bold mb-2">Merged Sibling Credit Profiles</h4>
+                <p class="story-card-desc">Two family members with identical surnames and shared previous addresses had accounts cross-merged on their Experian and Equifax bureau profiles.</p>
               </div>
-              <div class="story-card-footer mt-3">
-                <span class="story-outcome-badge">Outcome:</span> <span class="story-outcome-text">Bureau files separated; unassociated items cleared.</span>
+              <div class="story-card-footer mt-3" title="Bureau files separated; unassociated items cleared">
+                <span class="story-outcome-badge">Outcome:</span> <span class="story-outcome-text">Files Separated</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- Story Card 4 -->
-        <div class="col-lg-3 col-md-6">
+        <div class="col-lg-3 col-md-6 story-card-col">
           <div class="story-card h-100">
             <div class="story-card-img-wrap">
               <img src="assets/images/stories/story-card-4.jpg" alt="Individual working on credit action plan" class="story-card-img" id="img-story-4">
@@ -386,8 +435,8 @@
                 <h4 class="font-heading fs-5 fw-bold mb-2">Utilization Action Plan Coaching</h4>
                 <p class="story-card-desc">Client maintained an 82% balance-to-limit ratio suppressing credit health. Developed a phased payoff roadmap and statement closing cycle alignment.</p>
               </div>
-              <div class="story-card-footer mt-3">
-                <span class="story-outcome-badge">Outcome:</span> <span class="story-outcome-text">Utilization reduced to 18%; healthier profile.</span>
+              <div class="story-card-footer mt-3" title="Utilization reduced to 18%; healthier profile">
+                <span class="story-outcome-badge">Outcome:</span> <span class="story-outcome-text">Utilization Cut to 18%</span>
               </div>
             </div>
           </div>
