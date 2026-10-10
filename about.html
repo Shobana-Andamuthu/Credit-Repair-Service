@@ -94,32 +94,36 @@
             <li class="nav-item"><a class="nav-link" href="dashboard.html" id="link-dashboard">Dashboard</a></li>
           </ul>
 
-          <!-- Controls & Login CTA -->
-          <div class="d-flex align-items-center gap-2 ms-lg-3 nav-controls-mobile mt-3 mt-lg-0">
-            <!-- Direction Switcher (LTR / RTL) -->
-            <button class="lang-switch-btn dir-toggle-btn" type="button" aria-label="Toggle Layout Direction" id="btn-rtl-toggle">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-              </svg>
-              <span class="dir-label">RTL</span>
-            </button>
+          <!-- Controls & CTAs -->
+          <div class="nav-controls-mobile">
+            <div class="nav-controls-toggles">
+              <!-- Direction Switcher (LTR / RTL) -->
+              <button class="lang-switch-btn dir-toggle-btn" type="button" aria-label="Toggle Layout Direction" id="btn-rtl-toggle">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 7h12m0 0l-4-4m4 4l-4 4m-4 6H4m0 0l4 4m-4-4l4-4"></path>
+                </svg>
+                <span class="dir-label">RTL</span>
+              </button>
 
-            <!-- Light/Dark Mode Switcher -->
-            <button class="btn-icon-toggle theme-toggle-btn" type="button" aria-label="Toggle Dark/Light Mode" id="btn-theme-toggle">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-              </svg>
-            </button>
+              <!-- Light/Dark Mode Switcher -->
+              <button class="btn-icon-toggle theme-toggle-btn" type="button" aria-label="Toggle Dark/Light Mode" id="btn-theme-toggle">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+              </button>
+            </div>
 
-            <!-- Login Button -->
-            <a href="login.html" class="btn-custom-primary text-decoration-none px-3 py-2 ms-1" id="btn-login">
+            <!-- Client Login Link -->
+            <a href="login.html" class="btn-custom-outline-nav text-decoration-none" id="btn-nav-login">
               <span>Client Login</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
-                <polyline points="10 17 15 12 10 7"></polyline>
-                <line x1="15" y1="12" x2="3" y2="12"></line>
+            </a>
+
+            <!-- Prominent Primary CTA -->
+            <a href="contact.html" class="btn-custom-primary text-decoration-none" id="btn-nav-cta">
+              <span>Free Credit Audit</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
           </div>
@@ -191,13 +195,13 @@
           <div class="about-floating-stat-card card-top-left">
             <div class="stat-badge-icon bg-teal-subtle">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
-                <polyline points="16 7 22 7 22 13"/>
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
               </svg>
             </div>
             <div>
-              <div class="stat-badge-number">+142 PTS</div>
-              <div class="stat-badge-label">Average 90-Day Score Jump</div>
+              <div class="stat-badge-number">Tri-Bureau Audit</div>
+              <div class="stat-badge-label">Equifax, Experian & TransUnion</div>
             </div>
           </div>
 
@@ -210,8 +214,8 @@
               </svg>
             </div>
             <div>
-              <div class="stat-badge-number">98.4% Accuracy</div>
-              <div class="stat-badge-label">Dispute Validation Rate</div>
+              <div class="stat-badge-number">FCRA & CROA</div>
+              <div class="stat-badge-label">Statutory Consumer Rights</div>
             </div>
           </div>
         </div>
@@ -228,30 +232,30 @@
       <div class="row g-4">
         <div class="col-6 col-lg-3">
           <div class="about-counter-card">
-            <div class="counter-val font-heading">14,850<span class="text-teal">+</span></div>
-            <div class="counter-label">Families Restored</div>
-            <div class="counter-sub">Across 50 states</div>
-          </div>
-        </div>
-        <div class="col-6 col-lg-3">
-          <div class="about-counter-card">
-            <div class="counter-val font-heading">$42.8<span class="text-teal">M</span></div>
-            <div class="counter-label">Disputed Inaccuracies</div>
-            <div class="counter-sub">Removed legally</div>
-          </div>
-        </div>
-        <div class="col-6 col-lg-3">
-          <div class="about-counter-card">
-            <div class="counter-val font-heading">32<span class="text-teal"> Days</span></div>
-            <div class="counter-label">Avg. First Deletion</div>
-            <div class="counter-sub">Industry-leading speed</div>
+            <div class="counter-val font-heading">3<span class="text-teal"> Bureaus</span></div>
+            <div class="counter-label">Comprehensive Audit</div>
+            <div class="counter-sub">Equifax, Experian & TransUnion</div>
           </div>
         </div>
         <div class="col-6 col-lg-3">
           <div class="about-counter-card">
             <div class="counter-val font-heading">100<span class="text-teal">%</span></div>
-            <div class="counter-label">CROA Compliance</div>
-            <div class="counter-sub">Full federal backing</div>
+            <div class="counter-label">Case-by-Case Reviews</div>
+            <div class="counter-sub">Individualized dispute files</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="about-counter-card">
+            <div class="counter-val font-heading">30-45<span class="text-teal"> Days</span></div>
+            <div class="counter-label">Bureau Response Window</div>
+            <div class="counter-sub">Mandated by FCRA § 611</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="about-counter-card">
+            <div class="counter-val font-heading">24/7<span class="text-teal"> Portal</span></div>
+            <div class="counter-label">Transparent Tracking</div>
+            <div class="counter-sub">Live dispute status updates</div>
           </div>
         </div>
       </div>
@@ -333,17 +337,17 @@
   </section>
 
   <!-- ==========================================================================
-       SECTION 4 — TECHNOLOGY & OPERATIONS FLOOR SHOWCASE
+       SECTION 4 — TECHNOLOGY & OPERATIONS METHODOLOGY
        ========================================================================== -->
   <section class="about-tech-section">
     <div class="container">
       
       <div class="row justify-content-center text-center mb-5">
         <div class="col-lg-8">
-          <div class="badge-eyebrow">INTELLIGENCE MEETS LEGAL FORCE</div>
-          <h2 class="section-title mt-2 mb-3">Inside Our Bureau Operations & <span class="gradient-text">Credit Analytics Center</span></h2>
+          <div class="badge-eyebrow">DILIGENT INVESTIGATION & COMPLIANCE</div>
+          <h2 class="section-title mt-2 mb-3">Our Credit Report Review & <span class="gradient-text">Dispute Methodology</span></h2>
           <p class="section-subtitle mx-auto">
-            Our dispute laboratory combines real-time data integration across Experian, Equifax, and TransUnion with attorney-supervised error identification protocols.
+            How our specialists examine trade-lines, identify potential reporting discrepancies across Equifax, Experian, and TransUnion, and prepare formal disputes under federal consumer protection laws.
           </p>
         </div>
       </div>
@@ -361,8 +365,8 @@
               </svg>
             </div>
             <div class="tech-info">
-              <h4 class="tech-card-title">120-Point Bureau Deep-Audit</h4>
-              <p class="tech-card-desc">We scan every trade-line for missing date codes, inaccurate balances, statute of limitations lapses, and duplicate reporting.</p>
+              <h4 class="tech-card-title">Thorough 3-Bureau Report Audit</h4>
+              <p class="tech-card-desc">We review every reported account line-by-line for inaccurate reporting dates, conflicting balances, missing furnisher information, or potential duplicate entries.</p>
             </div>
           </div>
 
@@ -375,8 +379,8 @@
               </svg>
             </div>
             <div class="tech-info">
-              <h4 class="tech-card-title">Section 609 / 611 / 623 Legal Challenge Suite</h4>
-              <p class="tech-card-desc">Direct statutory demand letters compelling credit bureaus and original furnishers to produce physical validation of debt or delete.</p>
+              <h4 class="tech-card-title">Statutory Dispute Preparation (FCRA §§ 609, 611 & 623)</h4>
+              <p class="tech-card-desc">Formal dispute notices prepared and directed to credit bureaus and original furnishers requesting complete verification under federal consumer protection standards.</p>
             </div>
           </div>
 
@@ -387,8 +391,8 @@
               </svg>
             </div>
             <div class="tech-info">
-              <h4 class="tech-card-title">Predictive Score Rebuild Modeling</h4>
-              <p class="tech-card-desc">Simulate how paying down specific card ratios, adding seasoned tradelines, or settling collections will impact your FICO score.</p>
+              <h4 class="tech-card-title">Personalized Credit Education & Action Plans</h4>
+              <p class="tech-card-desc">Practical guidance on credit utilization thresholds, positive payment history maintenance, and dispute response analysis for sustainable financial wellness.</p>
             </div>
           </div>
         </div>
@@ -399,7 +403,7 @@
             <img src="assets/images/about/about-technology.jpg" alt="VeritasCredit Analytics & Operations Center" class="tech-img img-fluid" loading="lazy">
             <div class="tech-badge-overlay">
               <span class="live-dot"></span>
-              <span>24/7 Real-Time Bureau Feed Active</span>
+              <span>Client Portal & Dispute Tracking Active</span>
             </div>
           </div>
         </div>
@@ -685,7 +689,7 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="text-teal">
                   <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                 </svg>
-                <span>90-Day Guarantee</span>
+                <span>Transparent Fees</span>
               </div>
             </div>
           </div>
@@ -704,7 +708,7 @@
         <div class="badge-eyebrow">COMMON QUESTIONS</div>
         <h2 class="section-title mt-2 mb-3">Everything You Need To Know <span class="gradient-text">About Our Firm</span></h2>
         <p class="section-subtitle mx-auto">
-          Clear, straightforward answers about how we operate, our guarantees, and our dispute methodology.
+          Clear, straightforward answers about how we operate, our compliance standards, and our dispute methodology.
         </p>
       </div>
 
@@ -721,7 +725,7 @@
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#aboutAccordion">
                 <div class="accordion-body">
-                  Yes, absolutely. The Fair Credit Reporting Act (FCRA 15 U.S.C. § 1681) grants every consumer the legal right to challenge inaccurate, misleading, or unverifiable information on their credit reports. The Credit Repair Organizations Act (CROA) specifically defines and regulates professional credit repair services like VeritasCredit.
+                  Yes. The Fair Credit Reporting Act (FCRA 15 U.S.C. § 1681) gives every consumer the legal right to challenge inaccurate, misleading, outdated, or unverifiable information on their credit reports. The Credit Repair Organizations Act (CROA) regulates professional credit repair services to ensure full consumer transparency.
                 </div>
               </div>
             </div>
@@ -734,7 +738,7 @@
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#aboutAccordion">
                 <div class="accordion-body">
-                  Unlike traditional services that mail generic form letters that bureaus immediately disregard as spam, VeritasCredit utilizes an advanced 120-point algorithmic audit and custom attorney-crafted dispute filings citing exact statutory violations. Furthermore, you receive transparent 24/7 client portal access and an assigned specialist.
+                  Unlike services that send mass form letters or make false promises, VeritasCredit conducts a detailed 3-bureau audit, prepares custom dispute documentation based on specific FCRA violations, provides 24/7 client portal tracking, and provides educational action plans for long-term credit health.
                 </div>
               </div>
             </div>
@@ -742,12 +746,12 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  How long does it typically take to see measurable score improvements?
+                  How long does the credit dispute process take?
                 </button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#aboutAccordion">
                 <div class="accordion-body">
-                  By federal law, credit bureaus have 30 to 45 days to respond to and investigate disputes. Most VeritasCredit clients see initial removals and score improvements within their first 30 to 45 days, with comprehensive file restoration typically taking 3 to 6 months depending on the file complexity.
+                  By federal law, credit bureaus have 30 to 45 days to investigate disputes and respond. Total engagement timelines vary depending on file complexity and bureau responses, typically spanning 3 to 6 months for comprehensive multi-round reviews.
                 </div>
               </div>
             </div>
@@ -755,12 +759,12 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingFour">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  What is the 90-Day Money Back Guarantee policy?
+                  What is your cancellation and fee policy?
                 </button>
               </h2>
               <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#aboutAccordion">
                 <div class="accordion-body">
-                  We stand behind our work. If we are unable to remove or correct any inaccurate, unverifiable, or outdated negative trade-lines from your three bureau credit reports within 90 days of onboarding, you are entitled to a full refund of your service fees as outlined in our CROA client agreement.
+                  Under the Credit Repair Organizations Act (CROA), we do not charge upfront fees before services are performed. You receive a full 3-day right of cancellation upon signing your agreement, transparent month-to-month billing, and the freedom to pause or cancel your subscription at any time.
                 </div>
               </div>
             </div>

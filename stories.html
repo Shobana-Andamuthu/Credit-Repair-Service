@@ -99,32 +99,36 @@
             <li class="nav-item"><a class="nav-link" href="dashboard.html" id="link-dashboard">Dashboard</a></li>
           </ul>
 
-          <!-- Controls & Login CTA -->
-          <div class="d-flex align-items-center gap-2 ms-lg-3 nav-controls-mobile mt-3 mt-lg-0">
-            <!-- Direction Switcher (LTR / RTL) -->
-            <button class="lang-switch-btn dir-toggle-btn" type="button" aria-label="Toggle Layout Direction" id="btn-rtl-toggle">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-              </svg>
-              <span class="dir-label">RTL</span>
-            </button>
+          <!-- Controls & CTAs -->
+          <div class="nav-controls-mobile">
+            <div class="nav-controls-toggles">
+              <!-- Direction Switcher (LTR / RTL) -->
+              <button class="lang-switch-btn dir-toggle-btn" type="button" aria-label="Toggle Layout Direction" id="btn-rtl-toggle">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 7h12m0 0l-4-4m4 4l-4 4m-4 6H4m0 0l4 4m-4-4l4-4"></path>
+                </svg>
+                <span class="dir-label">RTL</span>
+              </button>
 
-            <!-- Light/Dark Mode Switcher -->
-            <button class="btn-icon-toggle theme-toggle-btn" type="button" aria-label="Toggle Dark/Light Mode" id="btn-theme-toggle">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-              </svg>
-            </button>
+              <!-- Light/Dark Mode Switcher -->
+              <button class="btn-icon-toggle theme-toggle-btn" type="button" aria-label="Toggle Dark/Light Mode" id="btn-theme-toggle">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+              </button>
+            </div>
 
-            <!-- Login Button -->
-            <a href="login.html" class="btn-custom-primary text-decoration-none px-3 py-2 ms-1" id="btn-login">
+            <!-- Client Login Link -->
+            <a href="login.html" class="btn-custom-outline-nav text-decoration-none" id="btn-nav-login">
               <span>Client Login</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
-                <polyline points="10 17 15 12 10 7"></polyline>
-                <line x1="15" y1="12" x2="3" y2="12"></line>
+            </a>
+
+            <!-- Prominent Primary CTA -->
+            <a href="contact.html" class="btn-custom-primary text-decoration-none" id="btn-nav-cta">
+              <span>Free Credit Audit</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
           </div>
@@ -148,21 +152,21 @@
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
               </svg>
-              VERIFIED CLIENT MILESTONES
+              EDUCATIONAL CASE STUDIES & OUTCOMES
             </div>
 
             <h1 class="hero-title">
-              Real Stories of Real <br>
-              <span class="text-gradient">Financial Transformations</span>
+              Real Journeys Toward <br>
+              <span class="text-gradient">Accurate Credit Reporting</span>
             </h1>
 
             <p class="hero-subtitle">
-              Explore verified case studies detailing credit score recovery, FCRA bureau deletions, and life-changing home and business loan approvals.
+              Examine documented scenarios showing how tri-bureau audits, statutory dispute preparation under federal consumer law, and disciplined credit habits resolve reporting errors.
             </p>
 
             <div class="hero-actions">
               <a href="#featured" class="btn-custom-primary" id="btn-hero-stories-primary">
-                <span>Explore Case Studies</span>
+                <span>View Case Studies</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <line x1="12" y1="5" x2="12" y2="19"></line>
                   <polyline points="19 12 12 19 5 12"></polyline>
@@ -170,7 +174,7 @@
               </a>
 
               <a href="#results" class="btn-custom-secondary" id="btn-hero-stories-secondary">
-                <span>View Audited Metrics</span>
+                <span>How Outcomes Are Determined</span>
               </a>
             </div>
           </div>
@@ -179,12 +183,12 @@
         <!-- Right Hero Visual Banner -->
         <div class="col-lg-6">
           <div class="hero-stories-img-wrap">
-            <img src="assets/images/success-hero-new.jpg" alt="Client celebrating credit approval success" class="hero-stories-img" id="img-stories-hero">
+            <img src="assets/images/success-hero-new.jpg" alt="Client reviewing credit report results" class="hero-stories-img" id="img-stories-hero">
             
             <!-- Floating Badge Overlay -->
             <div class="position-absolute bottom-0 start-0 m-3 p-3 bg-dark bg-opacity-85 text-white backdrop-blur border border-white border-opacity-15 rounded-3 shadow-md">
-              <div class="fw-bold font-heading fs-6 text-teal">98.7% Client Satisfaction</div>
-              <div class="extra-small text-white-50">Audited across 12,000+ completed client programs</div>
+              <div class="fw-bold font-heading fs-6 text-teal">FCRA & CROA Aligned</div>
+              <div class="extra-small text-white-50">Every dispute is prepared individually with zero unsubstantiated claims</div>
             </div>
           </div>
         </div>
@@ -192,6 +196,24 @@
       </div>
     </div>
   </section>
+
+  <!-- Educational Disclaimer Banner -->
+  <div class="container my-4">
+    <div class="compliance-notice-box py-3 px-4">
+      <div class="d-flex align-items-center gap-3">
+        <div class="text-teal flex-shrink-0">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+        </div>
+        <div class="small text-muted mb-0">
+          <strong>Illustrative Disclaimer:</strong> The following case studies represent illustrative scenarios reflecting real dispute workflows under the Fair Credit Reporting Act (FCRA). Because every individual's credit report, payment history, and furnisher records are unique, results vary on a case-by-case basis. Veritas Credit does not guarantee specific score increases or bureau deletions.
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ==========================================================================
        SECTION 2 — FEATURED SUCCESS (DETAILED CASE STUDY)
@@ -202,8 +224,8 @@
       <!-- Section Header -->
       <div class="section-header-block text-center mb-5">
         <div class="badge-eyebrow mx-auto">FEATURED CASE STUDY</div>
-        <h2>The Miller Family's Homeownership Journey</h2>
-        <p>How strategic FCRA disputes helped clear 6 negative items and secure a prime mortgage rate.</p>
+        <h2>Resolving Duplicate Medical Collections Before Mortgage Application</h2>
+        <p>How statutory FCRA dispute correspondence addressed duplicate unverified reporting across credit bureaus.</p>
       </div>
 
       <!-- Featured Story Card -->
@@ -213,47 +235,49 @@
           <!-- Left Image Column -->
           <div class="col-lg-6">
             <div class="featured-story-img-wrap">
-              <img src="assets/images/success-featured-new.jpg" alt="Miller family in front of their new home" class="featured-story-img" id="img-featured-story">
+              <img src="assets/images/success-featured-new.jpg" alt="Homeowners reviewing approved mortgage closing docs" class="featured-story-img" id="img-featured-story">
             </div>
           </div>
 
           <!-- Right Content Column -->
           <div class="col-lg-6">
             <div class="featured-story-content">
-              <div class="badge-eyebrow bg-teal-subtle text-teal border-0 mb-3">120-DAY TRANSFORMATION</div>
-              <h3 class="font-heading fs-3 fw-bold mb-3">From Mortgage Denial to Dream Home</h3>
+              <div class="badge-eyebrow bg-teal-subtle text-teal border-0 mb-3">DOCUMENTED CASE WORKFLOW</div>
+              <h3 class="font-heading fs-3 fw-bold mb-3">Medical Collection Dispute & Mortgage Readiness</h3>
               
-              <p class="text-muted mb-4">
-                "We were turned down twice for a home loan due to erroneous medical collections and an inaccurate late payment record. VeritasCredit pinpointed statutory FCRA violations, filed tri-bureau disputes, and removed all 6 items within 4 months."
-              </p>
+              <div class="case-study-details mb-3">
+                <div class="mb-2"><strong>Initial Challenge:</strong> Client identified two duplicate $450 collections reported by an agency for a bill covered by insurance, depressing scores prior to a home loan.</div>
+                <div class="mb-2"><strong>Assistance Provided:</strong> Conducted comprehensive 3-bureau audit, gathered billing statements, and filed formal dispute requests under FCRA § 611 and FDCPA § 809.</div>
+                <div class="mb-2"><strong>Documented Outcome:</strong> Credit bureaus completed 30-day investigation; furnisher failed to validate records, and duplicate items were deleted from Equifax and TransUnion.</div>
+              </div>
 
-              <!-- Compact FICO Transformation Gauge -->
+              <!-- Dispute Timeline & Status Box -->
               <div class="fico-gauge-box mb-4">
                 <div class="fico-flex-row mb-3">
                   <div>
-                    <div class="small text-white-50 text-uppercase fw-semibold">Starting FICO</div>
-                    <div class="fico-score-pill poor mt-1">520 FICO</div>
+                    <div class="small text-white-50 text-uppercase fw-semibold">Dispute Scope</div>
+                    <div class="fico-score-pill poor mt-1">2 Duplicate Items</div>
                   </div>
 
                   <div class="text-center px-2">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2.5"><polyline points="13 17 18 12 13 7"></polyline><line x1="6" y1="12" x2="18" y2="12"></line></svg>
-                    <div class="extra-small text-teal font-heading mt-1">+225 PTS JUMP</div>
+                    <div class="extra-small text-teal font-heading mt-1">FCRA § 611 AUDIT</div>
                   </div>
 
                   <div class="text-end">
-                    <div class="small text-white-50 text-uppercase fw-semibold">Final FICO</div>
-                    <div class="fico-score-pill prime mt-1">745 FICO</div>
+                    <div class="small text-white-50 text-uppercase fw-semibold">Bureau Result</div>
+                    <div class="fico-score-pill prime mt-1">Verified & Deleted</div>
                   </div>
                 </div>
 
                 <div class="small text-white-50 pt-2 border-top border-white border-opacity-10 d-flex justify-content-between">
-                  <span>Result: $450,000 Loan Approved</span>
-                  <span class="text-emerald">5.2% Fixed APR</span>
+                  <span>Investigation Window: 45 Days</span>
+                  <span class="text-emerald">Mortgage File Approved</span>
                 </div>
               </div>
 
               <a href="#stories-grid" class="btn-custom-primary align-self-start" id="btn-read-more-stories">
-                <span>Read More Client Stories</span>
+                <span>View More Scenarios</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
             </div>
@@ -273,9 +297,9 @@
       
       <!-- Section Header -->
       <div class="section-header-block text-center mb-5">
-        <div class="badge-eyebrow mx-auto">VERIFIED OUTCOMES</div>
-        <h2>Inspiring Client Success Stories</h2>
-        <p>Read how consumers reclaimed their credit standing across diverse financial challenges.</p>
+        <div class="badge-eyebrow mx-auto">COMMON SCENARIOS</div>
+        <h2>Realistic Credit Repair Case Studies</h2>
+        <p>Review how different reporting errors were audited, challenged, and resolved.</p>
       </div>
 
       <!-- 4 Visual Story Cards Grid -->
@@ -283,19 +307,21 @@
         
         <!-- Story Card 1 -->
         <div class="col-lg-3 col-md-6">
-          <div class="story-card">
+          <div class="story-card h-100">
             <div class="story-card-img-wrap">
-              <img src="assets/images/stories/story-card-1.jpg" alt="Marcus & Sarah celebrating home closing" class="story-card-img" id="img-story-1">
+              <img src="assets/images/stories/story-card-1.jpg" alt="Homeowners reviewing loan terms" class="story-card-img" id="img-story-1">
             </div>
-            <div class="story-card-body">
-              <div class="d-flex align-items-center justify-content-between mb-2">
-                <span class="badge bg-teal-subtle text-teal font-heading">Home Buyer</span>
-                <span class="fw-bold text-emerald">+165 PTS</span>
+            <div class="story-card-body d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <span class="badge bg-teal-subtle text-teal font-heading">Auto Trade-Line</span>
+                  <span class="fw-bold text-teal">Corrected</span>
+                </div>
+                <h4 class="font-heading fs-5 fw-bold mb-2">Mislabeled 30-Day Late Payment</h4>
+                <p class="story-card-desc">Auto lender erroneously recorded a late payment on an account that had been paid on time via auto-debit. Bank records were gathered and submitted.</p>
               </div>
-              <h4 class="font-heading fs-5 fw-bold mb-2">Marcus & Sarah T.</h4>
-              <p class="story-card-desc">Overcame inaccurate collection records to qualify for a first-time homebuyer mortgage program.</p>
-              <div class="story-card-footer">
-                Score: 550 → 715 • 90 Days
+              <div class="story-card-footer mt-3">
+                <strong>Outcome:</strong> Bureau updated trade-line to "Paid as Agreed".
               </div>
             </div>
           </div>
@@ -303,19 +329,21 @@
 
         <!-- Story Card 2 -->
         <div class="col-lg-3 col-md-6">
-          <div class="story-card">
+          <div class="story-card h-100">
             <div class="story-card-img-wrap">
-              <img src="assets/images/stories/story-card-2.jpg" alt="David with new vehicle approval" class="story-card-img" id="img-story-2">
+              <img src="assets/images/stories/story-card-2.jpg" alt="Vehicle owner checking loan rate" class="story-card-img" id="img-story-2">
             </div>
-            <div class="story-card-body">
-              <div class="d-flex align-items-center justify-content-between mb-2">
-                <span class="badge bg-gold-subtle text-gold font-heading">Auto Refinance</span>
-                <span class="fw-bold text-emerald">+130 PTS</span>
+            <div class="story-card-body d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <span class="badge bg-gold-subtle text-gold font-heading">Obsolete Record</span>
+                  <span class="fw-bold text-teal">Removed</span>
+                </div>
+                <h4 class="font-heading fs-5 fw-bold mb-2">Outdated Collection Beyond 7 Years</h4>
+                <p class="story-card-desc">An old retail collection account was re-aged by a debt buyer beyond the 7-year statutory FCRA reporting limit under 15 U.S.C. § 1681c.</p>
               </div>
-              <h4 class="font-heading fs-5 fw-bold mb-2">David K.</h4>
-              <p class="story-card-desc">Refinanced high-interest car loan from 18% APR down to 4.5% APR, saving $420 every month.</p>
-              <div class="story-card-footer">
-                Score: 590 → 720 • 60 Days
+              <div class="story-card-footer mt-3">
+                <strong>Outcome:</strong> Obsolete trade-line deleted per federal rules.
               </div>
             </div>
           </div>
@@ -323,19 +351,21 @@
 
         <!-- Story Card 3 -->
         <div class="col-lg-3 col-md-6">
-          <div class="story-card">
+          <div class="story-card h-100">
             <div class="story-card-img-wrap">
-              <img src="assets/images/stories/story-card-3.jpg" alt="Elena in corporate office" class="story-card-img" id="img-story-3">
+              <img src="assets/images/stories/story-card-3.jpg" alt="Small business owner reviewing credit file" class="story-card-img" id="img-story-3">
             </div>
-            <div class="story-card-body">
-              <div class="d-flex align-items-center justify-content-between mb-2">
-                <span class="badge bg-teal-subtle text-teal font-heading">Business Credit</span>
-                <span class="fw-bold text-emerald">+195 PTS</span>
+            <div class="story-card-body d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <span class="badge bg-teal-subtle text-teal font-heading">Mixed Credit File</span>
+                  <span class="fw-bold text-teal">Separated</span>
+                </div>
+                <h4 class="font-heading fs-5 fw-bold mb-2">Merged Sibling Credit Accounts</h4>
+                <p class="story-card-desc">Two family members with similar names and shared previous addresses had accounts cross-merged onto Experian and Equifax reports.</p>
               </div>
-              <h4 class="font-heading fs-5 fw-bold mb-2">Elena R.</h4>
-              <p class="story-card-desc">Cleared disputed commercial charge-off records to secure a $100k revolving business line.</p>
-              <div class="story-card-footer">
-                Score: 510 → 705 • 120 Days
+              <div class="story-card-footer mt-3">
+                <strong>Outcome:</strong> Bureau files separated; unassociated items cleared.
               </div>
             </div>
           </div>
@@ -343,19 +373,21 @@
 
         <!-- Story Card 4 -->
         <div class="col-lg-3 col-md-6">
-          <div class="story-card">
+          <div class="story-card h-100">
             <div class="story-card-img-wrap">
-              <img src="assets/images/stories/story-card-4.jpg" alt="James reviewing credit profile" class="story-card-img" id="img-story-4">
+              <img src="assets/images/stories/story-card-4.jpg" alt="Individual working on credit action plan" class="story-card-img" id="img-story-4">
             </div>
-            <div class="story-card-body">
-              <div class="d-flex align-items-center justify-content-between mb-2">
-                <span class="badge bg-gold-subtle text-gold font-heading">Public Record</span>
-                <span class="fw-bold text-emerald">+210 PTS</span>
+            <div class="story-card-body d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <span class="badge bg-gold-subtle text-gold font-heading">Revolving Credit</span>
+                  <span class="fw-bold text-teal">Optimized</span>
+                </div>
+                <h4 class="font-heading fs-5 fw-bold mb-2">Utilization Action Plan Coaching</h4>
+                <p class="story-card-desc">Client maintained an 82% balance-to-limit ratio suppressing credit health. Developed a phased payoff roadmap and statement closing cycle alignment.</p>
               </div>
-              <h4 class="font-heading fs-5 fw-bold mb-2">James P.</h4>
-              <p class="story-card-desc">Challenged obsolete bankruptcy records under FCRA §611, resulting in full bureau deletion.</p>
-              <div class="story-card-footer">
-                Score: 480 → 690 • 150 Days
+              <div class="story-card-footer mt-3">
+                <strong>Outcome:</strong> Utilization reduced to 18%; healthier profile.
               </div>
             </div>
           </div>
@@ -367,66 +399,54 @@
   </section>
 
   <!-- ==========================================================================
-       SECTION 4 — RESULTS / PROGRESS (VISUAL METRICS GRID)
+       SECTION 4 — KEY FACTORS THAT DETERMINE OUTCOMES
        ========================================================================== -->
   <section class="results-section" id="results">
     <div class="container">
       
       <!-- Section Header -->
       <div class="section-header-block text-center mb-5">
-        <div class="badge-eyebrow mx-auto">AUDITED PERFORMANCE</div>
-        <h2>Empirical Evidence Of Credit Growth</h2>
-        <p>Visual statistics detailing bureau deletion performance and client satisfaction metrics.</p>
+        <div class="badge-eyebrow mx-auto">TRANSPARENT PROCESS</div>
+        <h2>What Influences Dispute Outcomes?</h2>
+        <p>Understanding the statutory legal framework governing credit report challenges.</p>
       </div>
 
-      <!-- 4 Visual Metrics Cards Grid -->
+      <!-- 4 Informative Process Metric Cards Grid -->
       <div class="row g-4">
         
         <div class="col-lg-3 col-sm-6">
-          <div class="result-stat-box text-center">
-            <div class="badge-eyebrow bg-teal-subtle text-teal border-0 mb-2">FCRA STATUTE</div>
-            <div class="font-heading display-5 fw-bold text-teal">99.1%</div>
-            <div class="fw-bold text-main font-heading mt-2">Dispute Accuracy Rate</div>
-            <p class="small text-muted mb-0">Legal precision backed by federal compliance specialists.</p>
-            <div class="stat-progress-bar">
-              <div class="stat-progress-fill" style="width: 99%;"></div>
-            </div>
+          <div class="result-stat-box text-center h-100">
+            <div class="badge-eyebrow bg-teal-subtle text-teal border-0 mb-2">STATUTORY RIGHT</div>
+            <div class="font-heading display-6 fw-bold text-teal">FCRA § 611</div>
+            <div class="fw-bold text-main font-heading mt-2">30-45 Day Response</div>
+            <p class="small text-muted mb-0">Bureaus must investigate and verify disputed items or remove unverified data.</p>
           </div>
         </div>
 
         <div class="col-lg-3 col-sm-6">
-          <div class="result-stat-box text-center">
-            <div class="badge-eyebrow bg-gold-subtle text-gold border-0 mb-2">TOTAL DELETIONS</div>
-            <div class="font-heading display-5 fw-bold text-gold">48,500+</div>
-            <div class="fw-bold text-main font-heading mt-2">Bureau Items Removed</div>
-            <p class="small text-muted mb-0">Collections, charge-offs, and late payments deleted.</p>
-            <div class="stat-progress-bar">
-              <div class="stat-progress-fill" style="width: 94%;"></div>
-            </div>
+          <div class="result-stat-box text-center h-100">
+            <div class="badge-eyebrow bg-gold-subtle text-gold border-0 mb-2">FURNISHER DUTY</div>
+            <div class="font-heading display-6 fw-bold text-gold">FCRA § 623</div>
+            <div class="fw-bold text-main font-heading mt-2">Data Accuracy Standards</div>
+            <p class="small text-muted mb-0">Creditors and collection agencies are legally required to report accurate information.</p>
           </div>
         </div>
 
         <div class="col-lg-3 col-sm-6">
-          <div class="result-stat-box text-center">
-            <div class="badge-eyebrow bg-teal-subtle text-teal border-0 mb-2">FAST TIMELINE</div>
-            <div class="font-heading display-5 fw-bold text-emerald">30 Days</div>
-            <div class="fw-bold text-main font-heading mt-2">Avg. First Deletion</div>
-            <p class="small text-muted mb-0">Rapid initial response from Experian, Equifax & TransUnion.</p>
-            <div class="stat-progress-bar">
-              <div class="stat-progress-fill" style="width: 88%;"></div>
-            </div>
+          <div class="result-stat-box text-center h-100">
+            <div class="badge-eyebrow bg-teal-subtle text-teal border-0 mb-2">TRI-BUREAU SCOPE</div>
+            <div class="font-heading display-6 fw-bold text-teal">3 Repositories</div>
+            <div class="fw-bold text-main font-heading mt-2">Equifax, Experian, TransUnion</div>
+            <p class="small text-muted mb-0">Discrepancies often occur because furnishers report different data across bureaus.</p>
           </div>
         </div>
 
         <div class="col-lg-3 col-sm-6">
-          <div class="result-stat-box text-center">
-            <div class="badge-eyebrow bg-gold-subtle text-gold border-0 mb-2">DEBT SHIELD</div>
-            <div class="font-heading display-5 fw-bold text-teal">$12.4M+</div>
-            <div class="fw-bold text-main font-heading mt-2">Inaccurate Debt Removed</div>
-            <p class="small text-muted mb-0">Protecting consumers from invalid collector claims.</p>
-            <div class="stat-progress-bar">
-              <div class="stat-progress-fill" style="width: 96%;"></div>
-            </div>
+          <div class="result-stat-box text-center h-100">
+            <div class="badge-eyebrow bg-gold-subtle text-gold border-0 mb-2">SCORE IMPACT</div>
+            <div class="font-heading display-6 fw-bold text-gold">65% Weight</div>
+            <div class="fw-bold text-main font-heading mt-2">Payment History & Utilization</div>
+            <p class="small text-muted mb-0">Disputing errors paired with sound credit habits builds lasting financial stability.</p>
           </div>
         </div>
 

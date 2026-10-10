@@ -94,32 +94,36 @@
             <li class="nav-item"><a class="nav-link" href="dashboard.html" id="link-dashboard">Dashboard</a></li>
           </ul>
 
-          <!-- Controls & Login CTA -->
-          <div class="d-flex align-items-center gap-2 ms-lg-3 nav-controls-mobile mt-3 mt-lg-0">
-            <!-- Direction Switcher (LTR / RTL) -->
-            <button class="lang-switch-btn dir-toggle-btn" type="button" aria-label="Toggle Layout Direction" id="btn-rtl-toggle">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-              </svg>
-              <span class="dir-label">RTL</span>
-            </button>
+          <!-- Controls & CTAs -->
+          <div class="nav-controls-mobile">
+            <div class="nav-controls-toggles">
+              <!-- Direction Switcher (LTR / RTL) -->
+              <button class="lang-switch-btn dir-toggle-btn" type="button" aria-label="Toggle Layout Direction" id="btn-rtl-toggle">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 7h12m0 0l-4-4m4 4l-4 4m-4 6H4m0 0l4 4m-4-4l4-4"></path>
+                </svg>
+                <span class="dir-label">RTL</span>
+              </button>
 
-            <!-- Light/Dark Mode Switcher -->
-            <button class="btn-icon-toggle theme-toggle-btn" type="button" aria-label="Toggle Dark/Light Mode" id="btn-theme-toggle">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-              </svg>
-            </button>
+              <!-- Light/Dark Mode Switcher -->
+              <button class="btn-icon-toggle theme-toggle-btn" type="button" aria-label="Toggle Dark/Light Mode" id="btn-theme-toggle">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+              </button>
+            </div>
 
-            <!-- Login Button -->
-            <a href="login.html" class="btn-custom-primary text-decoration-none px-3 py-2 ms-1" id="btn-login">
+            <!-- Client Login Link -->
+            <a href="login.html" class="btn-custom-outline-nav text-decoration-none" id="btn-nav-login">
               <span>Client Login</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
-                <polyline points="10 17 15 12 10 7"></polyline>
-                <line x1="15" y1="12" x2="3" y2="12"></line>
+            </a>
+
+            <!-- Prominent Primary CTA -->
+            <a href="contact.html" class="btn-custom-primary text-decoration-none" id="btn-nav-cta">
+              <span>Free Credit Audit</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
           </div>
@@ -135,6 +139,9 @@
   <!-- ==========================================================================
        SECTION 1 — HERO (FULL-WIDTH BACKGROUND IMAGE LAYOUT)
        ========================================================================== -->
+  <!-- ==========================================================================
+       SECTION 1 — CREDIT REPAIR HERO
+       ========================================================================== -->
   <section class="hero-section" id="hero">
     <div class="container text-center text-lg-start">
       <div class="row align-items-center g-5">
@@ -143,79 +150,81 @@
         <div class="col-lg-7">
           <div class="badge-eyebrow mb-3">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
-              <polyline points="16 7 22 7 22 13"></polyline>
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
             </svg>
-            ELEVATE YOUR FINANCIAL STANDING
+            CERTIFIED CREDIT REPAIR SERVICE
           </div>
 
           <h1 class="hero-title">
-            Your Credit. <br>
-            <span class="text-gradient">Your Next Chapter.</span>
+            Take Control of Your <br>
+            <span class="text-gradient">Credit Future.</span>
           </h1>
 
           <p class="hero-subtitle">
-            Empowering clients to understand, repair, and optimize their credit profiles with strategic dispute support, legal clarity, and transparent financial guidance.
+            Understand your credit report, challenge potentially inaccurate information, monitor your progress, and build a stronger financial foundation with personalized credit support.
           </p>
 
           <div class="hero-actions justify-content-center justify-content-lg-start">
-            <a href="#services" class="btn-custom-primary" id="btn-hero-primary">
-              <span>Get Free Credit Audit</span>
+            <a href="contact.html" class="btn-custom-primary" id="btn-hero-primary">
+              <span>Get Started</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
 
-            <a href="#journey" class="btn-custom-secondary text-white border-white-50" id="btn-hero-secondary">
-              <span>How It Works</span>
+            <a href="#services" class="btn-custom-secondary text-white border-white-50" id="btn-hero-secondary">
+              <span>Explore Our Services</span>
             </a>
           </div>
 
           <!-- Trust Badges Ticker -->
           <div class="d-flex align-items-center justify-content-center justify-content-lg-start gap-4 pt-3 border-top border-secondary border-opacity-25">
             <div>
-              <div class="fw-bold text-white font-heading fs-5 mb-0">FCRA Compliant</div>
-              <div class="text-white-50 small">100% Legal Bureau Disputes</div>
+              <div class="fw-bold text-white font-heading fs-5 mb-0">FCRA & CROA Compliant</div>
+              <div class="text-white-50 small">Strict adherence to federal credit repair laws</div>
             </div>
             <div class="border-end border-secondary border-opacity-50 py-3"></div>
             <div>
-              <div class="fw-bold text-white font-heading fs-5 mb-0">★ 4.9 / 5.0</div>
-              <div class="text-white-50 small">Over 12,000+ Profiles Restored</div>
+              <div class="fw-bold text-white font-heading fs-5 mb-0">3-Bureau Analysis</div>
+              <div class="text-white-50 small">Equifax • Experian • TransUnion</div>
             </div>
           </div>
         </div>
 
-        <!-- Right Floating Stats Glass Box -->
+        <!-- Right Credit Audit Summary Showcase Glass Box -->
         <div class="col-lg-5">
           <div class="hero-section-card-glass text-start">
             <div class="d-flex align-items-center gap-3 mb-3">
               <div class="hero-card-icon-glow">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
                 </svg>
               </div>
               <div>
-                <div class="fw-bold text-white font-heading fs-5">Rapid Bureau Disputes</div>
+                <div class="fw-bold text-white font-heading fs-5">Tri-Bureau Credit Review</div>
                 <div class="text-white small fw-medium">Equifax • Experian • TransUnion</div>
               </div>
             </div>
 
             <p class="text-white small mb-4 fw-normal">
-              Our certified legal team directly challenges unverifiable late payments, charge-offs, and inaccuracies under the Fair Credit Reporting Act.
+              We help you review your credit reports, pinpoint questionable negative entries, draft formal disputes, and track bureau investigations.
             </p>
 
             <div class="row g-2 align-items-stretch">
               <div class="col-6">
                 <div class="p-3 rounded-2 bg-white bg-opacity-10 text-center h-100 d-flex flex-column justify-content-center">
-                  <div class="fs-4 fw-bold text-teal">+140 PTS</div>
-                  <div class="small text-white fw-medium">Avg. 90-Day Boost</div>
+                  <div class="fs-5 fw-bold text-teal">Line-by-Line</div>
+                  <div class="small text-white fw-medium">Report Audit</div>
                 </div>
               </div>
               <div class="col-6">
                 <div class="p-3 rounded-2 bg-white bg-opacity-10 text-center h-100 d-flex flex-column justify-content-center">
-                  <div class="fs-4 fw-bold text-emerald">30 Days</div>
-                  <div class="small text-white fw-medium">First Bureau Deletions</div>
+                  <div class="fs-5 fw-bold text-emerald">24/7 Portal</div>
+                  <div class="small text-white fw-medium">Dispute Tracking</div>
                 </div>
               </div>
             </div>
@@ -227,16 +236,16 @@
   </section>
 
   <!-- ==========================================================================
-       SECTION 2 — CREDIT REPAIR JOURNEY
+       SECTION 2 — UNDERSTAND THE CREDIT REPAIR PROCESS
        ========================================================================== -->
-  <section class="journey-section" id="journey">
+  <section class="journey-section" id="process">
     <div class="container">
       
       <!-- Section Heading -->
       <div class="section-header-block">
-        <div class="badge-eyebrow">SYSTEMATIC PROCESS</div>
-        <h2>Our 4-Step Credit Repair Journey</h2>
-        <p>A clear, legal, and structured pathway to resolving inaccurate items and raising your credit score.</p>
+        <div class="badge-eyebrow">STRUCTURED METHODOLOGY</div>
+        <h2>Understand the Credit Repair Process</h2>
+        <p>A transparent, law-backed 4-step framework designed to identify reporting errors and help restore your credit profile.</p>
       </div>
 
       <!-- 4 Horizontal Step Process Cards -->
@@ -256,8 +265,8 @@
                 </svg>
               </div>
             </div>
-            <h4>Review & Audit</h4>
-            <p>In-depth tri-bureau audit across Equifax, Experian, and TransUnion to pinpoint erroneous entries.</p>
+            <h4>Review Your Credit Reports</h4>
+            <p>Understand reported accounts, balances, payment history, and negative items across Equifax, Experian, and TransUnion.</p>
           </div>
         </div>
 
@@ -268,12 +277,13 @@
               <div class="journey-step-num">02</div>
               <div class="journey-step-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
               </div>
             </div>
-            <h4>Strategic Dispute</h4>
-            <p>Customized legal challenges leveraging federal consumer rights under the Fair Credit Reporting Act.</p>
+            <h4>Identify Potential Errors</h4>
+            <p>Review potentially inaccurate, incomplete, outdated, or unverifiable information that may be negatively impacting your credit standing.</p>
           </div>
         </div>
 
@@ -284,14 +294,13 @@
               <div class="journey-step-num">03</div>
               <div class="journey-step-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <line x1="18" y1="20" x2="18" y2="10"></line>
-                  <line x1="12" y1="20" x2="12" y2="4"></line>
-                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
                 </svg>
               </div>
             </div>
-            <h4>Track Progress</h4>
-            <p>24/7 dispute tracking and credit updates monitored directly inside your encrypted portal.</p>
+            <h4>Prepare and Track Disputes</h4>
+            <p>Help organize supporting documentation and prepare appropriate disputes for relevant credit bureaus or information providers under federal law.</p>
           </div>
         </div>
 
@@ -302,25 +311,25 @@
               <div class="journey-step-num">04</div>
               <div class="journey-step-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-                  <polyline points="17 6 23 6 23 12"></polyline>
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
                 </svg>
               </div>
             </div>
-            <h4>Rebuild & Grow</h4>
-            <p>Tailored financial coaching and credit utilization advice to sustain long-term score growth.</p>
+            <h4>Monitor Your Progress</h4>
+            <p>Review bureau responses, track case status inside your client portal, and determine the next appropriate steps with your dedicated specialist.</p>
           </div>
         </div>
 
       </div>
 
       <!-- Supporting Visual Banner Overlay -->
-      <div class="journey-visual-banner">
-        <img src="assets/images/sections/journey-meeting.jpg" alt="Financial advisor consultation" class="journey-banner-img" id="img-journey">
+      <div class="journey-visual-banner mt-5">
+        <img src="assets/images/sections/journey-meeting.jpg" alt="Credit specialist reviewing credit report with client" class="journey-banner-img" id="img-journey">
         <div class="journey-banner-overlay">
           <div class="journey-banner-content">
-            <h3>Proven Tri-Bureau Legal Disputes</h3>
-            <p>We work directly with credit bureaus and creditors to ensure every negative item on your report is accurate, verified, and fair.</p>
+            <h3>Personalized, Law-Backed Dispute Guidance</h3>
+            <p>We work directly with you to ensure every disputed entry on your credit report is handled ethically, systematically, and transparently under the Fair Credit Reporting Act.</p>
           </div>
         </div>
       </div>
@@ -329,154 +338,143 @@
   </section>
 
   <!-- ==========================================================================
-       SECTION 3 — CREDIT PROGRESS
-       ========================================================================== -->
-  <section class="progress-section" id="progress">
-    <div class="container">
-      
-      <div class="row align-items-center g-5">
-        
-        <!-- Left Progress Analytics Image -->
-        <div class="col-lg-6">
-          <div class="progress-img-wrapper">
-            <img src="assets/images/sections/progress-dashboard.jpg" alt="Credit score tracking analytics dashboard" class="progress-img" id="img-progress">
-          </div>
-
-          <!-- Score Card Dial Floating Widget -->
-          <div class="score-widget-card">
-            <div class="score-dial-display">
-              <div>
-                <span class="score-badge-label text-nowrap">EXCELLENT RATING</span>
-                <h3 class="mt-2 mb-0 font-heading fs-5 fw-bold">Credit Score Jump</h3>
-              </div>
-              <div class="text-end">
-                <div class="score-value">740</div>
-                <span class="text-success small fw-bold">+160 PTS Growth</span>
-              </div>
-            </div>
-
-            <div class="d-flex align-items-center justify-content-between text-subtle small">
-              <span>Initial: 580 (Poor)</span>
-              <span>Disputes Resolved: 14</span>
-              <span>Status: Active Monitoring</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Copy & Compact Statistics -->
-        <div class="col-lg-6">
-          <div class="badge-eyebrow">MEASURABLE IMPACT</div>
-          <h2 class="font-heading fw-bold fs-2 mb-3">Transparent Results Driven By Data</h2>
-          <p class="text-muted mb-4">
-            We don't guess—we challenge unverifiable, misleading, and outdated items to give your credit profile the foundation it deserves.
-          </p>
-
-          <!-- Stat Pills -->
-          <div class="row g-3 mb-4">
-            <div class="col-4">
-              <div class="progress-stat-pill">
-                <div class="stat-number text-teal">98.4%</div>
-                <div class="stat-desc">Dispute Success</div>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="progress-stat-pill">
-                <div class="stat-number">$4.2M+</div>
-                <div class="stat-desc">Debt Removed</div>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="progress-stat-pill">
-                <div class="stat-number">45 Days</div>
-                <div class="stat-desc">Avg. First Results</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Compact Action Labels -->
-          <div class="d-flex flex-column gap-2">
-            <div class="d-flex align-items-center gap-2">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span class="fw-semibold text-main small">Tri-Bureau Inaccuracy Removal</span>
-            </div>
-            <div class="d-flex align-items-center gap-2">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span class="fw-semibold text-main small">FCRA & FDCPA Compliance Enforcement</span>
-            </div>
-            <div class="d-flex align-items-center gap-2">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span class="fw-semibold text-main small">Dedicated Client Success Advisor</span>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       SECTION 4 — SERVICES PREVIEW
+       SECTION 3 — CREDIT REPAIR SERVICES (6 DEDICATED CARDS)
        ========================================================================== -->
   <section class="services-section" id="services">
     <div class="container">
       
       <!-- Section Header -->
       <div class="section-header-block">
-        <div class="badge-eyebrow">CORE OFFERINGS</div>
-        <h2>Specialized Credit Recovery Services</h2>
-        <p>Comprehensive solutions built to address every stage of your financial growth.</p>
+        <div class="badge-eyebrow">CORE SERVICES</div>
+        <h2>Our Credit Repair Services</h2>
+        <p>Specialized credit solutions designed to address every aspect of your credit file with total transparency.</p>
       </div>
 
-      <!-- 3 Image-Rich Cards (Unique Images) -->
+      <!-- 6 Service Cards Grid -->
       <div class="row g-4">
         
-        <!-- Card 1: Credit Dispute Support -->
+        <!-- Service 1: Credit Report Review -->
         <div class="col-lg-4 col-md-6">
           <div class="service-card">
-            <div class="service-card-img-wrap">
-              <img src="assets/images/sections/service-dispute.jpg" alt="Financial document dispute analysis" class="service-card-img" id="img-service-1">
-            </div>
             <div class="service-card-body">
-              <h3 class="service-card-title">Credit Dispute Support</h3>
-              <p class="service-card-text">Rigorous legal challenges targeting inaccurate collections, late payments, and fraudulent inquiries.</p>
-              <a href="#" class="service-card-link" id="link-service-1">
-                <span>Learn Dispute Process</span>
+              <div class="challenge-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+              </div>
+              <h3 class="service-card-title">Credit Report Review</h3>
+              <p class="service-card-text">Comprehensive line-by-line analysis across Equifax, Experian, and TransUnion to uncover clerical mistakes, duplicate tradelines, and reporting discrepancies.</p>
+              <div class="small text-muted mb-3"><strong>What to expect:</strong> Complete audit breakdown highlighting items requiring documentation.</div>
+              <a href="services.html#dispute-support" class="service-card-link mt-auto" id="link-service-1">
+                <span>Learn More</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Card 2: Credit Monitoring -->
+        <!-- Service 2: Credit Bureau Dispute Assistance -->
         <div class="col-lg-4 col-md-6">
           <div class="service-card">
-            <div class="service-card-img-wrap">
-              <img src="assets/images/sections/service-monitoring.jpg" alt="Real-time mobile credit monitoring interface" class="service-card-img" id="img-service-2">
-            </div>
             <div class="service-card-body">
-              <h3 class="service-card-title">Credit Monitoring</h3>
-              <p class="service-card-text">24/7 tri-bureau protection with instant alerts on score updates, new inquiries, and identity threats.</p>
-              <a href="#" class="service-card-link" id="link-service-2">
-                <span>Explore Monitoring</span>
+              <div class="challenge-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <h3 class="service-card-title">Credit Bureau Dispute Assistance</h3>
+              <p class="service-card-text">Preparation and delivery of customized dispute requests to the three major bureaus, challenging entries that appear inaccurate, outdated, or incomplete under the FCRA.</p>
+              <div class="small text-muted mb-3"><strong>What to expect:</strong> Law-backed, tailored dispute filings rather than generic templates.</div>
+              <a href="services.html#dispute-support" class="service-card-link mt-auto" id="link-service-2">
+                <span>Learn More</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Card 3: Financial Coaching -->
-        <div class="col-lg-4 col-md-6 mx-auto">
+        <!-- Service 3: Creditor and Collection Dispute Support -->
+        <div class="col-lg-4 col-md-6">
           <div class="service-card">
-            <div class="service-card-img-wrap">
-              <img src="assets/images/sections/service-coaching.jpg" alt="One-on-one financial coaching consultation" class="service-card-img" id="img-service-3">
-            </div>
             <div class="service-card-body">
-              <h3 class="service-card-title">Financial Coaching</h3>
-              <p class="service-card-text">Personalized guidance to optimize credit utilization, structure debt payoff, and qualify for prime loans.</p>
-              <a href="#" class="service-card-link" id="link-service-3">
-                <span>Explore Coaching</span>
+              <div class="challenge-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                  <line x1="2" y1="10" x2="22" y2="10"></line>
+                </svg>
+              </div>
+              <h3 class="service-card-title">Creditor & Collector Dispute Support</h3>
+              <p class="service-card-text">Direct engagement with original creditors and third-party collection agencies demanding full account verification and compliance with the Fair Debt Collection Practices Act.</p>
+              <div class="small text-muted mb-3"><strong>What to expect:</strong> Formal debt validation letters requesting proof of account legitimacy.</div>
+              <a href="services.html#dispute-support" class="service-card-link mt-auto" id="link-service-3">
+                <span>Learn More</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4: Negative Item Review -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card">
+            <div class="service-card-body">
+              <div class="challenge-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="15" y1="9" x2="9" y2="15"></line>
+                  <line x1="9" y1="9" x2="15" y2="15"></line>
+                </svg>
+              </div>
+              <h3 class="service-card-title">Negative Item Review</h3>
+              <p class="service-card-text">Specialized evaluation of late payments, charge-offs, repossessions, collections, and public records to determine appropriate challenge avenues and verification requirements.</p>
+              <div class="small text-muted mb-3"><strong>What to expect:</strong> Case-by-case assessment of statutory reporting periods and errors.</div>
+              <a href="services.html#dispute-support" class="service-card-link mt-auto" id="link-service-4">
+                <span>Learn More</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 5: Credit Monitoring & Progress Tracking -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card">
+            <div class="service-card-body">
+              <div class="challenge-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                </svg>
+              </div>
+              <h3 class="service-card-title">Credit Monitoring & Tracking</h3>
+              <p class="service-card-text">Continuous tri-bureau tracking with instant notifications on new inquiries, account balance updates, bureau responses, and overall credit health progression.</p>
+              <div class="small text-muted mb-3"><strong>What to expect:</strong> 24/7 client portal alerts and monthly credit progress summaries.</div>
+              <a href="services.html#credit-monitoring" class="service-card-link mt-auto" id="link-service-5">
+                <span>Learn More</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 6: Personalized Credit Improvement Plans -->
+        <div class="col-lg-4 col-md-6">
+          <div class="service-card">
+            <div class="service-card-body">
+              <div class="challenge-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="service-card-title">Personalized Credit Improvement Plans</h3>
+              <p class="service-card-text">Actionable educational plans focused on revolving balance utilization optimization, trade-line management, and strategic payment timing for sustainable score health.</p>
+              <div class="small text-muted mb-3"><strong>What to expect:</strong> Step-by-step guidance to rebuild and sustain positive credit standing.</div>
+              <a href="services.html#financial-coaching" class="service-card-link mt-auto" id="link-service-6">
+                <span>Learn More</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
             </div>
@@ -489,20 +487,367 @@
   </section>
 
   <!-- ==========================================================================
-       SECTION 5 — FINAL CTA
+       SECTION 4 — HOW WE HELP YOU (PRACTICAL CHALLENGES & COMPLIANCE)
        ========================================================================== -->
-  <section class="cta-section" id="cta">
+  <section class="challenge-section py-5 bg-surface border-top border-bottom" id="challenges">
+    <div class="container py-4">
+      
+      <div class="section-header-block">
+        <div class="badge-eyebrow">COMMON OBSTACLES</div>
+        <h2>How We Help You Navigate Credit Challenges</h2>
+        <p>Understanding and challenging negative items can be difficult. We help you address the practical issues that affect everyday credit reports.</p>
+      </div>
+
+      <!-- 6 Common Challenges Grid -->
+      <div class="row g-4">
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="challenge-card">
+            <div class="challenge-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h4>Inaccurate Late-Payment Records</h4>
+            <p>Payments marked 30, 60, or 90 days delinquent due to billing cycle confusion, bank transitions, or clerical data entry errors.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="challenge-card">
+            <div class="challenge-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <h4>Incorrect Collection Accounts</h4>
+            <p>Collection agencies reporting unverified debts, duplicate entries from sold accounts, or balances belonging to another individual with a similar name.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="challenge-card">
+            <div class="challenge-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h4>Balance & Limit Discrepancies</h4>
+            <p>Credit card balances reported higher than actual balances, or credit limits missing entirely, which unfairly damages credit utilization ratios.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="challenge-card">
+            <div class="challenge-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            </div>
+            <h4>Outdated Negative Information</h4>
+            <p>Negative accounts that continue to appear on your report past the federal 7-year reporting window (or 10 years for certain bankruptcies) contrary to the FCRA.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="challenge-card">
+            <div class="challenge-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            </div>
+            <h4>Complex Tri-Bureau Reports</h4>
+            <p>Deciphering dense bureau codes, differing account numbers, and contradictory entries between Equifax, Experian, and TransUnion without guidance.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="challenge-card">
+            <div class="challenge-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+            </div>
+            <h4>Dispute Uncertainty & Next Steps</h4>
+            <p>Confusion over how to submit supporting documentation, what timeline credit bureaus have to respond, and what to do if an error is verified incorrectly.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Transparent Compliance Disclosure -->
+      <div class="compliance-notice-box">
+        <div class="compliance-notice-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        </div>
+        <div class="compliance-notice-content">
+          <h5>Important Notice Regarding Credit Repair Compliance</h5>
+          <p>Every credit file is unique, and items are audited strictly on a case-by-case basis. Under the Credit Repair Organizations Act (CROA), no credit repair company can legally promise or guarantee score increases, deletion of accurate and verifiable accounts, or specific outcomes. Veritas Credit focuses on helping consumers identify genuine inaccuracies and enforce their statutory rights under federal law.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5 — CLIENT DASHBOARD PREVIEW
+       ========================================================================== -->
+  <section class="dashboard-preview-section py-5" id="dashboard-preview">
+    <div class="container py-4">
+      
+      <div class="row align-items-center g-5">
+        
+        <!-- Left: Explanatory Copy & Key Features -->
+        <div class="col-lg-5">
+          <div class="badge-eyebrow">CLIENT TRANSPARENCY</div>
+          <h2 class="font-heading fw-bold fs-2 mb-3">Track Every Step Inside Your Client Portal</h2>
+          <p class="text-muted mb-4">
+            No guessing or waiting in the dark. Your secure Veritas Credit portal gives you complete visibility into dispute filings, bureau responses, and personalized credit milestones.
+          </p>
+
+          <div class="d-flex flex-column gap-3 mb-4">
+            <div class="d-flex align-items-start gap-3">
+              <div class="challenge-icon-box" style="width: 36px; height: 36px; min-width: 36px; margin: 0;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div>
+                <div class="fw-bold text-main font-heading small">Dispute Status by Credit Bureau</div>
+                <div class="small text-muted">Track cases organized across Equifax, Experian, and TransUnion in real time.</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-3">
+              <div class="challenge-icon-box" style="width: 36px; height: 36px; min-width: 36px; margin: 0;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div>
+                <div class="fw-bold text-main font-heading small">Secure Document Upload Center</div>
+                <div class="small text-muted">Upload IDs, utility bills, and creditor notices directly into your encrypted vault.</div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start gap-3">
+              <div class="challenge-icon-box" style="width: 36px; height: 36px; min-width: 36px; margin: 0;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div>
+                <div class="fw-bold text-main font-heading small">Personalized Action Plans</div>
+                <div class="small text-muted">Follow customized task checklists to optimize balances and maintain positive habits.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center gap-3">
+            <a href="login.html" class="btn-custom-primary">
+              <span>Access Client Portal</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="dashboard.html" class="btn-custom-outline-nav">View Portal Demo</a>
+          </div>
+        </div>
+
+        <!-- Right: Realistic Dashboard Shell Preview -->
+        <div class="col-lg-7">
+          <div class="dash-preview-shell">
+            <div class="dash-preview-header">
+              <div class="dash-window-dots">
+                <span class="dash-window-dot red"></span>
+                <span class="dash-window-dot yellow"></span>
+                <span class="dash-window-dot green"></span>
+              </div>
+              <span class="small text-muted fw-semibold">VeritasCredit Portal • Client View: Marcus Thorne, Senior Specialist</span>
+              <span class="badge bg-teal-subtle text-teal small">Live Session</span>
+            </div>
+
+            <div class="dash-preview-body">
+              
+              <!-- 3-Bureau Progress Summary -->
+              <div class="row g-2 mb-3">
+                <div class="col-4">
+                  <div class="p-3 bg-surface border rounded-3 text-center">
+                    <div class="small text-muted fw-semibold">Equifax</div>
+                    <div class="fs-5 fw-bold text-main">3 In Review</div>
+                    <span class="bureau-status-badge bureau-badge-pending mt-1">Pending Bureau</span>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="p-3 bg-surface border rounded-3 text-center">
+                    <div class="small text-muted fw-semibold">Experian</div>
+                    <div class="fs-5 fw-bold text-main">2 Resolved</div>
+                    <span class="bureau-status-badge bureau-badge-resolved mt-1">Updated Record</span>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="p-3 bg-surface border rounded-3 text-center">
+                    <div class="small text-muted fw-semibold">TransUnion</div>
+                    <div class="fs-5 fw-bold text-main">1 In Review</div>
+                    <span class="bureau-status-badge bureau-badge-open mt-1">Audit Scheduled</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Case Table Sample -->
+              <div class="p-3 bg-surface border rounded-3 mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="fw-bold font-heading small text-main">Recent Dispute Items Under Review</span>
+                  <span class="small text-muted">Last synced: Today</span>
+                </div>
+                <div class="d-flex flex-column gap-2">
+                  <div class="d-flex justify-content-between align-items-center p-2 bg-card rounded border small">
+                    <div>
+                      <div class="fw-semibold text-main">Midland Credit Management #8841</div>
+                      <div class="text-subtle extra-small">Unverified duplicate collection • TransUnion</div>
+                    </div>
+                    <span class="bureau-status-badge bureau-badge-pending">30-Day Window Active</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center p-2 bg-card rounded border small">
+                    <div>
+                      <div class="fw-semibold text-main">Capital One Trade-line #4102</div>
+                      <div class="text-subtle extra-small">Inaccurate 30-day late entry from 2021 • Experian</div>
+                    </div>
+                    <span class="bureau-status-badge bureau-badge-resolved">Record Corrected</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action Item Checklist Row -->
+              <div class="p-3 bg-teal-subtle rounded-3 border border-teal d-flex align-items-center justify-content-between flex-wrap gap-2">
+                <div class="d-flex align-items-center gap-2">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2.5"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                  <span class="small fw-bold text-teal">Upcoming Client Task:</span>
+                  <span class="small text-main">Upload Utility Bill for Proof of Address</span>
+                </div>
+                <a href="dashboard.html" class="btn btn-sm btn-outline-teal px-3 py-1">View Vault</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 6 — FINAL CTA AND FREQUENTLY ASKED QUESTIONS
+       ========================================================================== -->
+  <section class="about-faq-section" id="faq">
     <div class="container">
+      
+      <!-- FAQ Section Header -->
+      <div class="section-header-block">
+        <div class="badge-eyebrow">TRANSPARENT ANSWERS</div>
+        <h2>Frequently Asked Questions</h2>
+        <p>Get clear, honest information about credit repair, federal consumer protection, and what to expect.</p>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div class="row justify-content-center mb-5">
+        <div class="col-lg-9">
+          <div class="accordion accordion-custom" id="homeFaqAccordion">
+            
+            <!-- FAQ 1 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  What is credit repair?
+                </button>
+              </h3>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">
+                  Credit repair is the lawful process of reviewing your credit reports across the three major bureaus (Equifax, Experian, and TransUnion), identifying inaccurate, obsolete, incomplete, or unverifiable information, and exercising your rights under federal law to request investigations and corrections.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  How does the credit dispute process work?
+                </button>
+              </h3>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">
+                  We begin with a line-by-line review of your credit reports. When questionable or inaccurate entries are identified, we help compile supporting documentation and prepare formal dispute packages sent directly to the reporting bureaus or original furnishers under the Fair Credit Reporting Act (FCRA). The recipients have a statutory window (usually 30 days) to investigate and either verify, correct, or delete the disputed item.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  How long can the credit repair process take?
+                </button>
+              </h3>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">
+                  By law, credit bureaus have 30 to 45 days to investigate dispute claims once received. However, because credit profiles often require multiple rounds of review, documentation gathering, and creditor verification, a thorough process typically spans 3 to 6 months depending on the number and complexity of items under review.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Can every negative item be removed?
+                </button>
+              </h3>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">
+                  No. Under the Credit Repair Organizations Act (CROA), no ethical credit repair provider can promise or guarantee the removal of accurate, timely, and verifiable negative information. Items can only be corrected or removed if they are inaccurate, incomplete, misleading, unverifiable, or reporting past the statutory timeframe.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  How does credit monitoring work?
+                </button>
+              </h3>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">
+                  Credit monitoring continuously checks your credit files across Equifax, Experian, and TransUnion. Whenever a major change occurs—such as a new hard inquiry, a balance fluctuation, a public record update, or a bureau dispute response—you receive an alert so you can track progress and protect against identity theft.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  What documents may be needed to start?
+                </button>
+              </h3>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">
+                  To verify your identity with the bureaus, you will typically need a copy of a government-issued photo ID (driver's license or passport), proof of address (utility bill, lease, or bank statement dated within 60 days), and your Social Security number verification. For specific accounts, creditor statements or payment receipts are helpful.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                  How can clients track their dispute cases?
+                </button>
+              </h3>
+              <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#homeFaqAccordion">
+                <div class="accordion-body">
+                  All Veritas Credit clients receive 24/7 access to our secure online portal. Inside, you can review open and pending cases organized by credit bureau, view bureau response letters, upload documents, and track your personalized action items in real time.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Final CTA Banner -->
       <div class="cta-box">
         <div class="row align-items-center g-0">
           
           <div class="col-lg-7">
             <div class="cta-content">
               <div class="badge-eyebrow bg-teal-subtle text-teal border-0">TAKE THE FIRST STEP</div>
-              <h2>Ready to Reclaim Your Credit Future?</h2>
-              <p>Schedule your confidential, zero-obligation credit review with our certified specialists today.</p>
-              <a href="#contact" class="btn-custom-gold" id="btn-cta-final">
-                <span>Schedule Free Audit</span>
+              <h2>Ready to Take the Next Step?</h2>
+              <p>Schedule your confidential, zero-obligation credit review with a certified credit specialist today. Understand your rights and explore a clear path forward.</p>
+              <a href="contact.html" class="btn-custom-gold" id="btn-cta-final">
+                <span>Schedule Your Free Consultation</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
@@ -513,12 +858,13 @@
 
           <div class="col-lg-5">
             <div class="cta-img-wrap">
-              <img src="assets/images/sections/cta-success.jpg" alt="Confident client achieving financial goals" class="cta-img" id="img-cta">
+              <img src="assets/images/sections/cta-success.jpg" alt="Clients reviewing credit progress" class="cta-img" id="img-cta">
             </div>
           </div>
 
         </div>
       </div>
+
     </div>
   </section>
 

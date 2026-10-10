@@ -94,32 +94,36 @@
             <li class="nav-item"><a class="nav-link" href="dashboard.html" id="link-dashboard">Dashboard</a></li>
           </ul>
 
-          <!-- Controls & Login CTA -->
-          <div class="d-flex align-items-center gap-2 ms-lg-3 nav-controls-mobile mt-3 mt-lg-0">
-            <!-- Direction Switcher (LTR / RTL) -->
-            <button class="lang-switch-btn dir-toggle-btn" type="button" aria-label="Toggle Layout Direction" id="btn-rtl-toggle">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-              </svg>
-              <span class="dir-label">RTL</span>
-            </button>
+          <!-- Controls & CTAs -->
+          <div class="nav-controls-mobile">
+            <div class="nav-controls-toggles">
+              <!-- Direction Switcher (LTR / RTL) -->
+              <button class="lang-switch-btn dir-toggle-btn" type="button" aria-label="Toggle Layout Direction" id="btn-rtl-toggle">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 7h12m0 0l-4-4m4 4l-4 4m-4 6H4m0 0l4 4m-4-4l4-4"></path>
+                </svg>
+                <span class="dir-label">RTL</span>
+              </button>
 
-            <!-- Light/Dark Mode Switcher -->
-            <button class="btn-icon-toggle theme-toggle-btn" type="button" aria-label="Toggle Dark/Light Mode" id="btn-theme-toggle">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-              </svg>
-            </button>
+              <!-- Light/Dark Mode Switcher -->
+              <button class="btn-icon-toggle theme-toggle-btn" type="button" aria-label="Toggle Dark/Light Mode" id="btn-theme-toggle">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+              </button>
+            </div>
 
-            <!-- Login Button -->
-            <a href="login.html" class="btn-custom-primary text-decoration-none px-3 py-2 ms-1" id="btn-login">
+            <!-- Client Login Link -->
+            <a href="login.html" class="btn-custom-outline-nav text-decoration-none" id="btn-nav-login">
               <span>Client Login</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
-                <polyline points="10 17 15 12 10 7"></polyline>
-                <line x1="15" y1="12" x2="3" y2="12"></line>
+            </a>
+
+            <!-- Prominent Primary CTA -->
+            <a href="contact.html" class="btn-custom-primary text-decoration-none" id="btn-nav-cta">
+              <span>Free Credit Audit</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
           </div>
@@ -180,19 +184,19 @@
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
                 <div>
-                  <div class="fw-bold text-main font-heading small mb-0">FCRA Certified</div>
-                  <div class="text-subtle extra-small">Legal Bureau Disputes</div>
+                  <div class="fw-bold text-main font-heading small mb-0">FCRA & CROA Compliant</div>
+                  <div class="text-subtle extra-small">Law-Backed Bureau Inquiries</div>
                 </div>
               </div>
             </div>
             <div class="col-12 col-sm-6">
               <div class="d-flex align-items-center gap-2">
                 <div class="float-icon bg-gold-subtle text-gold flex-shrink-0" style="width: 38px; height: 38px; min-width: 38px; border-radius: 10px;">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
                 </div>
                 <div>
-                  <div class="fw-bold text-emerald font-heading small mb-0">+185 PTS</div>
-                  <div class="text-subtle extra-small">Avg. 90-Day Score Jump</div>
+                  <div class="fw-bold text-main font-heading small mb-0">3-Bureau Analysis</div>
+                  <div class="text-subtle extra-small">Equifax • Experian • TransUnion</div>
                 </div>
               </div>
             </div>
@@ -202,22 +206,22 @@
         <!-- Right Composite Editorial Visual Showcase -->
         <div class="col-lg-6">
           <div class="hero-image-wrapper border-0 bg-transparent shadow-none position-relative">
-            <img src="assets/images/home2/hero-editorial.jpg" alt="Executive financial strategy consultation" class="hero-editorial-center-img rounded-4 shadow-lg" id="img-hero-h2">
+            <img src="assets/images/home2/hero-editorial.jpg" alt="Credit specialist reviewing credit report with client" class="hero-editorial-center-img rounded-4 shadow-lg" id="img-hero-h2">
             
-            <!-- Top Right Score Boost Float Badge -->
+            <!-- Top Right Bureau Review Badge -->
             <div class="position-absolute top-0 end-0 m-3 p-3 bg-card border rounded-3 shadow-md d-flex align-items-center gap-3 hero-editorial-badge-top">
               <div class="float-icon bg-emerald-subtle text-emerald flex-shrink-0">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline></svg>
               </div>
               <div>
-                <div class="fw-bold text-main font-heading small mb-0">Audited Results</div>
-                <div class="text-emerald small font-heading fw-bold">12,000+ Profiles Restored</div>
+                <div class="fw-bold text-main font-heading small mb-0">Dedicated Case Support</div>
+                <div class="text-emerald small font-heading fw-bold">Individual Case Specialist</div>
               </div>
             </div>
 
             <!-- Bottom Left Tri-Bureau Float Badge -->
             <div class="position-absolute bottom-0 start-0 m-3 p-3 bg-dark bg-opacity-85 text-white backdrop-blur border border-white border-opacity-15 rounded-3 shadow-md hero-editorial-badge-bottom">
-              <div class="small fw-semibold mb-1">Tri-Bureau Dispute Shield</div>
+              <div class="small fw-semibold mb-1">Tri-Bureau Inaccuracy Audit</div>
               <div class="extra-small text-white fw-medium">Equifax • Experian • TransUnion</div>
             </div>
           </div>
@@ -338,15 +342,15 @@
           </div>
         </div>
 
-        <!-- Tile 3: Stat & Action Planning Tile -->
+        <!-- Tile 3: Action Planning Tile -->
         <div class="bento-tile bento-tile-stat">
           <div class="bento-tile-body justify-content-center text-center py-4">
             <span class="text-uppercase tracking-wider small text-teal fw-bold">CUSTOMIZED ACTION PLANNING</span>
-            <div class="progress-number-hero my-2 text-white">780+</div>
-            <p class="text-white-50 small mb-3">Target score threshold engineered for clients within 6 months.</p>
+            <div class="fs-2 fw-bold my-2 text-white font-heading">Personalized Guidance</div>
+            <p class="text-white-50 small mb-3">Targeted credit habit guidance and utilization optimization strategies tailored to your profile.</p>
             <div class="d-flex justify-content-center gap-2">
-              <span class="badge bg-secondary text-dark">Utilization Optimization</span>
-              <span class="badge bg-secondary text-dark">Debt Payoff Plan</span>
+              <span class="badge bg-white bg-opacity-10 text-white border-0 extra-small">Utilization Tuning</span>
+              <span class="badge bg-white bg-opacity-10 text-white border-0 extra-small">Debt Strategy</span>
             </div>
           </div>
         </div>
@@ -354,13 +358,13 @@
         <!-- Tile 4: Medium Feature (Financial Coaching) -->
         <div class="bento-tile bento-tile-medium">
           <div class="bento-tile-img-wrap">
-            <img src="assets/images/home2/bento-coaching.jpg" alt="Financial advisor coaching call" class="bento-tile-img" id="img-bento-4">
+            <img src="assets/images/home2/bento-coaching.jpg" alt="Credit specialist one on one session" class="bento-tile-img" id="img-bento-4">
           </div>
           <div class="bento-tile-body">
-            <h3 class="font-heading fs-4 fw-bold">Financial Coaching</h3>
-            <p>Personalized 1-on-1 strategy sessions focused on credit mix, trade-line expansion, and wealth building.</p>
-            <a href="#" class="service-card-link mt-auto" id="link-bento-4">
-              <span>Schedule Coaching</span>
+            <h3 class="font-heading fs-4 fw-bold">Credit Education & Coaching</h3>
+            <p>Personalized 1-on-1 strategy sessions focused on credit mix, trade-line management, and wealth building.</p>
+            <a href="services.html#financial-coaching" class="service-card-link mt-auto" id="link-bento-4">
+              <span>Schedule Consultation</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
           </div>
@@ -372,7 +376,7 @@
   </section>
 
   <!-- ==========================================================================
-       SECTION 4 — PROGRESS / SUCCESS
+       SECTION 4 — HOW DISPUTES WORK (TRANSPARENT FRAMEWORK)
        ========================================================================== -->
   <section class="editorial-progress-section" id="progress">
     <div class="container">
@@ -381,35 +385,35 @@
         <div class="row align-items-center g-5">
           
           <div class="col-lg-6">
-            <div class="badge-eyebrow">VERIFIED OUTCOMES</div>
-            <h2 class="font-heading fw-bold fs-2 mb-3">Empirical Evidence Of Score Growth</h2>
+            <div class="badge-eyebrow">TRANSPARENT METHODOLOGY</div>
+            <h2 class="font-heading fw-bold fs-2 mb-3">Structured, Law-Backed Dispute Verification</h2>
             <p class="text-muted mb-4">
-              Every dispute strategy is legally engineered to maximize item deletions and restore your credit standing across all major credit repositories.
+              We review every reported account against federal consumer protection standards to ensure information on your credit report is complete, accurate, and fully substantiated.
             </p>
 
             <div class="row g-3">
               <div class="col-6">
                 <div class="progress-stat-pill">
-                  <div class="stat-number text-teal">99.1%</div>
-                  <div class="stat-desc">FCRA Dispute Accuracy</div>
+                  <div class="stat-number text-teal">3-Bureau</div>
+                  <div class="stat-desc">Report Auditing</div>
                 </div>
               </div>
               <div class="col-6">
                 <div class="progress-stat-pill">
-                  <div class="stat-number">$6.8M+</div>
-                  <div class="stat-desc">Inaccurate Debt Removed</div>
+                  <div class="stat-number">FCRA & CROA</div>
+                  <div class="stat-desc">Full Legal Compliance</div>
                 </div>
               </div>
               <div class="col-6">
                 <div class="progress-stat-pill">
                   <div class="stat-number">30 Days</div>
-                  <div class="stat-desc">Avg. First Deletion</div>
+                  <div class="stat-desc">Bureau Statutory Window</div>
                 </div>
               </div>
               <div class="col-6">
                 <div class="progress-stat-pill">
-                  <div class="stat-number">100%</div>
-                  <div class="stat-desc">Transparent Portal</div>
+                  <div class="stat-number">24/7</div>
+                  <div class="stat-desc">Encrypted Client Portal</div>
                 </div>
               </div>
             </div>
@@ -417,10 +421,10 @@
 
           <div class="col-lg-6 text-center">
             <div class="p-4 rounded-3 border bg-surface">
-              <div class="badge-eyebrow bg-teal-subtle text-teal border-0 mb-2">SCORE IMPACT RECORD</div>
-              <div class="progress-number-hero text-teal">+185 PTS</div>
-              <div class="fw-bold text-main font-heading mt-2">Average 90-Day Credit Jump</div>
-              <p class="text-subtle small mt-1 mb-0">Based on audited client results across Equifax, Experian, and TransUnion.</p>
+              <div class="badge-eyebrow bg-teal-subtle text-teal border-0 mb-2">CLIENT RIGHTS PROTECTION</div>
+              <div class="fs-2 fw-bold text-teal font-heading">FCRA Section 611</div>
+              <div class="fw-bold text-main font-heading mt-2">Right to Inaccuracy Investigation</div>
+              <p class="text-subtle small mt-2 mb-0">Under federal law, credit reporting agencies must conduct a free, reasonable investigation of any disputed item and remove unverified or inaccurate entries.</p>
             </div>
           </div>
 

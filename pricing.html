@@ -94,32 +94,36 @@
             <li class="nav-item"><a class="nav-link" href="dashboard.html" id="link-dashboard">Dashboard</a></li>
           </ul>
 
-          <!-- Controls & Login CTA -->
-          <div class="d-flex align-items-center gap-2 ms-lg-3 nav-controls-mobile mt-3 mt-lg-0">
-            <!-- Direction Switcher (LTR / RTL) -->
-            <button class="lang-switch-btn dir-toggle-btn" type="button" aria-label="Toggle Layout Direction" id="btn-rtl-toggle">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-              </svg>
-              <span class="dir-label">RTL</span>
-            </button>
+          <!-- Controls & CTAs -->
+          <div class="nav-controls-mobile">
+            <div class="nav-controls-toggles">
+              <!-- Direction Switcher (LTR / RTL) -->
+              <button class="lang-switch-btn dir-toggle-btn" type="button" aria-label="Toggle Layout Direction" id="btn-rtl-toggle">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 7h12m0 0l-4-4m4 4l-4 4m-4 6H4m0 0l4 4m-4-4l4-4"></path>
+                </svg>
+                <span class="dir-label">RTL</span>
+              </button>
 
-            <!-- Light/Dark Mode Switcher -->
-            <button class="btn-icon-toggle theme-toggle-btn" type="button" aria-label="Toggle Dark/Light Mode" id="btn-theme-toggle">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-              </svg>
-            </button>
+              <!-- Light/Dark Mode Switcher -->
+              <button class="btn-icon-toggle theme-toggle-btn" type="button" aria-label="Toggle Dark/Light Mode" id="btn-theme-toggle">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+              </button>
+            </div>
 
-            <!-- Login Button -->
-            <a href="login.html" class="btn-custom-primary text-decoration-none px-3 py-2 ms-1" id="btn-login">
+            <!-- Client Login Link -->
+            <a href="login.html" class="btn-custom-outline-nav text-decoration-none" id="btn-nav-login">
               <span>Client Login</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
-                <polyline points="10 17 15 12 10 7"></polyline>
-                <line x1="15" y1="12" x2="3" y2="12"></line>
+            </a>
+
+            <!-- Prominent Primary CTA -->
+            <a href="contact.html" class="btn-custom-primary text-decoration-none" id="btn-nav-cta">
+              <span>Free Credit Audit</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
           </div>
@@ -180,15 +184,15 @@
             <div class="position-absolute bottom-0 start-0 end-0 p-3 bg-dark bg-opacity-75 backdrop-blur d-flex flex-wrap align-items-center justify-content-around text-white border-top border-white border-opacity-10">
               <div class="d-flex align-items-center gap-2">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span class="fw-semibold small">$0 Setup & Hidden Fees</span>
+                <span class="fw-semibold small">Transparent Flat Monthly Rates</span>
               </div>
               <div class="d-flex align-items-center gap-2">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span class="fw-semibold small">Cancel Anytime Policy</span>
+                <span class="fw-semibold small">Cancel Anytime Without Penalty</span>
               </div>
               <div class="d-flex align-items-center gap-2">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span class="fw-semibold small">90-Day Money-Back Guarantee</span>
+                <span class="fw-semibold small">100% CROA & FCRA Compliant</span>
               </div>
             </div>
           </div>
@@ -244,7 +248,9 @@
               </li>
             </ul>
 
-            <a href="#comparison" class="btn-custom-secondary w-100 text-center" id="btn-plan-1">Select Essential</a>
+            <a href="contact.html?plan=essential" class="btn-custom-secondary w-100 text-center" id="btn-plan-1">
+              <span>Start Essential Audit</span>
+            </a>
           </div>
         </div>
 
@@ -283,15 +289,17 @@
               </li>
             </ul>
 
-            <a href="#comparison" class="btn-custom-primary w-100 text-center" id="btn-plan-2">Select Advanced</a>
+            <a href="contact.html?plan=advanced" class="btn-custom-primary w-100 text-center" id="btn-plan-2">
+              <span>Start Advanced Audit</span>
+            </a>
           </div>
         </div>
 
         <!-- Plan 3: Executive Wealth Protection -->
         <div class="col-lg-4 col-md-6 mx-auto">
           <div class="pricing-card">
-            <h3 class="font-heading fs-4 fw-bold mb-1">Executive Wealth</h3>
-            <p class="small text-muted mb-3">Bespoke service with dedicated legal credit advisor and priority trade-line coaching.</p>
+            <h3 class="font-heading fs-4 fw-bold mb-1">Comprehensive Plan</h3>
+            <p class="small text-muted mb-3">Our most complete service with dedicated specialist review, multi-round disputes, and personalized credit coaching.</p>
 
             <div class="d-flex align-items-baseline mb-3">
               <span class="pricing-amount">$199</span>
@@ -301,30 +309,55 @@
             <ul class="pricing-features-list">
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Unlimited Priority Disputes</span>
+                <span>Comprehensive Tri-Bureau Disputes</span>
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Senior Legal Credit Advisor</span>
+                <span>Dedicated Credit Dispute Specialist</span>
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>1-on-1 Wealth & Trade-Line Coaching</span>
+                <span>1-on-1 Credit Coaching & Utilization Review</span>
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Mortgage Loan Qualification Plan</span>
+                <span>Mortgage Readiness Action Plan</span>
               </li>
               <li>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>VIP Expedited Processing</span>
+                <span>Expedited Document Processing</span>
               </li>
             </ul>
 
-            <a href="#comparison" class="btn-custom-secondary w-100 text-center" id="btn-plan-3">Select Executive</a>
+            <a href="contact.html?plan=comprehensive" class="btn-custom-secondary w-100 text-center" id="btn-plan-3">
+              <span>Start Comprehensive Audit</span>
+            </a>
           </div>
         </div>
 
+      </div>
+
+      <!-- Compliance Notice -->
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-10">
+          <div class="compliance-notice-box">
+            <div class="d-flex align-items-start gap-3">
+              <div class="notice-icon text-teal flex-shrink-0 mt-1">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1 text-main">Consumer Rights & Compliance Notice (CROA)</h5>
+                <p class="small text-muted mb-0">
+                  Under the federal Credit Repair Organizations Act (15 U.S.C. § 1679), you have the legal right to dispute inaccurate information in your credit report by yourself directly with credit bureaus without paying any fee. Veritas Credit provides professional document analysis, dispute preparation assistance, and personalized coaching. No credit repair company can guarantee score increases or promise the removal of accurate, timely, and verifiable records. Every case is evaluated individually.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>

@@ -98,8 +98,6 @@ function applyDirection(dir) {
     const textSpan = btn.querySelector('.dir-label');
     if (textSpan) {
       textSpan.textContent = dir === 'ltr' ? 'RTL' : 'LTR';
-    } else {
-      btn.textContent = dir === 'ltr' ? '🌐 RTL' : '🌐 LTR';
     }
     btn.setAttribute('title', `Switch to ${dir === 'ltr' ? 'Right-to-Left' : 'Left-to-Right'} layout`);
   });
