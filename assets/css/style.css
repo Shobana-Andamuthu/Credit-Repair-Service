@@ -1521,9 +1521,9 @@ ul.navbar-nav {
 }
 
 .footer-bottom {
-  border-top: 1px solid var(--border-color);
-  margin-top: 50px;
-  padding-top: 25px;
+  border-top: none;
+  margin-top: 40px;
+  padding-top: 15px;
   font-size: 0.85rem;
   color: var(--text-subtle);
 }
@@ -2456,11 +2456,15 @@ ul.navbar-nav {
 .fico-gauge-box {
   background: #0F172A !important;
   border-radius: var(--radius-md);
-  padding: 1.5rem;
+  padding: 1.25rem 1rem !important;
   color: #FFFFFF;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
   margin-bottom: 1.75rem !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 .fico-flex-row {
@@ -2468,17 +2472,56 @@ ul.navbar-nav {
   flex-wrap: nowrap !important;
   align-items: center !important;
   justify-content: space-between !important;
-  gap: 0.5rem !important;
+  gap: 0.4rem !important;
+  width: 100% !important;
+}
+
+.fico-flex-row > div:first-child {
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  text-align: left !important;
+}
+
+.fico-flex-row > div.text-center {
+  flex: 0 0 auto !important;
+  padding: 0 4px !important;
+}
+
+.fico-flex-row > div:last-child {
+  flex: 1 1 0 !important;
+  min-width: 0 !important;
+  text-align: right !important;
+}
+
+.fico-flex-row .text-uppercase {
+  font-size: 0.68rem !important;
+  letter-spacing: 0.03em !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  margin-bottom: 2px !important;
+}
+
+.fico-flex-row .extra-small {
+  font-size: 0.62rem !important;
+  line-height: 1.15 !important;
+  white-space: nowrap !important;
 }
 
 .fico-score-pill {
   font-family: var(--font-heading);
-  font-size: 1.15rem !important;
-  font-weight: 800;
-  padding: 0.35rem 0.75rem !important;
+  font-size: clamp(0.72rem, 1.05vw, 0.92rem) !important;
+  font-weight: 700 !important;
+  padding: 0.35rem 0.5rem !important;
   border-radius: var(--radius-sm);
-  display: inline-block;
-  white-space: nowrap !important;
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  text-align: center !important;
+  white-space: normal !important;
+  line-height: 1.2 !important;
+  box-sizing: border-box !important;
+  word-break: normal !important;
 }
 
 .fico-score-pill.poor {
@@ -2491,6 +2534,20 @@ ul.navbar-nav {
   background-color: rgba(45, 212, 191, 0.25) !important;
   color: #5EEAD4 !important;
   border: 1px solid rgba(45, 212, 191, 0.5) !important;
+}
+
+.fico-gauge-box .border-top {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  gap: 0.35rem 0.75rem !important;
+  font-size: 0.78rem !important;
+  padding-top: 0.6rem !important;
+}
+
+.fico-gauge-box .border-top > span {
+  white-space: nowrap !important;
 }
 
 .featured-story-content .btn-custom-primary,
@@ -2582,11 +2639,26 @@ ul.navbar-nav {
   padding-top: 0.75rem;
   border-top: 1px solid var(--border-color);
   font-size: 0.8rem;
-  font-weight: 600;
+  line-height: 1.45;
   color: var(--text-subtle);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex !important;
+  align-items: baseline !important;
+  justify-content: flex-start !important;
+  gap: 0.4rem !important;
+}
+
+.story-card-footer .story-outcome-badge,
+.story-card-footer strong {
+  font-weight: 700 !important;
+  color: var(--text-main) !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+}
+
+.story-card-footer .story-outcome-text,
+.story-card-footer span:not(.story-outcome-badge) {
+  color: var(--text-subtle) !important;
+  flex: 1 1 auto !important;
 }
 
 /* ==========================================================================
@@ -3183,11 +3255,18 @@ textarea.form-control:focus {
   font-size: 0.85rem !important;
 }
 
-.site-footer .footer-bottom,
+.site-footer .footer-bottom {
+  margin-top: 40px !important;
+  padding-top: 15px !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
 .site-footer .footer-bottom p {
-  margin-top: 50px !important;
-  padding-top: 25px !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border-top: none !important;
+  border-bottom: none !important;
   color: #CBD5E1 !important;
   font-size: 0.85rem !important;
 }
@@ -3531,7 +3610,7 @@ textarea.form-control:focus {
 }
 
 .footer-bottom {
-  border-top: 1px solid var(--border-color);
+  border-top: none;
   margin-top: 3rem;
   padding-top: 1.5rem;
   font-size: 0.88rem;
@@ -4799,12 +4878,16 @@ form.was-validated textarea:invalid ~ .invalid-feedback {
 
 /* Footer score line */
 .story-card-footer {
-  font-size: 0.78rem !important;
-  font-weight: 600 !important;
+  font-size: 0.8rem !important;
   color: var(--text-subtle) !important;
   padding-top: 0.75rem !important;
   border-top: 1px solid var(--border-color) !important;
   margin-top: auto !important;
+  display: flex !important;
+  align-items: baseline !important;
+  justify-content: flex-start !important;
+  gap: 0.4rem !important;
+  line-height: 1.45 !important;
 }
 
 /* Badge color variants */
@@ -6986,6 +7069,114 @@ form.was-validated textarea:invalid ~ .invalid-feedback {
   line-height: 1.5;
   margin-bottom: 0;
 }
+
+/* ==========================================================================
+   EQUAL LENGTH DASHBOARD PREVIEW CTA BUTTONS (Image 2 Fix)
+   ========================================================================== */
+.dash-preview-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dash-action-btn {
+  min-width: 215px !important;
+  height: 48px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 1.5rem !important;
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+  border-radius: var(--radius-sm, 8px) !important;
+  gap: 8px !important;
+  white-space: nowrap !important;
+}
+
+/* ==========================================================================
+   HERO EDITORIAL TRUST HIGHLIGHTS ALIGNMENT (Image 3 Fix)
+   ========================================================================== */
+.hero-trust-highlights {
+  margin-top: 1.25rem;
+}
+
+.hero-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.trust-badge-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.trust-badge-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.25;
+}
+
+.trust-badge-text .small {
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 2px;
+}
+
+.trust-badge-text .extra-small {
+  font-size: 0.74rem;
+  line-height: 1.2;
+}
+
+/* ==========================================================================
+   LOGO COLOR FIX — UNIFIED THEME BRANDING (Task 3)
+   ========================================================================== */
+.navbar-brand-logo,
+.navbar-brand-logo span,
+.navbar-brand-logo span span {
+  color: var(--brand-teal) !important;
+}
+
+.site-footer .navbar-brand-logo,
+.site-footer .navbar-brand-logo span,
+.site-footer .navbar-brand-logo span span {
+  color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   DASHBOARD BUREAU CARDS DESKTOP & BASE (Task 2)
+   ========================================================================== */
+.dash-bureau-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  height: 100%;
+}
+
+.dash-bureau-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dash-bureau-card .bureau-status-badge {
+  margin-top: 0.35rem;
+}
+
+
 
 
 

@@ -41,13 +41,13 @@ function initPageLoader() {
    ========================================================================== */
 function initTheme() {
   const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn');
-  const savedTheme = localStorage.getItem('credit_theme') || 'dark';
+  const savedTheme = localStorage.getItem('credit_theme') || 'light';
   
   applyTheme(savedTheme);
 
   themeToggleBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
       const newTheme = currentTheme === 'light' ? 'dark' : 'light';
       applyTheme(newTheme);
       localStorage.setItem('credit_theme', newTheme);

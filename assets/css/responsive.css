@@ -272,30 +272,73 @@
     margin-bottom: 0.5rem !important;
   }
 
-  /* FICO Gauge Box Mobile Responsiveness */
+  /* FICO Gauge Box Mobile Responsiveness (Image 3 fix) */
   .fico-gauge-box {
-    padding: 0.85rem 0.5rem !important;
+    padding: 0.95rem 0.65rem !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .fico-flex-row {
+    display: flex !important;
     flex-wrap: nowrap !important;
     justify-content: space-between !important;
     align-items: center !important;
-    gap: 0.2rem !important;
+    gap: 0.25rem !important;
+    width: 100% !important;
+  }
+
+  .fico-flex-row > div:first-child {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    text-align: left !important;
+  }
+
+  .fico-flex-row > div.text-center {
+    flex: 0 0 auto !important;
+    padding: 0 4px !important;
+  }
+
+  .fico-flex-row > div:last-child {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    text-align: right !important;
   }
 
   .fico-score-pill {
-    font-size: 0.78rem !important;
-    padding: 0.2rem 0.35rem !important;
-    line-height: 1.1 !important;
+    font-size: 0.72rem !important;
+    padding: 0.3rem 0.35rem !important;
+    line-height: 1.15 !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .fico-flex-row .text-uppercase {
-    font-size: 0.65rem !important;
+    font-size: 0.62rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
   }
 
   .fico-flex-row .extra-small {
-    font-size: 0.62rem !important;
+    font-size: 0.58rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .fico-gauge-box .border-top {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.25rem !important;
+    font-size: 0.75rem !important;
+    padding-top: 0.5rem !important;
   }
 
   /* Contact Form Mobile Symmetrical Alignment Fix */
@@ -923,6 +966,397 @@
     font-size: 1.55rem !important;
   }
 }
+
+/* ==========================================================================
+   IPAD & TABLET VIEW OVERRIDES (768px - 1199.98px)
+   RULE: All cards must show a MAXIMUM OF 2 CARDS PER ROW on iPad view
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  /* Service Section Cards: strictly max 2 cards per row (50% width) */
+  .services-section .row > [class*="col-"],
+  .services-section .col-lg-4,
+  .services-section .col-md-6,
+  .service-card-wrapper {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+
+  /* Challenge Section Cards: strictly max 2 cards per row (50% width) */
+  .challenge-section .row > [class*="col-"],
+  .challenge-section .col-lg-4,
+  .challenge-section .col-md-6 {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+
+  /* Journey Steps / Process Cards: strictly max 2 cards per row */
+  .journey-section .row > [class*="col-"],
+  .journey-section .col-lg-3,
+  .journey-section .col-lg-4,
+  .journey-section .col-md-6,
+  .process-steps-row > [class*="col-"] {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+
+  /* Success Story Cards: strictly max 2 cards per row */
+  .story-section .row > [class*="col-"],
+  .story-section .col-lg-4,
+  .story-card-col,
+  .stories-grid > [class*="col-"] {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+
+  /* Pricing Cards: strictly max 2 cards per row */
+  .pricing-section .row > [class*="col-"],
+  .pricing-section .col-lg-4,
+  .pricing-grid > [class*="col-"] {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+
+  /* About page cards: strictly max 2 cards per row */
+  .values-grid > [class*="col-"],
+  .methodology-row > [class*="col-"],
+  .team-grid > [class*="col-"],
+  .about-stat-row > [class*="col-"] {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+
+  /* Any grid row containing card components */
+  .row:has(> [class*="col-"] > .service-card) > [class*="col-"],
+  .row:has(> [class*="col-"] > .challenge-card) > [class*="col-"],
+  .row:has(> [class*="col-"] > .story-card) > [class*="col-"],
+  .row:has(> [class*="col-"] > .pricing-card) > [class*="col-"],
+  .row:has(> [class*="col-"] > .journey-step-card) > [class*="col-"] {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+
+  /* Bento Grid on iPad: strictly max 2 columns */
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem !important;
+  }
+
+  .bento-tile-large,
+  .bento-tile-tall,
+  .bento-tile-medium,
+  .bento-tile-stat {
+    grid-column: span 1 !important;
+  }
+
+  .bento-tile-wide-banner {
+    grid-column: span 2 !important;
+  }
+}
+
+/* ==========================================================================
+   DASHBOARD INTERACTIVE PREVIEW MOBILE FIX (Images 3 & 4)
+   ========================================================================== */
+@media (max-width: 767.98px) {
+  .dash-preview-actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    gap: 0.75rem !important;
+  }
+
+  .dash-action-btn {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: 48px !important;
+    justify-content: center !important;
+    padding: 0 1rem !important;
+    font-size: 0.94rem !important;
+  }
+
+  .dash-preview-shell {
+    margin-top: 2rem !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .dash-preview-header {
+    padding: 0.65rem 0.85rem !important;
+    flex-wrap: wrap !important;
+    gap: 0.4rem !important;
+  }
+
+  .dash-preview-header span.small {
+    font-size: 0.75rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .dash-preview-body {
+    padding: 1rem 0.85rem !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  /* Container protection so shell never clips on right edge */
+  .dashboard-preview-section .container {
+    padding-left: 0.85rem !important;
+    padding-right: 0.85rem !important;
+  }
+
+  .dash-preview-shell {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  /* 3-Bureau Progress Summary Cards on Mobile: Full-width clean horizontal layout (Image 2 fix) */
+  .dash-bureau-row > .dash-bureau-col,
+  .dash-preview-body .row.g-2.mb-3 > .col-4 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .dash-bureau-card,
+  .dash-preview-body .row.g-2.mb-3 > .col-4 > div {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    text-align: start !important;
+    padding: 0.75rem 1rem !important;
+    box-sizing: border-box !important;
+  }
+
+  .dash-bureau-info {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: start !important;
+    flex: 1 1 auto !important;
+  }
+
+  .dash-bureau-info .small {
+    font-size: 0.78rem !important;
+    margin-bottom: 2px !important;
+    line-height: 1.2 !important;
+  }
+
+  .dash-bureau-score {
+    font-size: 1.15rem !important;
+    font-weight: 800 !important;
+    white-space: nowrap !important;
+    line-height: 1.2 !important;
+  }
+
+  .dash-bureau-card .bureau-status-badge,
+  .dash-preview-body .row.g-2.mb-3 > .col-4 > div .bureau-status-badge {
+    margin-top: 0 !important;
+    margin-left: 0.5rem !important;
+    align-self: center !important;
+    font-size: 0.75rem !important;
+    padding: 0.3rem 0.65rem !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Recent Dispute Items on Mobile: vertical stack so badge doesn't crush text (Image 4 fix) */
+  .dash-preview-body .d-flex.justify-content-between.align-items-center.p-2.bg-card {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+    padding: 0.75rem !important;
+  }
+
+  .dash-preview-body .d-flex.justify-content-between.align-items-center.p-2.bg-card .bureau-status-badge {
+    align-self: flex-start !important;
+    font-size: 0.75rem !important;
+  }
+}
+
+/* ==========================================================================
+   EDITORIAL PROGRESS SECTION MOBILE FIX (Image 1)
+   ========================================================================== */
+@media (max-width: 767.98px) {
+  .editorial-progress-section {
+    padding: 45px 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  .editorial-progress-box {
+    padding: 1.25rem 0.85rem !important;
+    border-radius: var(--radius-md) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .editorial-progress-box .row.align-items-center.g-5 {
+    --bs-gutter-x: 1rem !important;
+    --bs-gutter-y: 1.5rem !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .editorial-progress-box .row.align-items-center.g-5 > [class*="col-"] {
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  .editorial-progress-box .row.g-3 {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .editorial-progress-box .row.g-3 > .col-6,
+  .editorial-progress-box .col-6 {
+    flex: 0 0 calc(50% - 0.25rem) !important;
+    max-width: calc(50% - 0.25rem) !important;
+    width: calc(50% - 0.25rem) !important;
+    padding: 0 !important;
+    display: flex !important;
+  }
+
+  .editorial-progress-box .progress-stat-pill {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 80px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 0.75rem 0.4rem !important;
+    box-sizing: border-box !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .editorial-progress-box .progress-stat-pill .stat-number {
+    font-size: 1.15rem !important;
+    font-weight: 800 !important;
+    line-height: 1.15 !important;
+    margin-bottom: 0.2rem !important;
+    white-space: nowrap !important;
+  }
+
+  .editorial-progress-box .progress-stat-pill .stat-desc {
+    font-size: 0.72rem !important;
+    line-height: 1.25 !important;
+    color: var(--text-subtle) !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .editorial-progress-box {
+    padding: 1.15rem 0.65rem !important;
+  }
+
+  .editorial-progress-box .progress-stat-pill {
+    padding: 0.65rem 0.3rem !important;
+    min-height: 75px !important;
+  }
+
+  .editorial-progress-box .progress-stat-pill .stat-number {
+    font-size: 1.05rem !important;
+  }
+
+  .editorial-progress-box .progress-stat-pill .stat-desc {
+    font-size: 0.68rem !important;
+  }
+}
+
+/* ==========================================================================
+   ABOUT COUNTER CARDS MOBILE FIX (Image 2)
+   ========================================================================== */
+.about-counter-section .row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+
+.about-counter-section [class*="col-"] {
+  display: flex !important;
+}
+
+.about-counter-card {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+@media (max-width: 767.98px) {
+  .about-counter-section {
+    padding: 35px 0 !important;
+  }
+
+  .about-counter-section .row.g-4 {
+    --bs-gutter-x: 0.5rem !important;
+    --bs-gutter-y: 0.5rem !important;
+  }
+
+  .about-counter-card {
+    padding: 1.1rem 0.45rem !important;
+    min-height: 170px !important;
+    box-sizing: border-box !important;
+  }
+
+  .about-counter-card .counter-val {
+    font-size: clamp(1.15rem, 4.2vw, 1.45rem) !important;
+    white-space: nowrap !important;
+    line-height: 1.15 !important;
+    margin-bottom: 6px !important;
+  }
+
+  .about-counter-card .counter-label {
+    font-size: 0.85rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .about-counter-card .counter-sub {
+    font-size: 0.72rem !important;
+    line-height: 1.25 !important;
+  }
+}
+
+/* ==========================================================================
+   WHAT INFLUENCES DISPUTE OUTCOMES — IPAD 2 CARDS PER ROW (Image 4)
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .results-section .row.g-4 > [class*="col-"],
+  #results .row.g-4 > [class*="col-"] {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .results-section .row.g-4 > [class*="col-"],
+  #results .row.g-4 > [class*="col-"] {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
 
 
 
